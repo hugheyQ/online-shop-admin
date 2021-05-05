@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="dist/css/bootstrap-icons-1.4.1/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+  
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home active" href="#"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="#"><i class="fi-rs-shop me-2"></i> Stores</a>
+
+                <a class="nav-link" href="#"><i class="fi-rs-box me-2"></i>Product</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-shopping-cart-add me-2"></i>Orders <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseOrders">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Completed</a>
+                        <a class="nav-link" href="#">Pending</a>
+                        <a class="nav-link" href="#">Temporary</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="#"><i class="fi-rs-receipt me-2"></i>Invoices</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-user me-2"></i>Customers <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseCustomers">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Customers</a>
+                        <a class="nav-link" href="#">Potential Customers</a>
+                        <a class="nav-link" href="#">Find Customers By Image</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseReports" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-document me-2 "></i>Reports <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseReports">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Reports</a>
+                        <a class="nav-link" href="#">What's Trending</a>
+                        <a class="nav-link" href="#">Sales & Profit</a>
+                        <a class="nav-link" href="#">Accounts</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseShipping" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-school-bus me-2"></i>Shipping <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseShipping">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Shipping Rates</a>
+                        <a class="nav-link" href="#">Shipping Auth</a>
+                        <a class="nav-link" href="#">Postage</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSiteInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-info me-2"></i>Site Info <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSiteInfo">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Site Header</a>
+                        <a class="nav-link" href="#">Gateways</a>
+                        <a class="nav-link" href="#">Site Top Header</a>
+                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#">Terms & Conditions</a>
+                        <a class="nav-link" href="#">Delivery Info</a>
+                        <a class="nav-link" href="#">FAQs</a>
+                        <a class="nav-link" href="#">Order Collections</a>
+                        <a class="nav-link" href="#">Opening Times</a>
+                        <a class="nav-link" href="#">Map Directions</a>
+                        <a class="nav-link" href="#">Privacy Policy</a>
+                        <a class="nav-link" href="#">Security Policy</a>
+                        <a class="nav-link" href="#">Cookie Policy</a>
+                    </div>
+                </div>
+                
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEmailSettings" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-envelope me-2"></i>Email Settings <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEmailSettings">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Mail Server</a>
+                        <a class="nav-link" href="#">Customers</a>
+                        <a class="nav-link" href="#">Forgot Password</a>
+                        <a class="nav-link" href="#">Orders</a>
+                        <a class="nav-link" href="#">Tracking Emails</a>
+                        <a class="nav-link" href="#">Invoices</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseMarketing" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-megaphone me-2"></i>Marketing <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseMarketing">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Email Loader</a>
+                        <a class="nav-link" href="#">Send Emails</a>
+                        <a class="nav-link" href="#">Froogle</a>
+                        <a class="nav-link" href="#">RSS Feeds</a>
+                        <a class="nav-link" href="#">Validate NL Emails</a>
+                        <a class="nav-link" href="#">Lions Home</a>
+                        <a class="nav-link" href="#">Site Map</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapsePromotions" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-ticket me-2"></i>Promotions <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapsePromotions">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">HomePage Text</a>
+                        <a class="nav-link" href="#">Best Selling</a>
+                        <a class="nav-link" href="#">Most Viewed</a>
+                        <a class="nav-link" href="#">Featured Products</a>
+                        <a class="nav-link" href="#">Deals</a>
+                        <a class="nav-link" href="#">Take All</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="#"><i class="fi-rs-building me-2"></i>eBay Management Center</a>
+                <a class="nav-link" href="#"><i class="fi-rs-list me-2"></i>eBay Listings Software</a>
+                <a class="nav-link" href="#"><i class="fi-rs-gallery me-2"></i>Images Data Center</a>
+                <a class="nav-link" href="#"><i class="fi-rs-money me-2"></i>Purchasing</a>
+                <a class="nav-link" href="#"><i class="fi-rs-calculator me-2"></i>OSC Management</a>
+                <a class="nav-link" href="#"><i class="fi-rs-life-ring me-2"></i>eBay Support Management</a>
+                <a class="nav-link" href="#"><i class="fi-rs-mode-portrait me-2"></i>User Image</a>
+            </nav>
+        </div>
+
+        <main class="dashboard w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="dashboard-section py-3 px-3">
+                <h1>Dashboard</h1>
+
+                <div class="row g-4 overview mb-5">
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card shadow card-1">
+                            <div class="card-body d-flex justify-content-between">
+                              <div class="left">
+                                <h5 class="card-title">Total Personal Customers</h5>
+                                <span class="stat fw-bolder fs-2">1000</span>
+                              </div>
+                              <div class="right">
+                                <i class="bi bi-people"></i>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card shadow card-2">
+                            <div class="card-body d-flex justify-content-between">
+                              <div class="left">
+                                <h5 class="card-title">Total Business Customers</h5>
+                                <span class="stat fw-bolder fs-2">1000</span>
+                              </div>
+                              <div class="right">
+                                <i class="bi bi-person"></i>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card shadow card-3">
+                            <div class="card-body d-flex justify-content-between">
+                              <div class="left">
+                                <h5 class="card-title">Total Products in Stock</h5>
+                                <span class="stat fw-bolder fs-2">1000</span>
+                              </div>
+                              <div class="right">
+                                <i class="bi bi-box-seam"></i>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card shadow card-4">
+                            <div class="card-body d-flex justify-content-between">
+                              <div class="left">
+                                <h5 class="card-title">Total Subscribers</h5>
+                                <span class="stat fw-bolder fs-2">1000</span>
+                              </div>
+                              <div class="right">
+                                <i class="bi bi-check-square"></i>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card shadow card-5">
+                            <div class="card-body d-flex justify-content-between">
+                              <div class="left">
+                                <h5 class="card-title">Total Unsubscribers</h5>
+                                <span class="stat fw-bolder fs-2">1000</span>
+                              </div>
+                              <div class="right">
+                                <i class="bi bi-question-square"></i>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card shadow card-6">
+                            <div class="card-body d-flex justify-content-between">
+                              <div class="left">
+                                <h5 class="card-title">Total Paid Orders</h5>
+                                <span class="stat fw-bolder fs-2">1000</span>
+                              </div>
+                              <div class="right">
+                                <i class="bi bi-wallet2"></i>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card shadow card-7">
+                            <div class="card-body d-flex justify-content-between">
+                              <div class="left">
+                                <h5 class="card-title">Total Unpaid Orders</h5>
+                                <span class="stat fw-bolder fs-2">1000</span>
+                              </div>
+                              <div class="right">
+                                <i class="bi bi-wallet"></i>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card shadow card-8">
+                            <div class="card-body d-flex justify-content-between">
+                              <div class="left">
+                                <h5 class="card-title">Total Completed Invoices</h5>
+                                <span class="stat fw-bolder fs-2">1000</span>
+                              </div>
+                              <div class="right">
+                                <i class="bi bi-receipt"></i>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <div>
+                            <canvas id="myChart" style="height: 300px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+        </main>
+    </div>
+    
+
+    <!-- JQuery File -->
+    <script src="dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="dist/js/bootstrap.bundle.min.js"></script> 
+
+
+    <!-- Chart JS -->
+    <script src="dist/js/chart.js"></script>
+
+    <script>
+
+        const labels = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        ];
+
+        const data = {
+        labels: labels,
+        datasets: [
+            {
+                label: 'Target Per Day',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 10, 5, 2, 20, 30, 45],
+            },
+            {
+                label: 'Current Sales',
+                backgroundColor: 'rgb(236,28,36)',
+                borderColor: 'rgb(236,28,36)',
+                data: [0, 20, 10, 4, 25, 20, 40],
+
+            }
+        ]
+        };
+
+        const config = {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+            legend: {
+                position: 'bottom',
+            },
+            title: {
+                display: true,
+                text: 'Q1 Sales Situation'
+            }
+            }
+        },
+        };
+
+
+        // === include 'setup' then 'config' above ===
+      
+        var myChart = new Chart(
+          document.getElementById('myChart'),
+          config
+        );
+
+
+
+    </script>
+
+    <!-- Custom Javascipt -->
+    <script src="dist/js/custom.js"></script>
+
+
+</body>
+</html>
+
