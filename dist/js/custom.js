@@ -27,4 +27,8 @@ $(document).ready(function () {
         
     }
 
+    $('#storesTB').DataTable({
+        ordering:true
+    });
+
 });

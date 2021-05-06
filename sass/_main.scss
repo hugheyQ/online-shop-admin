@@ -1,7 +1,7 @@
 .side-nav{
     background-color: $l-blue;
     color: $white;
-    width: 350px;
+    width: 300px;
     overflow-y: auto;
 
     // @media (min-width: 1200px){
@@ -74,13 +74,26 @@
 
 main{
 
-    &.dashboard{
-        .dashboard-section{
+    &.main-section{
+        .main-section-container{
             h1{
                 color: #5a5c69;
                 font-weight: 400;
                 font-size: 33.6px;
-                margin-bottom: .5em;
+            }
+
+            .cta-btn{
+                background-color: $l-blue;
+                color: white;
+                text-transform: capitalize;
+                padding: .5em 1em;
+                border: 1px solid $l-blue;
+                transition: $ease-in-out-1;
+
+                &:hover{
+                    background-color: $d-blue;
+                    border: 1px solid $d-blue;
+                }
             }
 
             .overview{
@@ -168,6 +181,40 @@ main{
                     }
                 }
             }
+
+            .dataTables_wrapper{
+                .row{
+                    &:nth-child(1){
+                        margin-bottom: .5em;
+
+                        input[type='search']{
+                            &:focus{
+                                box-shadow: none;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2){
+                        margin-bottom: .5em;
+                    }
+                }
+                .stores-table{
+                    thead{
+                        font-size: 15px;
+                        
+                    }
+    
+                    tbody{
+                        font-size: 14px;
+    
+                        td{
+                            padding-top: 1em;
+                            padding-bottom: 1em;
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }
