@@ -31,4 +31,53 @@ $(document).ready(function () {
         ordering:true
     });
 
+
+    
+
 });
+
+function toggleCheckAll(clickedID) {
+    let row = document.querySelector('#' + clickedID).parentNode.parentNode;
+
+    let checkboxes = row.querySelectorAll('input[type="checkbox"]');
+
+    let checkboxClicked = document.querySelector('#' + clickedID);
+
+
+    if (checkboxClicked.checked == true) {
+
+        for (let i = 0; i < checkboxes.length; i++) {
+        
+            checkboxes[i].checked = true;
+        
+        }
+        
+    } else {
+
+        for (let i = 0; i < checkboxes.length; i++) {
+        
+            checkboxes[i].checked = false;
+        
+        }
+
+    }
+
+
+    // for (let i = 0; i < checkboxes.length; i++) {
+        
+    
+    //     if (checkboxClicked.checked==true) {
+
+    //         checkboxes[i].checked = false;
+
+    //     } else{
+
+    //         checkboxes[i].checked = true;
+
+    //     }
+
+    // }
+
+
+
+}

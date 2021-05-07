@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="dist/css/bootstrap-icons-1.4.1/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link active" href="stores.html"><i class="fi-rs-shop me-2"></i> Stores</a>
+
+                <a class="nav-link" href="#"><i class="fi-rs-box me-2"></i>Product</a>
+
+                <a class="nav-link custom-dropdown " data-bs-toggle="collapse" href="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-shopping-cart-add me-2"></i>Orders <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseOrders">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Completed</a>
+                        <a class="nav-link" href="#">Pending</a>
+                        <a class="nav-link" href="#">Temporary</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="#"><i class="fi-rs-receipt me-2"></i>Invoices</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-user me-2"></i>Customers <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseCustomers">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Customers</a>
+                        <a class="nav-link" href="#">Potential Customers</a>
+                        <a class="nav-link" href="#">Find Customers By Image</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseReports" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-document me-2 "></i>Reports <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseReports">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Reports</a>
+                        <a class="nav-link" href="#">What's Trending</a>
+                        <a class="nav-link" href="#">Sales & Profit</a>
+                        <a class="nav-link" href="#">Accounts</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseShipping" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-school-bus me-2"></i>Shipping <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseShipping">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Shipping Rates</a>
+                        <a class="nav-link" href="#">Shipping Auth</a>
+                        <a class="nav-link" href="#">Postage</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSiteInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-info me-2"></i>Site Info <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSiteInfo">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Site Header</a>
+                        <a class="nav-link" href="#">Gateways</a>
+                        <a class="nav-link" href="#">Site Top Header</a>
+                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#">Terms & Conditions</a>
+                        <a class="nav-link" href="#">Delivery Info</a>
+                        <a class="nav-link" href="#">FAQs</a>
+                        <a class="nav-link" href="#">Order Collections</a>
+                        <a class="nav-link" href="#">Opening Times</a>
+                        <a class="nav-link" href="#">Map Directions</a>
+                        <a class="nav-link" href="#">Privacy Policy</a>
+                        <a class="nav-link" href="#">Security Policy</a>
+                        <a class="nav-link" href="#">Cookie Policy</a>
+                    </div>
+                </div>
+                
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEmailSettings" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-envelope me-2"></i>Email Settings <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEmailSettings">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Mail Server</a>
+                        <a class="nav-link" href="#">Customers</a>
+                        <a class="nav-link" href="#">Forgot Password</a>
+                        <a class="nav-link" href="#">Orders</a>
+                        <a class="nav-link" href="#">Tracking Emails</a>
+                        <a class="nav-link" href="#">Invoices</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseMarketing" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-megaphone me-2"></i>Marketing <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseMarketing">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Email Loader</a>
+                        <a class="nav-link" href="#">Send Emails</a>
+                        <a class="nav-link" href="#">Froogle</a>
+                        <a class="nav-link" href="#">RSS Feeds</a>
+                        <a class="nav-link" href="#">Validate NL Emails</a>
+                        <a class="nav-link" href="#">Lions Home</a>
+                        <a class="nav-link" href="#">Site Map</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapsePromotions" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-ticket me-2"></i>Promotions <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapsePromotions">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">HomePage Text</a>
+                        <a class="nav-link" href="#">Best Selling</a>
+                        <a class="nav-link" href="#">Most Viewed</a>
+                        <a class="nav-link" href="#">Featured Products</a>
+                        <a class="nav-link" href="#">Deals</a>
+                        <a class="nav-link" href="#">Take All</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="#"><i class="fi-rs-building me-2"></i>eBay Management Center</a>
+                <a class="nav-link" href="#"><i class="fi-rs-list me-2"></i>eBay Listings Software</a>
+                <a class="nav-link" href="#"><i class="fi-rs-gallery me-2"></i>Images Data Center</a>
+                <a class="nav-link" href="#"><i class="fi-rs-money me-2"></i>Purchasing</a>
+                <a class="nav-link" href="#"><i class="fi-rs-calculator me-2"></i>OSC Management</a>
+                <a class="nav-link" href="#"><i class="fi-rs-life-ring me-2"></i>eBay Support Management</a>
+                <a class="nav-link" href="#"><i class="fi-rs-mode-portrait me-2"></i>User Image</a>
+            </nav>
+        </div>
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="mb-3" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                      <li class="breadcrumb-item"><a href="stores.html">Stores</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Store Users Management</li>
+                    </ol>
+                </nav>
+                
+                <h1>Store Users Management</h1>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <p>Manage your store users here</p>
+                    <button type="button" class="btn cta-btn" data-bs-toggle="modal" data-bs-target="#addStoreUserModal"><i class="bi bi-plus"></i> Add New Store User</button>
+                </div>
+
+
+                <table id="storesTB" class="table stores-table table-bordered table-hover border">
+                    <thead class="bg-light">
+                      <tr>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Department</th>
+                        <th scope="col">Active</th>
+                        <th scope="col">Admin User</th>
+                        <th scope="col">Allowed eBay</th>
+                        <th scope="col">Allowed Main</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Amjad Ahmad</td>
+                        <td>amjad@safekom.com</td>
+                        <td>Admin</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#editStoreUserModal"><i class="bi bi-pencil-fill"></i></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteStoreUserModal"><i class="bi bi-trash-fill"></i></a>
+                        </td>
+                      </tr>
+
+
+                    </tbody>
+                </table>
+
+                
+
+
+            </section>
+        </main>
+    </div>
+    
+
+    <!-- JQuery File -->
+    <script src="dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="dist/js/custom.js"></script>
+
+
+</body>
+</html>
+
+
+<!-- Add Store User Modal -->
+<div class="modal fade" id="addStoreUserModal" tabindex="-1" aria-labelledby="addStoreUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="addStoreUserModalLabel">Add New Store User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <div class="row">
+
+                    <div class="col-12">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">Admin User Information</h5>
+    
+                                <div class="row">
+                                    <div class="col-md-6">
+    
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingFName" placeholder="Full Name">
+                                            <label for="floatingFName">Full Name</label>
+                                        </div>
+        
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingEmail" placeholder="Email Address">
+                                            <label for="floatingEmail">Email Address</label>
+                                        </div>
+        
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                            <label for="floatingEmail">Password</label>
+                                        </div>
+        
+                                        <div class="form-floating mb-3">
+                                            <select class="form-select" id="floatingDepartment">
+                                                <option selected>eBay</option>
+                                                <option>Admin</option>
+                                                <option>Purchasing</option>
+                                                <option>Warehouse</option>
+                                                <option>Template</option>
+                                                <option>Trade</option>
+                                            </select>
+                                            <label for="floatingDepartment">Department</label>
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="col-md-6">
+        
+                                        <div class="row">
+
+                                            <div class="col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allowMain">
+                                                    <label class="form-check-label" for="allowMain">
+                                                        Allow Main
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="alloweBay">
+                                                    <label class="form-check-label" for="alloweBay">
+                                                        Allow eBay
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allowELS">
+                                                    <label class="form-check-label" for="allowELS">
+                                                        Allow ELS
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allowTMP">
+                                                    <label class="form-check-label" for="allowTMP">
+                                                        Allow eBay TMP
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="alloweTH">
+                                                    <label class="form-check-label" for="alloweTH">
+                                                        Allow eTH Tmp
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="alloweBayImg">
+                                                    <label class="form-check-label" for="alloweBayImg">
+                                                        Allow eBay Img
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="alloweTHImg">
+                                                    <label class="form-check-label" for="alloweTHImg">
+                                                        Allow eTH Img
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allowAmazon">
+                                                    <label class="form-check-label" for="allowAmazon">
+                                                        Allow Amazon
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="alloweBaySupport">
+                                                    <label class="form-check-label" for="alloweBaySupport">
+                                                        Allow eBay Support
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="alloweTHSupport">
+                                                    <label class="form-check-label" for="alloweTHSupport">
+                                                        Allow eTH Support
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allowPurchasing">
+                                                    <label class="form-check-label" for="allowPurchasing">
+                                                        Allow Purchasing
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allowOCH">
+                                                    <label class="form-check-label" for="allowOCH">
+                                                        Allow OCH
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="activeCheck">
+                                                    <label class="form-check-label" for="activeCheck">
+                                                        Active
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="adminCheck">
+                                                    <label class="form-check-label" for="adminCheck">
+                                                        Admin
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">Admin User Permissions</h5>
+
+                                <table class="table table-bordered text-center">
+                                    <thead class="sticky-top">
+                                        <tr>
+                                            <th scope="col">Module</th>
+                                            <th scope="col">ReadOnly</th>
+                                            <th scope="col">InsertOnly</th>
+                                            <th scope="col">UpdateOnly</th>
+                                            <th scope="col">DeleteOnly</th>
+                                            <th scope="col">Select All</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Store</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check1" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Product</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check2" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Orders</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check3" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Pending Orders</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check4" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Change Address</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check5" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Invoice Orders</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check6" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Customers</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check7" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Shipping</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check8" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Accounts</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check9" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Purchasing</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check10" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Supplier</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check11" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Credit Note</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check12" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Refund Note</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check13" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Reports</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check14" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Promotions</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check15" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Replacement</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check16" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Messages</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check17" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Fixing</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check18" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>eBay Items</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check19" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Contact</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check20" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Email Settings</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check21" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Gateways</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check22" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Site Info</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="check23" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add New Store User</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+<!-- Edit Store User Modal -->
+<div class="modal fade" id="editStoreUserModal" tabindex="-1" aria-labelledby="editStoreUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="editStoreUserModalLabel">Edit Store User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <div class="row">
+
+                    <div class="col-12">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">Admin User Information</h5>
+    
+                                <div class="row">
+                                    <div class="col-md-6">
+    
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingFName" placeholder="Full Name">
+                                            <label for="floatingFName">Full Name</label>
+                                        </div>
+        
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingEmail" placeholder="Email Address">
+                                            <label for="floatingEmail">Email Address</label>
+                                        </div>
+        
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                            <label for="floatingEmail">Password</label>
+                                        </div>
+        
+                                        <div class="form-floating mb-3">
+                                            <select class="form-select" id="floatingDepartment">
+                                                <option selected>eBay</option>
+                                                <option>Admin</option>
+                                                <option>Purchasing</option>
+                                                <option>Warehouse</option>
+                                                <option>Template</option>
+                                                <option>Trade</option>
+                                            </select>
+                                            <label for="floatingDepartment">Department</label>
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="col-md-6">
+        
+                                        <div class="row">
+
+                                            <div class="col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allowMain">
+                                                    <label class="form-check-label" for="allowMain">
+                                                        Allow Main
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="alloweBay">
+                                                    <label class="form-check-label" for="alloweBay">
+                                                        Allow eBay
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allowELS">
+                                                    <label class="form-check-label" for="allowELS">
+                                                        Allow ELS
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allowTMP">
+                                                    <label class="form-check-label" for="allowTMP">
+                                                        Allow eBay TMP
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="alloweTH">
+                                                    <label class="form-check-label" for="alloweTH">
+                                                        Allow eTH Tmp
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="alloweBayImg">
+                                                    <label class="form-check-label" for="alloweBayImg">
+                                                        Allow eBay Img
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="alloweTHImg">
+                                                    <label class="form-check-label" for="alloweTHImg">
+                                                        Allow eTH Img
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allowAmazon">
+                                                    <label class="form-check-label" for="allowAmazon">
+                                                        Allow Amazon
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="alloweBaySupport">
+                                                    <label class="form-check-label" for="alloweBaySupport">
+                                                        Allow eBay Support
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="alloweTHSupport">
+                                                    <label class="form-check-label" for="alloweTHSupport">
+                                                        Allow eTH Support
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allowPurchasing">
+                                                    <label class="form-check-label" for="allowPurchasing">
+                                                        Allow Purchasing
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="allowOCH">
+                                                    <label class="form-check-label" for="allowOCH">
+                                                        Allow OCH
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="activeCheck">
+                                                    <label class="form-check-label" for="activeCheck">
+                                                        Active
+                                                    </label>
+                                                </div>
+                
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="adminCheck">
+                                                    <label class="form-check-label" for="adminCheck">
+                                                        Admin
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">Admin User Permissions</h5>
+
+                                <table class="table table-bordered text-center">
+                                    <thead class="sticky-top">
+                                        <tr>
+                                            <th scope="col">Module</th>
+                                            <th scope="col">ReadOnly</th>
+                                            <th scope="col">InsertOnly</th>
+                                            <th scope="col">UpdateOnly</th>
+                                            <th scope="col">DeleteOnly</th>
+                                            <th scope="col">Select All</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Store</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checka" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Product</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkb" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Orders</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkc" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Pending Orders</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkd" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Change Address</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checke" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Invoice Orders</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkf" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Customers</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkg" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Shipping</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkh" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Accounts</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checki" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Purchasing</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkj" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Supplier</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkk" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Credit Note</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkl" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Refund Note</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkm" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Reports</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkn" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Promotions</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checko" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Replacement</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkp" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Messages</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkq" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Fixing</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkr" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>eBay Items</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checks" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Contact</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkt" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Email Settings</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checku" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Gateways</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkv" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Site Info</td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="">
+                                            </td>
+                                            <td>
+                                                <input class="form-check-input" type="checkbox" value="" id="checkw" onchange="toggleCheckAll(this.id)">
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add New Store User</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+<!-- Delete Store User Modal -->
+<div class="modal fade" id="deleteStoreUserModal" tabindex="-1" aria-labelledby="deleteStoreUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="deleteStoreUserModalLabel">Delete Store User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+            <i class="bi bi-exclamation-triangle-fill text-danger fs-1"></i>
+            <p>Are you sure you want to delete this store user? This action is irreversable!</p>
+        </div>
+        <div class="modal-footer border-0 d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-danger px-4">Yes</button>
+        </div>
+      </div>
+    </div>
+</div>
+

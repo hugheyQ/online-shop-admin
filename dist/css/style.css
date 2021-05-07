@@ -12,13 +12,10 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #e6e6e6;
+  border-radius: 5px;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #3457bb;
-}
-
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -96,11 +93,31 @@ p {
   padding: 0;
 }
 
+.breadcrumb .breadcrumb-item {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.breadcrumb .breadcrumb-item.active {
+  color: #146cda;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #47494a;
+  transition: all 300ms ease-in-out;
+}
+
+.breadcrumb a:hover {
+  color: #146cda;
+}
+
 .side-nav {
   background-color: #4a6fdc;
   color: #ffffff;
   width: 300px;
   overflow-y: auto;
+  height: 100vh;
 }
 
 .side-nav .company-logo {
@@ -153,6 +170,11 @@ p {
 
 .side-nav .sub-menu .card .nav-link:hover {
   background-color: #eaecf4;
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
 }
 
 main.main-section .main-section-container h1 {
@@ -285,5 +307,25 @@ main.main-section .main-section-container .dataTables_wrapper .stores-table tbod
 main.main-section .main-section-container .dataTables_wrapper .stores-table tbody td {
   padding-top: 1em;
   padding-bottom: 1em;
+}
+
+main.main-section .main-section-container .dataTables_wrapper .stores-table tbody td a {
+  display: inline-block;
+  padding: 1px;
+}
+
+main.main-section .main-section-container .dataTables_wrapper table {
+  text-align: center;
+}
+
+main.main-section .main-section-container .dataTables_wrapper table a {
+  text-decoration: none;
+  color: unset;
+  transition: all 300ms ease-in-out;
+  display: inline-block;
+}
+
+main.main-section .main-section-container .dataTables_wrapper table a:hover {
+  color: #4a6fdc;
 }
 /*# sourceMappingURL=style.css.map */
