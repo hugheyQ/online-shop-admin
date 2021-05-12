@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
 /* width */
 ::-webkit-scrollbar {
@@ -112,6 +113,29 @@ p {
   color: #146cda;
 }
 
+.poundsProf::before {
+  content: '£';
+  display: inline-block;
+}
+
+.percentProf::after {
+  content: '%';
+  display: inline-block;
+}
+
+.images-preview img {
+  width: 100%;
+  max-width: 50px;
+  height: auto;
+}
+
+.modal .card-title {
+  margin-bottom: 1em;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .side-nav {
   background-color: #4a6fdc;
   color: #ffffff;
@@ -168,7 +192,7 @@ p {
   border-radius: 5px;
 }
 
-.side-nav .sub-menu .card .nav-link:hover {
+.side-nav .sub-menu .card .nav-link:hover, .side-nav .sub-menu .card .nav-link.active {
   background-color: #eaecf4;
 }
 
@@ -177,10 +201,16 @@ main {
   overflow-y: auto;
 }
 
+main.main-section .main-section-container .breadcrumb {
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
+
 main.main-section .main-section-container h1 {
   color: #5a5c69;
   font-weight: 400;
   font-size: 33.6px;
+  margin-bottom: .5em;
 }
 
 main.main-section .main-section-container .cta-btn {
@@ -312,6 +342,12 @@ main.main-section .main-section-container .dataTables_wrapper .stores-table tbod
 main.main-section .main-section-container .dataTables_wrapper .stores-table tbody td a {
   display: inline-block;
   padding: 1px;
+}
+
+main.main-section .main-section-container .dataTables_wrapper .stores-table tbody td img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
 }
 
 main.main-section .main-section-container .dataTables_wrapper table {

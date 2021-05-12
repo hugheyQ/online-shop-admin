@@ -63,7 +63,7 @@
                 transition: $ease-in-out-1;
                 border-radius: 5px;
 
-                &:hover{
+                &:hover, &.active{
                     background-color: $off-white;
                 }
             }
@@ -78,10 +78,16 @@ main{
     overflow-y: auto;
     &.main-section{
         .main-section-container{
+            .breadcrumb{
+                margin-bottom: .5em;
+                margin-top: .5em;
+            }
+
             h1{
                 color: #5a5c69;
                 font-weight: 400;
                 font-size: 33.6px;
+                margin-bottom: .5em;
             }
 
             .cta-btn{
@@ -185,6 +191,7 @@ main{
             }
 
             .dataTables_wrapper{
+                
                 .row{
                     &:nth-child(1){
                         margin-bottom: .5em;
@@ -216,6 +223,12 @@ main{
                             a{
                                 display: inline-block;
                                 padding: 1px;
+                            }
+
+                            img{
+                                width: 100%;
+                                max-width: 100px;
+                                height: auto;
                             }
                         }
                     }

@@ -122,3 +122,43 @@ p {
 		}
 	}
 }
+
+
+.poundsProf{
+	// &::after{
+	// 	content: '|';
+	// 	display: inline-block;
+	// 	margin: 0 .5em;
+	// }
+
+	&::before{
+		content: '£';
+		display: inline-block; 
+	}
+}
+
+.percentProf{
+	&::after{
+		content: '%';
+		display: inline-block;
+	}
+}
+
+
+.images-preview{
+	img{
+		width: 100%;
+		max-width: 50px;
+		height: auto;
+	}
+}
+
+
+.modal{
+	.card-title{
+		margin-bottom: 1em;
+		font-size: 16px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}

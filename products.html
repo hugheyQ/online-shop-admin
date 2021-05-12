@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="dist/css/bootstrap-icons-1.4.1/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="#"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="stores.html"><i class="fi-rs-shop me-2"></i> Stores</a>
+
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseInventory" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fi-rs-box me-2"></i>Inventory  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseInventory">
+                    <div class="card card-body">
+                        <a class="nav-link active" href="products.html">Products</a>
+                        <a class="nav-link" href="product-category.html">Category</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-shopping-cart-add me-2"></i>Orders <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseOrders">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Completed</a>
+                        <a class="nav-link" href="#">Pending</a>
+                        <a class="nav-link" href="#">Temporary</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="#"><i class="fi-rs-receipt me-2"></i>Invoices</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-user me-2"></i>Customers <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseCustomers">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Customers</a>
+                        <a class="nav-link" href="#">Potential Customers</a>
+                        <a class="nav-link" href="#">Find Customers By Image</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseReports" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-document me-2 "></i>Reports <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseReports">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Reports</a>
+                        <a class="nav-link" href="#">What's Trending</a>
+                        <a class="nav-link" href="#">Sales & Profit</a>
+                        <a class="nav-link" href="#">Accounts</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseShipping" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-school-bus me-2"></i>Shipping <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseShipping">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Shipping Rates</a>
+                        <a class="nav-link" href="#">Shipping Auth</a>
+                        <a class="nav-link" href="#">Postage</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSiteInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-info me-2"></i>Site Info <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSiteInfo">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Site Header</a>
+                        <a class="nav-link" href="#">Gateways</a>
+                        <a class="nav-link" href="#">Site Top Header</a>
+                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#">Terms & Conditions</a>
+                        <a class="nav-link" href="#">Delivery Info</a>
+                        <a class="nav-link" href="#">FAQs</a>
+                        <a class="nav-link" href="#">Order Collections</a>
+                        <a class="nav-link" href="#">Opening Times</a>
+                        <a class="nav-link" href="#">Map Directions</a>
+                        <a class="nav-link" href="#">Privacy Policy</a>
+                        <a class="nav-link" href="#">Security Policy</a>
+                        <a class="nav-link" href="#">Cookie Policy</a>
+                    </div>
+                </div>
+                
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEmailSettings" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-envelope me-2"></i>Email Settings <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEmailSettings">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Mail Server</a>
+                        <a class="nav-link" href="#">Customers</a>
+                        <a class="nav-link" href="#">Forgot Password</a>
+                        <a class="nav-link" href="#">Orders</a>
+                        <a class="nav-link" href="#">Tracking Emails</a>
+                        <a class="nav-link" href="#">Invoices</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseMarketing" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-megaphone me-2"></i>Marketing <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseMarketing">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Email Loader</a>
+                        <a class="nav-link" href="#">Send Emails</a>
+                        <a class="nav-link" href="#">Froogle</a>
+                        <a class="nav-link" href="#">RSS Feeds</a>
+                        <a class="nav-link" href="#">Validate NL Emails</a>
+                        <a class="nav-link" href="#">Lions Home</a>
+                        <a class="nav-link" href="#">Site Map</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapsePromotions" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-ticket me-2"></i>Promotions <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapsePromotions">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">HomePage Text</a>
+                        <a class="nav-link" href="#">Best Selling</a>
+                        <a class="nav-link" href="#">Most Viewed</a>
+                        <a class="nav-link" href="#">Featured Products</a>
+                        <a class="nav-link" href="#">Deals</a>
+                        <a class="nav-link" href="#">Take All</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="#"><i class="fi-rs-building me-2"></i>eBay Management Center</a>
+                <a class="nav-link" href="#"><i class="fi-rs-list me-2"></i>eBay Listings Software</a>
+                <a class="nav-link" href="#"><i class="fi-rs-gallery me-2"></i>Images Data Center</a>
+                <a class="nav-link" href="#"><i class="fi-rs-money me-2"></i>Purchasing</a>
+                <a class="nav-link" href="#"><i class="fi-rs-calculator me-2"></i>OSC Management</a>
+                <a class="nav-link" href="#"><i class="fi-rs-life-ring me-2"></i>eBay Support Management</a>
+                <a class="nav-link" href="#"><i class="fi-rs-mode-portrait me-2"></i>User Image</a>
+            </nav>
+        </div>
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Inventory</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Products</li>
+                    </ol>
+                </nav>
+                
+                <h1>Products Management</h1>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <p>Manage your products here</p>
+                    <button type="button" class="btn cta-btn" data-bs-toggle="modal" data-bs-target="#addProductModal"><i class="bi bi-plus"></i> Add New Product</button>
+                </div>
+
+
+                <table id="storesTB" class="table stores-table table-bordered table-hover border">
+                    <thead class="bg-light">
+                      <tr>
+                        <th scope="col">SKU</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Sell Price</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Import Date</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5V35A-2U</td>
+                        <td>Dual USB Car Charger Hardwire Kit for Dash Cam GPS DVR</td>
+                        <td>Splinktech</td>
+                        <td>1.67</td>
+                        <td>Car Accessory</td>
+                        <td>10/11/2018</td>
+                        <td>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#editProductModal"><i class="bi bi-pencil-fill"></i></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteProductModal"><i class="bi bi-trash-fill"></i></a>
+                        </td>
+                      </tr>
+
+
+                    </tbody>
+                </table>
+
+                
+
+
+            </section>
+        </main>
+    </div>
+    
+
+    <!-- JQuery File -->
+    <script src="dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="dist/js/custom.js"></script>
+
+</body>
+</html>
+
+
+
+<!-- Add Product Modal -->
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Product</h5>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingTitle" placeholder="Title">
+                                            <label for="floatingTitle">Title</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Meta Description" id="floatingPDesc" style="height: 100px;"></textarea>
+                                            <label for="floatingPDesc">Product Description</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="floatingCategory" aria-label="Category">
+                                              <option>Option 1</option>
+                                              <option>Option 2</option>
+                                              <option>Option 3</option>
+                                              <option>Option 4</option>
+                                            </select>
+                                            <label for="floatingCategory">Category</label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingSKU" placeholder="SKU">
+                                            <label for="floatingSKU">SKU</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingMPN" placeholder="MPN">
+                                            <label for="floatingMPN">MPN</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingBrand" placeholder="Brand">
+                                            <label for="floatingBrand">Brand</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingBarcode" placeholder="Barcode">
+                                            <label for="floatingBrand">Barcode</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingStockMessage" placeholder="Out of Stock Message">
+                                            <label for="floatingStockMessage">Out of Stock Message</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingType" placeholder="Type">
+                                            <label for="floatingType">Type</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control" id="floatingImpDate" placeholder="Import Date">
+                                            <label for="floatingImpDate">Import Date</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Pricing Information</h5>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <label for="avCost" class="mb-1">Average Cost</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="basic-addon1">&#163;
+                                            </span>
+                                            <input type="number" step ="0.01" class="form-control average-cost" placeholder="0.00" aria-label="Average Cost" aria-describedby="basic-addon1" id="avCost" onchange="toggleSellPriceField()" onkeyup="toggleSellPriceField()">
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="sellPrice" class="mb-1">Sell Price</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="basic-addon2">&#163;
+                                            </span>
+                                            <input type="number" step ="0.01" class="form-control sell-price" placeholder="0.00" aria-label="Sell Price" aria-describedby="basic-addon2" id="sellPrice" onkeyup="calculateProfit()" onchange="calculateProfit()" disabled>
+                                        </div>
+                                    </div>
+
+                                    <div class="col d-flex flex-column">
+                                        <label>Profit: </label>
+
+                                        <div class="profit-block h-100 d-flex align-items-center">
+                                            <span class="poundsProf me-1">0.00</span><span class="percentProf ms-1">100</span>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col-4">
+                                        <label for="vatRate" class="mb-1">VAT Rate</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.01" class="form-control" value="20.00" placeholder="0.00" aria-label="VAT Rate" aria-describedby="basic-addon3" id="vatRate">
+                                            <span class="input-group-text" id="basic-addon3">%
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col d-flex align-items-end">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="applyVAT" checked>
+                                            <label class="form-check-label" for="applyVAT">
+                                              Apply VAT Rate
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Stock Information/Controller</h5>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="floatingStock" placeholder="Stock">
+                                            <label for="floatingStock">Stock</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="floatingCartonQ" placeholder="Carton Quantity">
+                                            <label for="floatingCartonQ">Carton Quantity</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="floatingMinSell" placeholder="Min Sell">
+                                            <label for="floatingMinSell">Min Sell</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="floatingMaxSell" placeholder="Max Sell">
+                                            <label for="floatingMaxSell">Max Sell</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="floatingRLevel" placeholder="Re-Order Level">
+                                            <label for="floatingRLevel">Re-Order Level</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="sellByCarton">
+                                            <label class="form-check-label" for="sellByCarton">
+                                              Sell By Carton
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="warnROrder">
+                                            <label class="form-check-label" for="warnROrder">
+                                              Warn Re-Order
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="warnEmail">
+                                            <label class="form-check-label" for="warnEmail">
+                                              Warn Email
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Dimension/Weight Information</h5>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <label for="netWeight" class="mb-1">Net Weight</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.001" class="form-control" placeholder="0.000" aria-label="Net Weight" aria-describedby="basic-addon4" id="netWeight">
+                                            <span class="input-group-text" id="basic-addon4">KG
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="grossWeight" class="mb-1">Gross Weight</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.001" class="form-control" placeholder="0.000" aria-label="Gross Weight" aria-describedby="basic-addon5" id="grossWeight">
+                                            <span class="input-group-text" id="basic-addon5">KG
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <label for="cNetWeight" class="mb-1">Carton Net Weight</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.001" class="form-control" placeholder="0.000" aria-label="Carton Net Weight" aria-describedby="basic-addon6" id="cNetWeight">
+                                            <span class="input-group-text" id="basic-addon6">KG
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="cGrossWeight" class="mb-1">Carton Gross Weight</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.001" class="form-control" placeholder="0.000" aria-label="Carton Gross Weight" aria-describedby="basic-addon7" id="cGrossWeight">
+                                            <span class="input-group-text" id="basic-addon7">KG
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <label for="unitLength" class="mb-1">Unit Length</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.01" class="form-control" placeholder="0.00" aria-label="Unit Length" aria-describedby="basic-addon7" id="unitLength" onchange="calculateUnitVolume()" onkeyup="calculateUnitVolume()">
+                                            <span class="input-group-text" id="basic-addon7">mm
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="unitWidth" class="mb-1">Unit Width</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.01" class="form-control" placeholder="0.00" aria-label="Unit Width" aria-describedby="basic-addon8" id="unitWidth" onchange="calculateUnitVolume()" onkeyup="calculateUnitVolume()">
+                                            <span class="input-group-text" id="basic-addon8">mm
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="unitHeight" class="mb-1">Unit Height</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.01" class="form-control" placeholder="0.00" aria-label="Unit Height" aria-describedby="basic-addon9" id="unitHeight" onchange="calculateUnitVolume()" onkeyup="calculateUnitVolume()">
+                                            <span class="input-group-text" id="basic-addon9">mm
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <label for="unitVolume" class="mb-1">Unit Volume</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.001" class="form-control" placeholder="0.000" aria-label="Unit Volume" aria-describedby="basic-addon10" id="unitVolume" readonly>
+                                            <span class="input-group-text" id="basic-addon10">cm<sup>3</sup>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="cartonVolume" class="mb-1">Carton Volume</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.001" class="form-control" placeholder="0.000" aria-label="Carton Volume" aria-describedby="basic-addon10" id="cartonVolume">
+                                            <span class="input-group-text" id="basic-addon10">cm<sup>3</sup>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Images</h5>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <input type="file" class="form-control" accept="image/*" id="imageInput" name="imageInput" multiple>
+                                            <label class="input-group-text" for="imageInput">Upload</label>
+                                        </div>
+
+                                        <div class="text-center images-preview">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Meta Information</h5>
+
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingMetaTitle" placeholder="Meta Title">
+                                            <label for="floatingMetaTitle">Meta Title</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingMetaKeyword" placeholder="Meta Keyword">
+                                            <label for="floatingMetaKeyword">Meta Keyword</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Meta Description" id="floatingMetaDescription"></textarea>
+                                            <label for="floatingMetaDescription">Meta Description</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Optional</h5>
+
+                                <div class="row mb-3">
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="publishchck" checked>
+                                            <label class="form-check-label" for="publishchck">
+                                              Publish
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="orderingchck" checked>
+                                            <label class="form-check-label" for="oderingchck">
+                                              Allow Ordering
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="row mb-3">
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="showQtyDischck" checked>
+                                            <label class="form-check-label" for="showQtyDischck">
+                                              Show Quantity Discount
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="applyQtyDischck" checked>
+                                            <label class="form-check-label" for="applyQtyDischck">
+                                              Apply Quantity Discount
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+                                <div class="row mb-3">
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="reviewApprove" checked>
+                                            <label class="form-check-label" for="reviewApprove">
+                                              Review Approve
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="phaseoutchck" checked>
+                                            <label class="form-check-label" for="phaseoutchck">
+                                              Phaseout
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row mb-3">
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="applyCustDisc" checked>
+                                            <label class="form-check-label" for="applyCustDisc">
+                                              Apply Customer Discount
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="showDet" checked>
+                                            <label class="form-check-label" for="showDet">
+                                              Show Detail
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Create New Product</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Edit Product Modal -->
+<div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Product</h5>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingTitle" placeholder="Title">
+                                            <label for="floatingTitle">Title</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Meta Description" id="floatingPDesc" style="height: 100px;"></textarea>
+                                            <label for="floatingPDesc">Product Description</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="floatingCategory" aria-label="Category">
+                                              <option>Option 1</option>
+                                              <option>Option 2</option>
+                                              <option>Option 3</option>
+                                              <option>Option 4</option>
+                                            </select>
+                                            <label for="floatingCategory">Category</label>
+                                          </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingSKU" placeholder="SKU">
+                                            <label for="floatingSKU">SKU</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingMPN" placeholder="MPN">
+                                            <label for="floatingMPN">MPN</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingBrand" placeholder="Brand">
+                                            <label for="floatingBrand">Brand</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingBarcode" placeholder="Barcode">
+                                            <label for="floatingBrand">Barcode</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingStockMessage" placeholder="Out of Stock Message">
+                                            <label for="floatingStockMessage">Out of Stock Message</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingType" placeholder="Type">
+                                            <label for="floatingType">Type</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control" id="floatingImpDate" placeholder="Import Date">
+                                            <label for="floatingImpDate">Import Date</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Pricing Information</h5>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <label for="avCost" class="mb-1">Average Cost</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="basic-addon1">&#163;
+                                            </span>
+                                            <input type="number" step ="0.01" class="form-control average-cost" placeholder="0.00" aria-label="Average Cost" aria-describedby="basic-addon1" id="avCost" onchange="toggleSellPriceField()" onkeyup="toggleSellPriceField()">
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="sellPrice" class="mb-1">Sell Price</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="basic-addon2">&#163;
+                                            </span>
+                                            <input type="number" step ="0.01" class="form-control sell-price" placeholder="0.00" aria-label="Sell Price" aria-describedby="basic-addon2" id="sellPrice" onkeyup="calculateProfit()" onchange="calculateProfit()" disabled>
+                                        </div>
+                                    </div>
+
+                                    <div class="col d-flex flex-column">
+                                        <label>Profit: </label>
+
+                                        <div class="profit-block h-100 d-flex align-items-center">
+                                            <span class="poundsProf me-1">0.00</span><span class="percentProf ms-1">100</span>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col-4">
+                                        <label for="vatRate" class="mb-1">VAT Rate</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.01" class="form-control" value="20.00" placeholder="0.00" aria-label="VAT Rate" aria-describedby="basic-addon3" id="vatRate">
+                                            <span class="input-group-text" id="basic-addon3">%
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col d-flex align-items-end">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="applyVAT" checked>
+                                            <label class="form-check-label" for="applyVAT">
+                                              Apply VAT Rate
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Stock Information/Controller</h5>
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="floatingStock" placeholder="Stock">
+                                            <label for="floatingStock">Stock</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="floatingCartonQ" placeholder="Carton Quantity">
+                                            <label for="floatingCartonQ">Carton Quantity</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="floatingMinSell" placeholder="Min Sell">
+                                            <label for="floatingMinSell">Min Sell</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="floatingMaxSell" placeholder="Max Sell">
+                                            <label for="floatingMaxSell">Max Sell</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row g-3 mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="floatingRLevel" placeholder="Re-Order Level">
+                                            <label for="floatingRLevel">Re-Order Level</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="sellByCarton">
+                                            <label class="form-check-label" for="sellByCarton">
+                                              Sell By Carton
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="warnROrder">
+                                            <label class="form-check-label" for="warnROrder">
+                                              Warn Re-Order
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="warnEmail">
+                                            <label class="form-check-label" for="warnEmail">
+                                              Warn Email
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Dimension/Weight Information</h5>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <label for="netWeight" class="mb-1">Net Weight</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.001" class="form-control" placeholder="0.000" aria-label="Net Weight" aria-describedby="basic-addon4" id="netWeight">
+                                            <span class="input-group-text" id="basic-addon4">KG
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="grossWeight" class="mb-1">Gross Weight</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.001" class="form-control" placeholder="0.000" aria-label="Gross Weight" aria-describedby="basic-addon5" id="grossWeight">
+                                            <span class="input-group-text" id="basic-addon5">KG
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <label for="cNetWeight" class="mb-1">Carton Net Weight</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.001" class="form-control" placeholder="0.000" aria-label="Carton Net Weight" aria-describedby="basic-addon6" id="cNetWeight">
+                                            <span class="input-group-text" id="basic-addon6">KG
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="cGrossWeight" class="mb-1">Carton Gross Weight</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.001" class="form-control" placeholder="0.000" aria-label="Carton Gross Weight" aria-describedby="basic-addon7" id="cGrossWeight">
+                                            <span class="input-group-text" id="basic-addon7">KG
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <label for="unitLength" class="mb-1">Unit Length</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.01" class="form-control" placeholder="0.00" aria-label="Unit Length" aria-describedby="basic-addon7" id="unitLength" onchange="calculateUnitVolume()" onkeyup="calculateUnitVolume()">
+                                            <span class="input-group-text" id="basic-addon7">mm
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="unitWidth" class="mb-1">Unit Width</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.01" class="form-control" placeholder="0.00" aria-label="Unit Width" aria-describedby="basic-addon8" id="unitWidth" onchange="calculateUnitVolume()" onkeyup="calculateUnitVolume()">
+                                            <span class="input-group-text" id="basic-addon8">mm
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="unitHeight" class="mb-1">Unit Height</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.01" class="form-control" placeholder="0.00" aria-label="Unit Height" aria-describedby="basic-addon9" id="unitHeight" onchange="calculateUnitVolume()" onkeyup="calculateUnitVolume()">
+                                            <span class="input-group-text" id="basic-addon9">mm
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row g-3 mb-3">
+
+                                    <div class="col">
+                                        <label for="unitVolume" class="mb-1">Unit Volume</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.001" class="form-control" placeholder="0.000" aria-label="Unit Volume" aria-describedby="basic-addon10" id="unitVolume" readonly>
+                                            <span class="input-group-text" id="basic-addon10">cm<sup>3</sup>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="cartonVolume" class="mb-1">Carton Volume</label>
+                                        <div class="input-group">
+                                            <input type="number" step ="0.001" class="form-control" placeholder="0.000" aria-label="Carton Volume" aria-describedby="basic-addon10" id="cartonVolume">
+                                            <span class="input-group-text" id="basic-addon10">cm<sup>3</sup>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Images</h5>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <input type="file" class="form-control" accept="image/*" id="imageInput" name="imageInput" multiple>
+                                            <label class="input-group-text" for="imageInput">Upload</label>
+                                        </div>
+
+                                        <div class="text-center images-preview">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Meta Information</h5>
+
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingMetaTitle" placeholder="Meta Title">
+                                            <label for="floatingMetaTitle">Meta Title</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingMetaKeyword" placeholder="Meta Keyword">
+                                            <label for="floatingMetaKeyword">Meta Keyword</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Meta Description" id="floatingMetaDescription"></textarea>
+                                            <label for="floatingMetaDescription">Meta Description</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Optional</h5>
+
+                                <div class="row mb-3">
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="publishchck" checked>
+                                            <label class="form-check-label" for="publishchck">
+                                              Publish
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="orderingchck" checked>
+                                            <label class="form-check-label" for="oderingchck">
+                                              Allow Ordering
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="row mb-3">
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="showQtyDischck" checked>
+                                            <label class="form-check-label" for="showQtyDischck">
+                                              Show Quantity Discount
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="applyQtyDischck" checked>
+                                            <label class="form-check-label" for="applyQtyDischck">
+                                              Apply Quantity Discount
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+                                <div class="row mb-3">
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="reviewApprove" checked>
+                                            <label class="form-check-label" for="reviewApprove">
+                                              Review Approve
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="phaseoutchck" checked>
+                                            <label class="form-check-label" for="phaseoutchck">
+                                              Phaseout
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row mb-3">
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="applyCustDisc" checked>
+                                            <label class="form-check-label" for="applyCustDisc">
+                                              Apply Customer Discount
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="showDet" checked>
+                                            <label class="form-check-label" for="showDet">
+                                              Show Detail
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Update Product</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Delete Product Modal -->
+<div class="modal fade" id="deleteProductModal" tabindex="-1" aria-labelledby="deleteProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="deleteProductModalLabel">Delete Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+            <i class="bi bi-exclamation-triangle-fill text-danger fs-1"></i>
+            <p>Are you sure you want to delete this product? This action is irreversable!</p>
+        </div>
+        <div class="modal-footer border-0 d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-danger px-4">Yes</button>
+        </div>
+      </div>
+    </div>
+</div>
+
