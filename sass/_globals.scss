@@ -51,6 +51,7 @@ p {
 	margin: 0;
 }
 
+
 .search-form{
 	.input-group{
 		width: 400px;
@@ -160,5 +161,89 @@ p {
 		font-size: 16px;
 		font-weight: 700;
 		text-transform: uppercase;
+	}
+}
+
+
+.data-tables{
+
+	input[type="search"]{
+		font-size: 16px;
+	}
+
+	select{
+		font-size: 16px;
+		padding: 0 .5em;
+		text-align: center;
+	}
+	
+	.row{
+		&:nth-child(1){
+			margin-bottom: .5em;
+
+			input[type='search']{
+				&:focus{
+					box-shadow: none;
+				}
+			}
+		}
+
+		&:nth-child(2){
+			margin-bottom: .5em;
+		}
+	}
+	.stores-table{
+		thead{
+			font-size: 15px;
+			
+		}
+
+		tbody{
+			font-size: 14px;
+
+			td{
+				padding-top: 1em;
+				padding-bottom: 1em;
+
+				a{
+					display: inline-block;
+					padding: 1px;
+				}
+
+				img{
+					width: 100%;
+					max-width: 100px;
+					height: auto;
+				}
+			}
+		}
+	}
+
+	table{
+		text-align: center;
+		td{
+			vertical-align:middle;
+			input{
+				max-width: 80px;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+			a{
+				text-decoration: none;
+				color: unset;
+				transition: $ease-in-out-1;
+				display: inline-block;
+				font-size: 16px;
+	
+				// &:not(:last-child){
+				//     margin-right: .1em;
+				// }
+	
+				&:hover{
+					color: $l-blue;
+				}
+			}
+		}
 	}
 }

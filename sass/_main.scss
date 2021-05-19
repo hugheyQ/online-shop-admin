@@ -62,6 +62,7 @@
                 color: $vd-grey;
                 transition: $ease-in-out-1;
                 border-radius: 5px;
+                margin-bottom: .2em;
 
                 &:hover, &.active{
                     background-color: $off-white;
@@ -73,182 +74,145 @@
 
 }
 
-main{
+.main-section{
     height: 100vh;
     overflow-y: auto;
-    &.main-section{
-        .main-section-container{
-            .breadcrumb{
-                margin-bottom: .5em;
-                margin-top: .5em;
+    .main-section-container{
+        .breadcrumb{
+            margin-bottom: .5em;
+            margin-top: .5em;
+        }
+
+        h1{
+            color: #5a5c69;
+            font-weight: 400;
+            font-size: 33.6px;
+            margin-bottom: 0;
+        }
+
+        .cta-btn{
+            background-color: $l-blue;
+            color: white;
+            text-transform: capitalize;
+            padding: .5em 1em;
+            border: 1px solid $l-blue;
+            transition: $ease-in-out-1;
+
+            &:hover{
+                background-color: $d-blue;
+                border: 1px solid $d-blue;
             }
+        }
 
-            h1{
-                color: #5a5c69;
-                font-weight: 400;
-                font-size: 33.6px;
-                margin-bottom: .5em;
-            }
-
-            .cta-btn{
-                background-color: $l-blue;
-                color: white;
-                text-transform: capitalize;
-                padding: .5em 1em;
-                border: 1px solid $l-blue;
-                transition: $ease-in-out-1;
-
-                &:hover{
-                    background-color: $d-blue;
-                    border: 1px solid $d-blue;
+        .overview{
+            .card{
+                border-radius: 5px;
+                .card-title{
+                    margin-bottom: .1em;
                 }
-            }
 
-            .overview{
-                .card{
-                    border-radius: 5px;
+                .stat{
+                    color: #5a5c69;
+                }
+
+                &.card-1{
+                    border-left: 4px solid $violet;
+
                     .card-title{
-                        margin-bottom: .1em;
-                    }
-
-                    .stat{
-                        color: #5a5c69;
-                    }
-
-                    &.card-1{
-                        border-left: 4px solid $violet;
-
-                        .card-title{
-                            color: $violet;
-                        }
-                    }
-
-                    &.card-2{
-                        border-left: 4px solid $green;
-
-                        .card-title{
-                            color: $green;
-                        }
-                    }
-
-                    &.card-3{
-                        border-left: 4px solid $lime;
-
-                        .card-title{
-                            color: $lime;
-                        }
-                    }
-
-                    &.card-4{
-                        border-left: 4px solid $gold;
-
-                        .card-title{
-                            color: $gold;
-                        }
-                    }
-
-                    &.card-5{
-                        border-left: 4px solid $red;
-
-                        .card-title{
-                            color: $red;
-                        }
-                    }
-
-                    &.card-6{
-                        border-left: 4px solid $purple;
-
-                        .card-title{
-                            color: $purple;
-                        }
-                    }
-
-                    &.card-7{
-                        border-left: 4px solid $pink;
-
-                        .card-title{
-                            color: $pink;
-                        }
-                    }
-
-                    &.card-8{
-                        border-left: 4px solid $brown;
-
-                        .card-title{
-                            color: $brown;
-                        }
+                        color: $violet;
                     }
                 }
-                .right{
-                    display: flex;
-                    align-items: center;
-                    i{
-                        font-size: 37px;
-                        color: #dddfeb;
-                        font-weight: 900;
+
+                &.card-2{
+                    border-left: 4px solid $green;
+
+                    .card-title{
+                        color: $green;
+                    }
+                }
+
+                &.card-3{
+                    border-left: 4px solid $lime;
+
+                    .card-title{
+                        color: $lime;
+                    }
+                }
+
+                &.card-4{
+                    border-left: 4px solid $gold;
+
+                    .card-title{
+                        color: $gold;
+                    }
+                }
+
+                &.card-5{
+                    border-left: 4px solid $red;
+
+                    .card-title{
+                        color: $red;
+                    }
+                }
+
+                &.card-6{
+                    border-left: 4px solid $purple;
+
+                    .card-title{
+                        color: $purple;
+                    }
+                }
+
+                &.card-7{
+                    border-left: 4px solid $pink;
+
+                    .card-title{
+                        color: $pink;
+                    }
+                }
+
+                &.card-8{
+                    border-left: 4px solid $brown;
+
+                    .card-title{
+                        color: $brown;
                     }
                 }
             }
-
-            .dataTables_wrapper{
-                
-                .row{
-                    &:nth-child(1){
-                        margin-bottom: .5em;
-
-                        input[type='search']{
-                            &:focus{
-                                box-shadow: none;
-                            }
-                        }
-                    }
-
-                    &:nth-child(2){
-                        margin-bottom: .5em;
-                    }
-                }
-                .stores-table{
-                    thead{
-                        font-size: 15px;
-                        
-                    }
-    
-                    tbody{
-                        font-size: 14px;
-    
-                        td{
-                            padding-top: 1em;
-                            padding-bottom: 1em;
-
-                            a{
-                                display: inline-block;
-                                padding: 1px;
-                            }
-
-                            img{
-                                width: 100%;
-                                max-width: 100px;
-                                height: auto;
-                            }
-                        }
-                    }
-                }
-
-                table{
-                    text-align: center;
-                    a{
-                        text-decoration: none;
-                        color: unset;
-                        transition: $ease-in-out-1;
-                        display: inline-block;
-
-                        &:hover{
-                            color: $l-blue;
-                        }
-                    }
+            .right{
+                display: flex;
+                align-items: center;
+                i{
+                    font-size: 37px;
+                    color: #dddfeb;
+                    font-weight: 900;
                 }
             }
-            
+        }
+
+        
+    }
+}
+
+#viewOrderModal{
+    .action-block{
+        button{
+            font-size: 14px;
+
+            &:not(:last-child){
+                margin-right: .4em;
+            }
         }
     }
+
+    .delivery-address{
+        button{
+            font-size: 14px;
+
+            &:focus{
+                box-shadow: none;
+            }
+        }
+    }
+    
 }

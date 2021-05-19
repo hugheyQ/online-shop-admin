@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function () {
 
     
@@ -38,16 +35,19 @@ $(document).ready(function () {
 
     
 
-    $('#imageInput').on('change', function() {
+    $('#imageInput').change(function() {
         $('.images-preview').html("");
         imagesPreview(this, 'div.images-preview');
     });
+
+
+    
+
     
 
 });
 
-
-function toggleCheckAll(clickedID) {
+function toggleCheckAll (clickedID) {
     let row = document.querySelector('#' + clickedID).parentNode.parentNode;
 
     let checkboxes = row.querySelectorAll('input[type="checkbox"]');
@@ -76,6 +76,7 @@ function toggleCheckAll(clickedID) {
 
 
 }
+
 
 function toggleSellPriceField() {
     let sellPriceField = document.querySelector('.sell-price');

@@ -17,7 +17,7 @@
 
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="dist/css/bootstrap-icons-1.4.1/bootstrap-icons.css">
+    <link rel="stylesheet" href="dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
 
     <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
     <link rel="stylesheet" href="dist/css/bootstrap5-dropdown-ml-hack-hover.css">
@@ -61,7 +61,7 @@
                 </a>
                 <div class="collapse sub-menu" id="collapseOrders">
                     <div class="card card-body">
-                        <a class="nav-link" href="#">Completed</a>
+                        <a class="nav-link" href="completed-orders.html">Completed</a>
                         <a class="nav-link" href="#">Pending</a>
                         <a class="nav-link" href="#">Temporary</a>
                     </div>
@@ -229,35 +229,39 @@
                 </div>
 
 
-                <table id="storesTB" class="table stores-table table-bordered table-hover border">
-                    <thead class="bg-light">
-                      <tr>
-                        <th scope="col">SKU</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Brand</th>
-                        <th scope="col">Sell Price</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Import Date</th>
-                        <th scope="col">Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>5V35A-2U</td>
-                        <td>Dual USB Car Charger Hardwire Kit for Dash Cam GPS DVR</td>
-                        <td>Splinktech</td>
-                        <td>1.67</td>
-                        <td>Car Accessory</td>
-                        <td>10/11/2018</td>
-                        <td>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#editProductModal"><i class="bi bi-pencil-fill"></i></a>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteProductModal"><i class="bi bi-trash-fill"></i></a>
-                        </td>
-                      </tr>
-
-
-                    </tbody>
-                </table>
+                <div class="card data-tables">
+                    <div class="card-body">
+                        <table id="storesTB" class="table stores-table table-bordered table-hover border">
+                            <thead class="bg-light">
+                              <tr>
+                                <th scope="col">SKU</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Brand</th>
+                                <th scope="col">Sell Price</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Import Date</th>
+                                <th scope="col">Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>5V35A-2U</td>
+                                <td>Dual USB Car Charger Hardwire Kit for Dash Cam GPS DVR</td>
+                                <td>Splinktech</td>
+                                <td>1.67</td>
+                                <td>Car Accessory</td>
+                                <td>10/11/2018</td>
+                                <td>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#editProductModal"><i class="bi bi-pencil-fill"></i></a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deleteProductModal"><i class="bi bi-trash-fill"></i></a>
+                                </td>
+                              </tr>
+        
+        
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
                 
 
