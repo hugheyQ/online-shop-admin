@@ -33,6 +33,11 @@ $(document).ready(function () {
         ordering:true
     });
 
+    $('#findCustomersTB').DataTable({
+        ordering:true,
+        searching: false
+    });
+
     
 
     $('#imageInput').change(function() {

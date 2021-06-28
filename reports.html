@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="stores.html"><i class="fi-rs-shop me-2"></i> Stores</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseInventory" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fi-rs-box me-2"></i>Inventory  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseInventory">
+                    <div class="card card-body">
+                        <a class="nav-link" href="products.html">Products</a>
+                        <a class="nav-link" href="product-category.html">Category</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-shopping-cart-add me-2"></i>Orders <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseOrders">
+                    <div class="card card-body">
+                        <a class="nav-link" href="completed-orders.html">Completed</a>
+                        <a class="nav-link" href="pending-orders.html">Pending</a>
+                        <a class="nav-link" href="temporary-orders.html">Temporary</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="invoices.html"><i class="fi-rs-receipt me-2"></i>Invoices</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-user me-2"></i>Customers <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseCustomers">
+                    <div class="card card-body">
+                        <a class="nav-link" href="customers.html">Customers</a>
+                        <a class="nav-link" href="potential-customers.html">Potential Customers</a>
+                        <a class="nav-link" href="find-customers.html">Find Customers By Image</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseReports" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-document me-2 "></i>Reports <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseReports">
+                    <div class="card card-body">
+                        <a class="nav-link active" href="reports.html">Reports</a>
+                        <a class="nav-link" href="trending.html">What's Trending</a>
+                        <a class="nav-link" href="sales-&-profit.html">Sales & Profit</a>
+                        <a class="nav-link" href="accounts.html">Accounts</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseShipping" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-school-bus me-2"></i>Shipping <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseShipping">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Shipping Rates</a>
+                        <a class="nav-link" href="#">Shipping Auth</a>
+                        <a class="nav-link" href="#">Postage</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSiteInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-info me-2"></i>Site Info <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSiteInfo">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Site Header</a>
+                        <a class="nav-link" href="#">Gateways</a>
+                        <a class="nav-link" href="#">Site Top Header</a>
+                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#">Terms & Conditions</a>
+                        <a class="nav-link" href="#">Delivery Info</a>
+                        <a class="nav-link" href="#">FAQs</a>
+                        <a class="nav-link" href="#">Order Collections</a>
+                        <a class="nav-link" href="#">Opening Times</a>
+                        <a class="nav-link" href="#">Map Directions</a>
+                        <a class="nav-link" href="#">Privacy Policy</a>
+                        <a class="nav-link" href="#">Security Policy</a>
+                        <a class="nav-link" href="#">Cookie Policy</a>
+                    </div>
+                </div>
+                
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEmailSettings" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-envelope me-2"></i>Email Settings <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEmailSettings">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Mail Server</a>
+                        <a class="nav-link" href="#">Customers</a>
+                        <a class="nav-link" href="#">Forgot Password</a>
+                        <a class="nav-link" href="#">Orders</a>
+                        <a class="nav-link" href="#">Tracking Emails</a>
+                        <a class="nav-link" href="#">Invoices</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseMarketing" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-megaphone me-2"></i>Marketing <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseMarketing">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Email Loader</a>
+                        <a class="nav-link" href="#">Send Emails</a>
+                        <a class="nav-link" href="#">Froogle</a>
+                        <a class="nav-link" href="#">RSS Feeds</a>
+                        <a class="nav-link" href="#">Validate NL Emails</a>
+                        <a class="nav-link" href="#">Lions Home</a>
+                        <a class="nav-link" href="#">Site Map</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapsePromotions" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-ticket me-2"></i>Promotions <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapsePromotions">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">HomePage Text</a>
+                        <a class="nav-link" href="#">Best Selling</a>
+                        <a class="nav-link" href="#">Most Viewed</a>
+                        <a class="nav-link" href="#">Featured Products</a>
+                        <a class="nav-link" href="#">Deals</a>
+                        <a class="nav-link" href="#">Take All</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="#"><i class="fi-rs-building me-2"></i>eBay Management Center</a>
+                <a class="nav-link" href="#"><i class="fi-rs-list me-2"></i>eBay Listings Software</a>
+                <a class="nav-link" href="#"><i class="fi-rs-gallery me-2"></i>Images Data Center</a>
+                <a class="nav-link" href="#"><i class="fi-rs-money me-2"></i>Purchasing</a>
+                <a class="nav-link" href="#"><i class="fi-rs-calculator me-2"></i>OSC Management</a>
+                <a class="nav-link" href="#"><i class="fi-rs-life-ring me-2"></i>eBay Support Management</a>
+                <a class="nav-link" href="#"><i class="fi-rs-mode-portrait me-2"></i>User Image</a>
+            </nav>
+        </div>
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Reports</li>
+                    </ol>
+                </nav>
+                
+                <h1>SKU Reports</h1>
+
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <p>View SKU Reports Here</p>
+
+                </div>
+
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <form action="" class="report-form">
+                            <div class="row">
+
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="sku" placeholder="SKU" required>
+                                        <label for="floatingSName">SKU</label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control" id="sDate" placeholder="Start Date" required>
+                                        <label for="sDate">Start Date</label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control" id="eDate" placeholder="End Date" required>
+                                        <label for="eDate">End Date</label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary w-100 form-control py-3">SEARCH</button>
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                
+
+
+                <div class="card data-tables d-none" id="searchResult">
+                    <div class="card-body">
+
+                        <table id="findCustomersTB" class="table stores-table table-bordered table-hover border">
+                            <thead class="bg-light">
+                                <tr>
+                                  <th scope="col">Customer Name</th>
+                                  <th scope="col">Email Address</th>
+                                  <th scope="col">Order Date</th>
+                                  <th scope="col">SKU</th>
+                                  <th scope="col">Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>John Smith</td>
+                                <td>john@example.com</td>
+                                <td>9/99/9999</td>
+                                <td>11111111</td>
+                                <td>100</td>
+                            </tr>
+                        
+                        
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+                
+
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- JQuery File -->
+    <script src="dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <script>
+        const reportForm = document.querySelector('.report-form');
+        const searchResult = document.querySelector('#searchResult');
+
+        reportForm.addEventListener('submit', e => {
+            e.preventDefault();
+
+            searchResult.classList.remove('d-none');
+            
+        });
+    </script>
+
+    <!-- Custom Javascipt -->
+    <script src="dist/js/custom.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
