@@ -403,4 +403,20 @@ p {
 .data-tables table td a:hover {
   color: #4a6fdc;
 }
+
+.shipping-blocks a {
+  text-decoration: none;
+  color: unset;
+  transition: all 300ms ease-in-out;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.shipping-blocks a:not(:last-child) {
+  margin-right: .3em;
+}
+
+.shipping-blocks a:hover {
+  color: #4a6fdc;
+}
 /*# sourceMappingURL=style.css.map */

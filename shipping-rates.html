@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="stores.html"><i class="fi-rs-shop me-2"></i> Stores</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseInventory" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fi-rs-box me-2"></i>Inventory  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseInventory">
+                    <div class="card card-body">
+                        <a class="nav-link" href="products.html">Products</a>
+                        <a class="nav-link" href="product-category.html">Category</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-shopping-cart-add me-2"></i>Orders <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseOrders">
+                    <div class="card card-body">
+                        <a class="nav-link" href="completed-orders.html">Completed</a>
+                        <a class="nav-link" href="pending-orders.html">Pending</a>
+                        <a class="nav-link" href="temporary-orders.html">Temporary</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="invoices.html"><i class="fi-rs-receipt me-2"></i>Invoices</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-user me-2"></i>Customers <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseCustomers">
+                    <div class="card card-body">
+                        <a class="nav-link" href="customers.html">Customers</a>
+                        <a class="nav-link" href="potential-customers.html">Potential Customers</a>
+                        <a class="nav-link" href="find-customers.html">Find Customers By Image</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseReports" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-document me-2 "></i>Reports <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseReports">
+                    <div class="card card-body">
+                        <a class="nav-link" href="reports.html">Reports</a>
+                        <a class="nav-link" href="trending.html">What's Trending</a>
+                        <a class="nav-link" href="sales-&-profit.html">Sales & Profit</a>
+                        <!-- <a class="nav-link" href="accounts.html">Accounts</a> -->
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseShipping" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-school-bus me-2"></i>Shipping <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseShipping">
+                    <div class="card card-body">
+                        <a class="nav-link active" href="shipping-rates.html">Shipping Rates</a>
+                        <a class="nav-link" href="shipping-auth.html">Shipping Auth</a>
+                        <a class="nav-link" href="postage.html">Postage</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSiteInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-info me-2"></i>Site Info <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSiteInfo">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Site Header</a>
+                        <a class="nav-link" href="#">Gateways</a>
+                        <a class="nav-link" href="#">Site Top Header</a>
+                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#">Terms & Conditions</a>
+                        <a class="nav-link" href="#">Delivery Info</a>
+                        <a class="nav-link" href="#">FAQs</a>
+                        <a class="nav-link" href="#">Order Collections</a>
+                        <a class="nav-link" href="#">Opening Times</a>
+                        <a class="nav-link" href="#">Map Directions</a>
+                        <a class="nav-link" href="#">Privacy Policy</a>
+                        <a class="nav-link" href="#">Security Policy</a>
+                        <a class="nav-link" href="#">Cookie Policy</a>
+                    </div>
+                </div>
+                
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEmailSettings" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-envelope me-2"></i>Email Settings <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEmailSettings">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Mail Server</a>
+                        <a class="nav-link" href="#">Customers</a>
+                        <a class="nav-link" href="#">Forgot Password</a>
+                        <a class="nav-link" href="#">Orders</a>
+                        <a class="nav-link" href="#">Tracking Emails</a>
+                        <a class="nav-link" href="#">Invoices</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseMarketing" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-megaphone me-2"></i>Marketing <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseMarketing">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">Email Loader</a>
+                        <a class="nav-link" href="#">Send Emails</a>
+                        <a class="nav-link" href="#">Froogle</a>
+                        <a class="nav-link" href="#">RSS Feeds</a>
+                        <a class="nav-link" href="#">Validate NL Emails</a>
+                        <a class="nav-link" href="#">Lions Home</a>
+                        <a class="nav-link" href="#">Site Map</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapsePromotions" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-ticket me-2"></i>Promotions <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapsePromotions">
+                    <div class="card card-body">
+                        <a class="nav-link" href="#">HomePage Text</a>
+                        <a class="nav-link" href="#">Best Selling</a>
+                        <a class="nav-link" href="#">Most Viewed</a>
+                        <a class="nav-link" href="#">Featured Products</a>
+                        <a class="nav-link" href="#">Deals</a>
+                        <a class="nav-link" href="#">Take All</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="#"><i class="fi-rs-building me-2"></i>eBay Management Center</a>
+                <a class="nav-link" href="#"><i class="fi-rs-list me-2"></i>eBay Listings Software</a>
+                <a class="nav-link" href="#"><i class="fi-rs-gallery me-2"></i>Images Data Center</a>
+                <a class="nav-link" href="#"><i class="fi-rs-money me-2"></i>Purchasing</a>
+                <a class="nav-link" href="#"><i class="fi-rs-calculator me-2"></i>OSC Management</a>
+                <a class="nav-link" href="#"><i class="fi-rs-life-ring me-2"></i>eBay Support Management</a>
+                <a class="nav-link" href="#"><i class="fi-rs-mode-portrait me-2"></i>User Image</a>
+            </nav>
+        </div>
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Shipping</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Shipping Rates</li>
+                    </ol>
+                </nav>
+                
+                <h1>Shipping Management</h1>
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>Manage Shipping Here</p>
+                </div>
+
+
+                <div class="row mb-4 g-3 shipping-blocks">
+
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">
+                                Shipping Countries
+                            </div>
+                            <div class="card-body">
+                                <select class="form-select" size="5">
+                                    <option value="14">Afghanistan (0) </option>
+                                    <option selected="selected" value="40">Albania (1) </option>
+                                    <option value="86">ANDORRA (0) </option>
+                                    <option value="74">ARGENTINA (0) </option>
+                                    <option value="19">Australia (1) </option>
+                                    <option value="41">Austria (1) </option>
+                                    <option value="61">Belarus (0) </option>
+                                    <option value="10">Belgium (1) </option>
+                                    <option value="83">BOSNIA AND HERZEGOVINA (0) </option>
+                                    <option value="26">Bosnia and Herzegowina (0) </option>
+                                    <option value="15">Brazil (0) </option>
+                                    <option value="44">Bulgaria (1) </option>
+                                    <option value="27">Canada (1) </option>
+                                    <option value="4">China (0) </option>
+                                    <option value="65">Cote d'Ivoire (0) </option>
+                                    <option value="56">CROATIA (1) </option>
+                                    <option value="47">Croatia (local name: Hrvatska) (0) </option>
+                                    <option value="28">Cyprus (1) </option>
+                                    <option value="48">Czech Republic (1) </option>
+                                    <option value="23">Denmark (1) </option>
+                                    <option value="67">EN (0) </option>
+                                    <option value="21">Estonia (1) </option>
+                                    <option value="30">Finland (1) </option>
+                                    <option value="7">France (1) </option>
+                                    <option value="31">France, Metropolitan (0) </option>
+                                    <option value="62">Gambia (0) </option>
+                                    <option value="6">Germany (1) </option>
+                                    <option value="81">GIBRALTAR (0) </option>
+                                    <option value="93">GREAT BRITAIN (0) </option>
+                                    <option value="20">Greece (1) </option>
+                                    <option value="92">GUAM (0) </option>
+                                    <option value="70">HONDURAS (0) </option>
+                                    <option value="29">Hungary (1) </option>
+                                    <option value="80">ICELAND (0) </option>
+                                    <option value="50">India (0) </option>
+                                    <option value="12">Ireland (1) </option>
+                                    <option value="24">Israel (0) </option>
+                                    <option value="11">Italy (1) </option>
+                                    <option value="49">Jamaica (0) </option>
+                                    <option value="76">JAPAN (0) </option>
+                                    <option value="78">KENYA (0) </option>
+                                    <option value="35">Lao People's Democratic Republic (0) </option>
+                                    <option value="34">Latvia (1) </option>
+                                    <option value="22">Lithuania (1) </option>
+                                    <option value="55">LUXEMBOURG (1) </option>
+                                    <option value="82">MACEDONIA (0) </option>
+                                    <option value="53">Macedonia, the former Yugoslav Republic of (0) </option>
+                                    <option value="77">MALAYSIA (0) </option>
+                                    <option value="8">Malta (1) </option>
+                                    <option value="63">Martinique (0) </option>
+                                    <option value="64">Mexico (0) </option>
+                                    <option value="85">MOLDOVA (0) </option>
+                                    <option value="84">MONTENEGRO (0) </option>
+                                    <option value="18">Netherlands (1) </option>
+                                    <option value="72">NO (0) </option>
+                                    <option value="39">Norway (0) </option>
+                                    <option value="73">OMAN (0) </option>
+                                    <option value="71">OX (0) </option>
+                                    <option value="3">Pakistan (0) </option>
+                                    <option value="60">Peru (0) </option>
+                                    <option value="59">Philippines (0) </option>
+                                    <option value="5">Poland (1) </option>
+                                    <option value="13">Portugal (1) </option>
+                                    <option value="89">PUERTO RICO (0) </option>
+                                    <option value="16">Romania (1) </option>
+                                    <option value="90">RUSSIA (0) </option>
+                                    <option value="36">Russian Federation (1) </option>
+                                    <option value="88">SAN MARINO (0) </option>
+                                    <option value="45">Saudi Arabia (0) </option>
+                                    <option value="51">Senegal (0) </option>
+                                    <option value="87">SERBIA (0) </option>
+                                    <option value="25">Singapore (0) </option>
+                                    <option value="79">SLOVAKIA (0) </option>
+                                    <option value="37">Slovakia (Slovak Republic) (1) </option>
+                                    <option value="17">Slovenia (1) </option>
+                                    <option value="75">SOUTH KOREA (0) </option>
+                                    <option value="9">Spain (1) </option>
+                                    <option value="32">Sweden (1) </option>
+                                    <option value="33">Switzerland (0) </option>
+                                    <option value="38">Thailand (0) </option>
+                                    <option value="46">Turkey (0) </option>
+                                    <option value="54">UB6 7LH (0) </option>
+                                    <option value="58">Uganda (0) </option>
+                                    <option value="43">Ukraine (0) </option>
+                                    <option value="69">UNDEFINED (0) </option>
+                                    <option value="42">United Arab Emirates (0) </option>
+                                    <option value="1">United Kingdom (5) </option>
+                                    <option value="2">United States (1) </option>
+                                    <option value="91">VIRGIN ISLANDS (U.S.) (0) </option>
+                                    <option value="66">WE (0) </option>
+                                    <option value="68">WO (0) </option>
+                                    <option value="52">Yugoslavia (0) </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">
+                                Shipping Couriers
+
+                                <span class="float-end">
+
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#addCourierModal" title="Add New Courier"><i class="bi bi-plus-lg"></i>
+                                    </a>
+
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#editCourierModal" title="Edit Courier"><i class="bi bi-pencil"></i></a>
+
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deleteCourierModal" title="Delete Courier"><i class="bi bi-trash"></i></a>
+
+                                    <a href="#" title="Move Up"><i class="bi bi-arrow-up"></i></a>
+
+                                    <a href="#" title="Move Down"><i class="bi bi-arrow-down"></i></a>
+
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#moveCourierModal" title="Re-assign Courier"><i class="bi bi-arrow-left-right"></i></a>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <select class="form-select" size="5">
+                                    <option selected>UK Only Royal Mail And Parcelforce</option>
+                                    <option value="1">Order Collection</option>
+                                    <option value="2">Europe Shipping</option>
+                                    <option value="3">Andorra</option>
+                                    <option value="4">Armenia</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">
+                                Shipping Services
+
+                                <span class="float-end">
+
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#addServiceModal" title="Add New Service"><i class="bi bi-plus-lg"></i>
+                                    </a>
+
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#editServiceModal" title="Edit Service"><i class="bi bi-pencil"></i></a>
+
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deleteServiceModal" title="Delete Service"><i class="bi bi-trash"></i></a>
+
+                                    <a href="#" title="Move Up"><i class="bi bi-arrow-up"></i></a>
+
+                                    <a href="#" title="Move Down"><i class="bi bi-arrow-down"></i></a>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <select class="form-select" size="5">
+                                    <option selected>Next Day</option>
+                                    <option value="1">Super Saver</option>
+                                    <option value="2">Drop Shipping</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-8">
+
+                        <div class="card data-tables">
+                            <form action="">
+
+                                <div class="card-body">
+                                <table class="table table-bordered table-hover border">
+                                    <thead class="bg-light">
+                                      <tr>
+                                        <th scope="col">Weight</th>
+                                        <th scope="col">Cost</th>
+                                        <th scope="col">Charge</th>
+                                        <th scope="col">Profit</th>
+                                        <th scope="col">Profit %</th>
+                                        <th scope="col">Actions</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm d-inline-block" step="0.01"> %
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £0.50
+                                        </td>
+                                        <td>
+                                            11.628%
+                                        </td>
+                                        <td>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal"><i class="bi bi-trash-fill"></i></a>
+                                        </td>
+                                      </tr>
+                
+                                      <tr>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm d-inline-block" step="0.01"> %
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £0.50
+                                        </td>
+                                        <td>
+                                            11.628%
+                                        </td>
+                                        <td>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal"><i class="bi bi-trash-fill"></i></a>
+                                        </td>
+                                      </tr>
+
+
+                                      <tr>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm d-inline-block" step="0.01"> %
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £0.50
+                                        </td>
+                                        <td>
+                                            11.628%
+                                        </td>
+                                        <td>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal"><i class="bi bi-trash-fill"></i></a>
+                                        </td>
+                                      </tr>
+
+
+                                      <tr>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm d-inline-block" step="0.01"> %
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £0.50
+                                        </td>
+                                        <td>
+                                            11.628%
+                                        </td>
+                                        <td>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal"><i class="bi bi-trash-fill"></i></a>
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm d-inline-block" step="0.01"> %
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £0.50
+                                        </td>
+                                        <td>
+                                            11.628%
+                                        </td>
+                                        <td>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal"><i class="bi bi-trash-fill"></i></a>
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm d-inline-block" step="0.01"> %
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £0.50
+                                        </td>
+                                        <td>
+                                            11.628%
+                                        </td>
+                                        <td>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal"><i class="bi bi-trash-fill"></i></a>
+                                        </td>
+                                      </tr>
+
+
+                                      <tr>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm d-inline-block" step="0.01"> %
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £0.50
+                                        </td>
+                                        <td>
+                                            11.628%
+                                        </td>
+                                        <td>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal"><i class="bi bi-trash-fill"></i></a>
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm d-inline-block" step="0.01"> %
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £0.50
+                                        </td>
+                                        <td>
+                                            11.628%
+                                        </td>
+                                        <td>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal"><i class="bi bi-trash-fill"></i></a>
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td>
+                                            <input type="number" class="form-control form-control-sm d-inline-block" step="0.01"> %
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £ <input type="number" class="form-control form-control-sm d-inline-block" step="0.01">
+                                        </td>
+                                        <td>
+                                            £0.50
+                                        </td>
+                                        <td>
+                                            11.628%
+                                        </td>
+                                        <td>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#editCategoryModal"><i class="bi bi-pencil-fill"></i></a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal"><i class="bi bi-trash-fill"></i></a>
+                                        </td>
+                                      </tr>
+                
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                Shipping VAT Information
+                            </div>
+                            <div class="card-body">
+                                <form action="">
+                                    <div class="row mb-2">
+                                        <div class="col-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="enableVAT">
+                                                <label class="form-check-label" for="enableVAT">
+                                                  Enable VAT
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-1">
+                                        <div class="col">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="vatRate" placeholder="VAT Rate" value="0.00" step="0.01" min="0" max="100" disabled>
+                                                <label for="vatRate">VAT Rate %</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="submit" class="btn btn-primary" id="saveBtn" disabled>Save Setting</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                               
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                Calculate Shipping Via
+                            </div>
+                            <div class="card-body">
+                                <form action="">
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="calcShipping" id="calcShipping1">
+                                                <label class="form-check-label" for="calcShipping1">
+                                                  Fixed
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="calcShipping" id="calcShipping2">
+                                                <label class="form-check-label" for="calcShipping2">
+                                                  Quantity
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="calcShipping" id="calcShipping3">
+                                                <label class="form-check-label" for="calcShipping3">
+                                                  Amount
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="calcShipping" id="calcShipping4" checked>
+                                                <label class="form-check-label" for="calcShipping4">
+                                                  Weight
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="submit" class="btn btn-primary" id="saveBtn">Save Setting</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">
+                                Increment Settings
+                            </div>
+                            <div class="card-body">
+
+
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-3">If the order exceeds 48.000KG then increment each<h5/>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="incWeight" placeholder="Weight (KG)" value="25.00" step="0.01" min="0">
+                                                    <label for="incWeight" style="font-size: 1rem;">Weight (KG)</label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="incCost" placeholder="Cost (£)" value="5.50" step="0.01" min="0">
+                                                    <label for="incCost" style="font-size: 1rem;">Cost (£)</label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="incCharge" placeholder="Charge (£)" value="6.00" step="0.01" min="0">
+                                                    <label for="incCharge" style="font-size: 1rem;">Charge (£)</label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="incProfit" placeholder="Profit (£)" value="0.50" disabled>
+                                                    <label for="incProfit" style="font-size: 1rem;">Profit (£)</label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="incProfitper" placeholder="Profit (%)" value="8.33" disabled>
+                                                    <label for="incProfitper" style="font-size: 1rem;">Profit (%)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <button type="submit" class="btn btn-primary" id="saveBtn">Save Setting</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-3">Handling Fee<h5/>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <div class="form-check" style="font-size: 1rem;">
+                                                    <input class="form-check-input" type="checkbox" value="" id="appHandling" checked>
+                                                    <label class="form-check-label" for="appHandling">
+                                                      Apply Handling Fee
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 d-flex">
+                                            <div class="input-group me-2" style="max-width: 10rem;">
+                                                <span class="input-group-text">Cost(£)</span>
+                                                <input type="number" class="form-control" value="0.00" min="0" step="0.01">
+                                            </div>
+                                            <div class="input-group me-2" style="max-width: 11rem;">
+                                                <span class="input-group-text">Charge(£)</span>
+                                                <input type="number" class="form-control" value="0.00" min="0" step="0.01">
+                                            </div>
+                                            <div class="input-group me-2" style="max-width: 17rem;">
+                                                <span class="input-group-text">plus an additional</span>
+                                                <input type="number" class="form-control" value="0.00" min="0" step="0.01">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="input-group">
+                                                <span class="input-group-text">of the shipping charge where the actual cost is</span>
+                                                <input type="number" class="form-control" value="0.00" min="0" step="0.01">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <button type="submit" class="btn btn-primary" id="saveBtn">Save Handling Settings</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-3">Surcharge Fee<h5/>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <div class="form-check" style="font-size: 1rem;">
+                                                    <input class="form-check-input" type="checkbox" value="" id="appSurcharge" checked>
+                                                    <label class="form-check-label" for="appSurcharge">
+                                                      Apply Surcharge Fee
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 d-flex">
+                                            <div class="input-group me-2" style="max-width: 10rem;">
+                                                <span class="input-group-text">Cost(£)</span>
+                                                <input type="number" class="form-control" value="0.00" min="0" step="0.01">
+                                            </div>
+                                            <div class="input-group me-2" style="max-width: 11rem;">
+                                                <span class="input-group-text">Charge(£)</span>
+                                                <input type="number" class="form-control" value="0.00" min="0" step="0.01">
+                                            </div>
+                                            <div class="input-group me-2" style="max-width: 17rem;">
+                                                <span class="input-group-text">plus an additional</span>
+                                                <input type="number" class="form-control" value="0.00" min="0" step="0.01">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="input-group">
+                                                <span class="input-group-text">of the shipping charge where the actual cost is</span>
+                                                <input type="number" class="form-control" value="0.00" min="0" step="0.01">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <button type="submit" class="btn btn-primary" id="saveBtn">Save Surcharge Settings</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+
+            </section>
+        </main>
+    </div>
+    
+
+    <!-- JQuery File -->
+    <script src="dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="dist/js/custom.js"></script>
+
+
+    <script>
+        const enableVAT = document.querySelector('#enableVAT');
+        const vatRate = document.querySelector('#vatRate');
+        const saveBtn = document.querySelector('#saveBtn');
+
+        enableVAT.addEventListener('change', () =>{
+            if (enableVAT.checked === true) {
+                vatRate.removeAttribute('disabled');
+                saveBtn.removeAttribute('disabled');
+            } else {
+                vatRate.setAttribute('disabled', 'disabled');
+                saveBtn.setAttribute('disabled', 'disabled');
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+<!-- Add Courier Modal -->
+<div class="modal fade" id="addCourierModal" tabindex="-1" aria-labelledby="addCourierModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="addCourierModalLabel">Add New Courier</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="">
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="cName" placeholder="Courier Name" required>
+                            <label for="cName">Courier Name</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="url" class="form-control" id="webURL" placeholder="Courier Website" value="https://">
+                            <label for="webURL">Courier Website</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="url" class="form-control" id="logoURL" placeholder="Courier Logo" value="https://">
+                            <label for="logoURL">Courier Logo</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-end">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="showCourier" checked>
+                        <label class="form-check-label" for="showCourier">
+                          Show
+                        </label>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Add New Courier</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- Edit Courier Modal -->
+<div class="modal fade" id="editCourierModal" tabindex="-1" aria-labelledby="editCourierModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="editCourierModalLabel">Edit Courier</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form action="">
+  
+                  <div class="row mb-3">
+                      <div class="col">
+                          <div class="form-floating">
+                              <input type="text" class="form-control" id="cName" placeholder="Courier Name" required>
+                              <label for="cName">Courier Name</label>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="row mb-3">
+                      <div class="col">
+                          <div class="form-floating">
+                              <input type="url" class="form-control" id="webURL" placeholder="Courier Website" value="https://">
+                              <label for="webURL">Courier Website</label>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="row mb-3">
+                      <div class="col">
+                          <div class="form-floating">
+                              <input type="url" class="form-control" id="logoURL" placeholder="Courier Logo" value="https://">
+                              <label for="logoURL">Courier Logo</label>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="col d-flex align-items-end">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="showCourier" checked>
+                          <label class="form-check-label" for="showCourier">
+                            Show
+                          </label>
+                      </div>
+                  </div>
+  
+              </form>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save Changes</button>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<!-- Delete Courier Modal -->
+<div class="modal fade" id="deleteCourierModal" tabindex="-1" aria-labelledby="deleteCourierModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="deleteCourierModalLabel">Delete Courier</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+            <i class="bi bi-exclamation-triangle-fill text-danger fs-1"></i>
+            <p>Are you sure you want to delete this Courier? This action is irreversable!</p>
+        </div>
+        <div class="modal-footer border-0 d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-danger px-4">Yes</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- Move Courier Modal -->
+<div class="modal fade" id="moveCourierModal" tabindex="-1" aria-labelledby="moveCourierModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="moveCourierModalLabel">Move Courier to Another Country</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="">
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="mCName" value="UK Only Royal Mail And Parcelforce" disabled>
+                            <label for="mCName">Courier Name</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="country-block mb-3">
+                    <label for="shippingCountry">Country:</label>
+                    <select class="form-select form-control-lg mb-3" id="shippingCountry">
+                        <option value="14">Afghanistan (0) </option>
+                        <option selected="selected" value="40">Albania (1) </option>
+                        <option value="86">ANDORRA (0) </option>
+                        <option value="74">ARGENTINA (0) </option>
+                        <option value="19">Australia (1) </option>
+                        <option value="41">Austria (1) </option>
+                        <option value="61">Belarus (0) </option>
+                        <option value="10">Belgium (1) </option>
+                        <option value="83">BOSNIA AND HERZEGOVINA (0) </option>
+                        <option value="26">Bosnia and Herzegowina (0) </option>
+                        <option value="15">Brazil (0) </option>
+                        <option value="44">Bulgaria (1) </option>
+                        <option value="27">Canada (1) </option>
+                        <option value="4">China (0) </option>
+                        <option value="65">Cote d'Ivoire (0) </option>
+                        <option value="56">CROATIA (1) </option>
+                        <option value="47">Croatia (local name: Hrvatska) (0) </option>
+                        <option value="28">Cyprus (1) </option>
+                        <option value="48">Czech Republic (1) </option>
+                        <option value="23">Denmark (1) </option>
+                        <option value="67">EN (0) </option>
+                        <option value="21">Estonia (1) </option>
+                        <option value="30">Finland (1) </option>
+                        <option value="7">France (1) </option>
+                        <option value="31">France, Metropolitan (0) </option>
+                        <option value="62">Gambia (0) </option>
+                        <option value="6">Germany (1) </option>
+                        <option value="81">GIBRALTAR (0) </option>
+                        <option value="93">GREAT BRITAIN (0) </option>
+                        <option value="20">Greece (1) </option>
+                        <option value="92">GUAM (0) </option>
+                        <option value="70">HONDURAS (0) </option>
+                        <option value="29">Hungary (1) </option>
+                        <option value="80">ICELAND (0) </option>
+                        <option value="50">India (0) </option>
+                        <option value="12">Ireland (1) </option>
+                        <option value="24">Israel (0) </option>
+                        <option value="11">Italy (1) </option>
+                        <option value="49">Jamaica (0) </option>
+                        <option value="76">JAPAN (0) </option>
+                        <option value="78">KENYA (0) </option>
+                        <option value="35">Lao People's Democratic Republic (0) </option>
+                        <option value="34">Latvia (1) </option>
+                        <option value="22">Lithuania (1) </option>
+                        <option value="55">LUXEMBOURG (1) </option>
+                        <option value="82">MACEDONIA (0) </option>
+                        <option value="53">Macedonia, the former Yugoslav Republic of (0) </option>
+                        <option value="77">MALAYSIA (0) </option>
+                        <option value="8">Malta (1) </option>
+                        <option value="63">Martinique (0) </option>
+                        <option value="64">Mexico (0) </option>
+                        <option value="85">MOLDOVA (0) </option>
+                        <option value="84">MONTENEGRO (0) </option>
+                        <option value="18">Netherlands (1) </option>
+                        <option value="72">NO (0) </option>
+                        <option value="39">Norway (0) </option>
+                        <option value="73">OMAN (0) </option>
+                        <option value="71">OX (0) </option>
+                        <option value="3">Pakistan (0) </option>
+                        <option value="60">Peru (0) </option>
+                        <option value="59">Philippines (0) </option>
+                        <option value="5">Poland (1) </option>
+                        <option value="13">Portugal (1) </option>
+                        <option value="89">PUERTO RICO (0) </option>
+                        <option value="16">Romania (1) </option>
+                        <option value="90">RUSSIA (0) </option>
+                        <option value="36">Russian Federation (1) </option>
+                        <option value="88">SAN MARINO (0) </option>
+                        <option value="45">Saudi Arabia (0) </option>
+                        <option value="51">Senegal (0) </option>
+                        <option value="87">SERBIA (0) </option>
+                        <option value="25">Singapore (0) </option>
+                        <option value="79">SLOVAKIA (0) </option>
+                        <option value="37">Slovakia (Slovak Republic) (1) </option>
+                        <option value="17">Slovenia (1) </option>
+                        <option value="75">SOUTH KOREA (0) </option>
+                        <option value="9">Spain (1) </option>
+                        <option value="32">Sweden (1) </option>
+                        <option value="33">Switzerland (0) </option>
+                        <option value="38">Thailand (0) </option>
+                        <option value="46">Turkey (0) </option>
+                        <option value="54">UB6 7LH (0) </option>
+                        <option value="58">Uganda (0) </option>
+                        <option value="43">Ukraine (0) </option>
+                        <option value="69">UNDEFINED (0) </option>
+                        <option value="42">United Arab Emirates (0) </option>
+                        <option value="1">United Kingdom (5) </option>
+                        <option value="2">United States (1) </option>
+                        <option value="91">VIRGIN ISLANDS (U.S.) (0) </option>
+                        <option value="66">WE (0) </option>
+                        <option value="68">WO (0) </option>
+                        <option value="52">Yugoslavia (0) </option>
+                    </select>
+                </div>
+
+            </form>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Move Courier</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+<!-- Add Shipping Modal -->
+<div class="modal fade" id="addServiceModal" tabindex="-1" aria-labelledby="addServiceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="addServiceModalLabel">Add New Shipping Service</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="">
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="sName" placeholder="Shipping Service Name" required>
+                            <label for="sName">Shipping Service Name</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="url" class="form-control" id="sWebURL" placeholder="Shipping Service Website" value="https://">
+                            <label for="sWebURL">Shipping Service Website</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="url" class="form-control" id="sLogoURL" placeholder="Shipping Service Logo" value="https://">
+                            <label for="sLogoURL">Shipping Service Logo</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-end">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="showService" checked>
+                        <label class="form-check-label" for="showService">
+                          Show
+                        </label>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Add New Shipping Service</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- Edit Shipping Modal -->
+<div class="modal fade" id="editServiceModal" tabindex="-1" aria-labelledby="editServiceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="editCourierModalLabel">Edit Shipping Service</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form action="">
+  
+                  <div class="row mb-3">
+                      <div class="col">
+                          <div class="form-floating">
+                              <input type="text" class="form-control" id="eSName" placeholder="Shipping Service Name" required>
+                              <label for="eSName">Shipping Service Name</label>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="row mb-3">
+                      <div class="col">
+                          <div class="form-floating">
+                              <input type="url" class="form-control" id="eSwebURL" placeholder="Shipping Service Website" value="https://">
+                              <label for="eSwebURL">Shipping Service Website</label>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="row mb-3">
+                      <div class="col">
+                          <div class="form-floating">
+                              <input type="url" class="form-control" id="eSlogoURL" placeholder="Shipping Service Logo" value="https://">
+                              <label for="eSlogoURL">Shipping Service Logo</label>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="col d-flex align-items-end">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="eShowService" checked>
+                          <label class="form-check-label" for="eShowService">
+                            Show
+                          </label>
+                      </div>
+                  </div>
+  
+              </form>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save Changes</button>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<!-- Delete Shipping Service Modal -->
+<div class="modal fade" id="deleteServiceModal" tabindex="-1" aria-labelledby="deleteServiceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="deleteServiceModalLabel">Delete Shipping Service</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+            <i class="bi bi-exclamation-triangle-fill text-danger fs-1"></i>
+            <p>Are you sure you want to delete this shipping service? This action is irreversable!</p>
+        </div>
+        <div class="modal-footer border-0 d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-danger px-4">Yes</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
