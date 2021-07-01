@@ -38,6 +38,17 @@ $(document).ready(function () {
         searching: false
     });
 
+    $('#shippingAuthTB').DataTable({
+        ordering:false,
+        searching: false
+    });
+
+    $('#postageTB').DataTable({
+        ordering:true,
+        searching:false,
+        "scrollX": true
+    });
+
     
 
     $('#imageInput').change(function() {
