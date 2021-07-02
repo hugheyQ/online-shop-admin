@@ -30,6 +30,8 @@
   
   
     <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
 </head>
 <body>
 
@@ -69,14 +71,14 @@
 
                 <a class="nav-link" href="invoices.html"><i class="fi-rs-receipt me-2"></i>Invoices</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fi-rs-user me-2"></i>Customers <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseCustomers">
                     <div class="card card-body">
                         <a class="nav-link" href="customers.html">Customers</a>
                         <a class="nav-link" href="potential-customers.html">Potential Customers</a>
-                        <a class="nav-link active" href="find-customers.html">Find Customers By Image</a>
+                        <a class="nav-link" href="find-customers.html">Find Customers By Image</a>
                     </div>
                 </div>
 
@@ -103,7 +105,7 @@
                     </div>
                 </div>
 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSiteInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseSiteInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fi-rs-info me-2"></i>Site Info <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseSiteInfo">
@@ -114,7 +116,7 @@
                         <a class="nav-link" href="site-top-header.html">Site Top Header</a>
                         <a class="nav-link" href="about-us.html">About Us</a>
                         <a class="nav-link" href="terms-&-conditions.html">Terms & Conditions</a>
-                        <a class="nav-link" href="delivery-info.html">Delivery Info</a>
+                        <a class="nav-link active" href="delivery-info.html">Delivery Info</a>
                         <a class="nav-link" href="faqs.html">FAQs</a>
                         <a class="nav-link" href="order-collections.html">Order Collections</a>
                         <a class="nav-link" href="opening-times.html">Opening Times</a>
@@ -217,53 +219,26 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Find Customers By Image</li>
+                      <li class="breadcrumb-item"><a href="#">Site Information</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Delivery Information</li>
                     </ol>
                 </nav>
                 
-                <h1>Search By Product Image</h1>
+                <h1>Delivery Information Management</h1>
 
-                <div class="mb-3 d-flex justify-content-between align-items-center">
-                    <p>Search by Product Image Here</p>
-
-                    <div class="input-group" style="max-width: 30rem;">
-                        <input type="file" class="form-control" id="searchImage" aria-describedby="searchImage" aria-label="Upload">
-                        <button class="btn btn-primary" type="button" id="searchImage">Search</button>
-                    </div>
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>Manage Your Delivery Information Page Here</p>
                 </div>
 
-                
-
-
-                <div class="card data-tables">
+                <div class="card">
+                    <div class="card-header">Delivery Information</div>
                     <div class="card-body">
 
-                        <table id="findCustomersTB" class="table stores-table table-bordered table-hover border">
-                            <thead class="bg-light">
-                                <tr>
-                                  <th scope="col">Image</th>
-                                  <th scope="col">Item ID</th>
-                                  <th scope="col">Title</th>
-                                  <th scope="col">Price (£)</th>
-                                  <th scope="col">Seller</th>
-                                  <th scope="col">Feedback Score</th>
-                                  <th scope="col">Address</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td><img src="images/item.jpg" alt=""></td>
-                                <td>333948060427</td>
-                                <td>Samsung Galaxy S9 SM-G960 64GB Unlocked Smartphone Various Colours & Grades</td>
-                                <td>139.99</td>
-                                <td>gadget-gifts</td>
-                                <td>522-99.2%</td>
-                                <td>SL***, GB</td>
-                            </tr>
-                        
-                        
-                            </tbody>
-                        </table>
+                        <!-- https://ckeditor.com/ckeditor-5/ -->
+                        <div id="dInfoHeader"></div>
+
+                        <button class="btn btn-primary float-end mt-3"><i class="bi bi-save"></i> Save</button>
+
 
                     </div>
                 </div>
@@ -299,16 +274,14 @@
 
     <!-- Custom Javascipt -->
     <script src="dist/js/custom.js"></script>
+    <!-- https://ckeditor.com/ckeditor-5/ -->
+    <script>
+        ClassicEditor
+            .create( document.querySelector('#dInfoHeader'))
+            .catch( error => {
+                console.error( error );
+            });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
 

@@ -30,6 +30,8 @@
   
   
     <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
 </head>
 <body>
 
@@ -69,14 +71,14 @@
 
                 <a class="nav-link" href="invoices.html"><i class="fi-rs-receipt me-2"></i>Invoices</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fi-rs-user me-2"></i>Customers <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseCustomers">
                     <div class="card card-body">
                         <a class="nav-link" href="customers.html">Customers</a>
                         <a class="nav-link" href="potential-customers.html">Potential Customers</a>
-                        <a class="nav-link active" href="find-customers.html">Find Customers By Image</a>
+                        <a class="nav-link" href="find-customers.html">Find Customers By Image</a>
                     </div>
                 </div>
 
@@ -103,14 +105,14 @@
                     </div>
                 </div>
 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSiteInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseSiteInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fi-rs-info me-2"></i>Site Info <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseSiteInfo">
                     <div class="card card-body">
                         <a class="nav-link" href="contact.html">Contact</a>
                         <a class="nav-link" href="site-header.html">Site Header</a>
-                        <a class="nav-link" href="gateways.html">Gateways</a>
+                        <a class="nav-link active" href="gateways.html">Gateways</a>
                         <a class="nav-link" href="site-top-header.html">Site Top Header</a>
                         <a class="nav-link" href="about-us.html">About Us</a>
                         <a class="nav-link" href="terms-&-conditions.html">Terms & Conditions</a>
@@ -217,48 +219,86 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Find Customers By Image</li>
+                      <li class="breadcrumb-item"><a href="#">Site Information</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Gateways</li>
                     </ol>
                 </nav>
                 
-                <h1>Search By Product Image</h1>
+                <h1>Gateways Management</h1>
 
-                <div class="mb-3 d-flex justify-content-between align-items-center">
-                    <p>Search by Product Image Here</p>
-
-                    <div class="input-group" style="max-width: 30rem;">
-                        <input type="file" class="form-control" id="searchImage" aria-describedby="searchImage" aria-label="Upload">
-                        <button class="btn btn-primary" type="button" id="searchImage">Search</button>
-                    </div>
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>Manage Gateways Here</p>
                 </div>
 
-                
 
 
-                <div class="card data-tables">
+                <div class="card">
+                    
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        Gateways
+
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addGatewayModal"><i class="bi bi-plus"></i>Add New Gateway</button>
+                    </div>
+
                     <div class="card-body">
 
-                        <table id="findCustomersTB" class="table stores-table table-bordered table-hover border">
+                        <table id="gatewaysTB" class="table table-bordered table-hover border text-center" style="width: 190%;">
                             <thead class="bg-light">
                                 <tr>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">Installation ID</th>
                                   <th scope="col">Image</th>
-                                  <th scope="col">Item ID</th>
-                                  <th scope="col">Title</th>
-                                  <th scope="col">Price (£)</th>
-                                  <th scope="col">Seller</th>
-                                  <th scope="col">Feedback Score</th>
-                                  <th scope="col">Address</th>
+                                  <th scope="col">Link</th>
+                                  <th scope="col">Pr Fee (£)</th>
+                                  <th scope="col">Surcharge (%)</th>
+                                  <th scope="col">Show</th>
+                                  <th scope="col">Login Requirement</th>
+                                  <th scope="col">Position</th>
+                                  <th scope="col">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td><img src="images/item.jpg" alt=""></td>
-                                <td>333948060427</td>
-                                <td>Samsung Galaxy S9 SM-G960 64GB Unlocked Smartphone Various Colours & Grades</td>
-                                <td>139.99</td>
-                                <td>gadget-gifts</td>
-                                <td>522-99.2%</td>
-                                <td>SL***, GB</td>
+                                <td>
+                                    <input type="text" class="form-control" value="Paypal">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" value="paypaleth@etradehouse.com">
+                                </td>
+                                <td>
+                                    <img src="images/item.jpg" >
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" value="Paypal/">
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" value="0.00" step="0.01" min="0">
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" value="0.00" step="0.01" min="0">
+                                </td>
+                                <td>
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </td>
+                                <td>
+                                    <input class="form-check-input" type="checkbox">
+                                </td>
+                                <td>
+                                    <select class="form-select">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#saveGatewayModal" title="Save"><i class="bi bi-save"></i></a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deleteGatewayModal" title="Delete"><i class="bi bi-trash"></i></a>
+                                </td>
                             </tr>
                         
                         
@@ -299,16 +339,166 @@
 
     <!-- Custom Javascipt -->
     <script src="dist/js/custom.js"></script>
-</body>
+
 </html>
 
 
+<!-- Add Shipping Modal -->
+<div class="modal fade" id="addGatewayModal" tabindex="-1" aria-labelledby="addGatewayModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="addGatewatModalLabel">Add New Gateway</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="card">
+                <div class="card-body">
+
+                    <form action="">
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="gwName" placeholder="Name">
+                                    <label for="gwName">Name</label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row mb-3">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="gwInstallID" placeholder="Installation ID">
+                                    <label for="gwInstallID">Installation ID</label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row mb-3">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="gwLink" placeholder="Gateway Link">
+                                    <label for="gwLink">Gateway Link</label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row mb-3">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="aPrFee" placeholder="Pr Fee" min="0" step="0.01">
+                                    <label for="aPrFee">Pr Fee</label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row mb-3">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="aSurcharge" placeholder="Surcharge" min="0" step="0.01">
+                                    <label for="aSurcharge">Surcharge</label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- <div class="row mb-3">
+                            <div class="col">
+                                <label for="aPosition">Position</label>
+                                <select class="form-select form-select-lg" id="aPosition">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                </select>
+                            </div>
+                        </div> -->
+        
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="gatewayLogo" class="mb-1">Gateway Logo:</label>
+                                <input type="file" class="form-control" id="gatewayLogo">
+                            </div>
+                        </div>
+        
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="loginReq" checked>
+                                    <label class="form-check-label" for="loginReq">
+                                      Login Requirement
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="aShow" checked>
+                                    <label class="form-check-label" for="aShow">
+                                      Show
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        
+        
+        
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Add New Gateway</button>
+        </div>
+      </div>
+    </div>
+</div>
 
 
 
+<!-- Save Gateway Modal -->
+<div class="modal fade" id="saveGatewayModal" tabindex="-1" aria-labelledby="saveGatewayModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="saveWeightModalLabel">Save Gateway Setting</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+            <i class="bi bi-exclamation-triangle-fill text-danger fs-1"></i>
+            <p>Are you sure you want to save this setting?</p>
+        </div>
+        <div class="modal-footer border-0 d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-danger px-4">Yes</button>
+        </div>
+      </div>
+    </div>
+</div>
 
 
-
-
-
-
+<!-- Delete Gateway Modal -->
+<div class="modal fade" id="deleteGatewayModal" tabindex="-1" aria-labelledby="deleteGatewayModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="deleteWeightModalLabel">Delete Gateway Setting</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+            <i class="bi bi-exclamation-triangle-fill text-danger fs-1"></i>
+            <p>Are you sure you want to save this gateway setting? This action is irreversable!</p>
+        </div>
+        <div class="modal-footer border-0 d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-danger px-4">Yes</button>
+        </div>
+      </div>
+    </div>
+</div>

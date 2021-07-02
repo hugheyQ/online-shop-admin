@@ -49,6 +49,12 @@ $(document).ready(function () {
         "scrollX": true
     });
 
+    $('#gatewaysTB').DataTable({
+        ordering:false,
+        searching:false,
+        "scrollX": true
+    });
+
     
 
     $('#imageInput').change(function() {

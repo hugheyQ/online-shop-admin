@@ -30,6 +30,8 @@
   
   
     <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
 </head>
 <body>
 
@@ -69,14 +71,14 @@
 
                 <a class="nav-link" href="invoices.html"><i class="fi-rs-receipt me-2"></i>Invoices</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fi-rs-user me-2"></i>Customers <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseCustomers">
                     <div class="card card-body">
                         <a class="nav-link" href="customers.html">Customers</a>
                         <a class="nav-link" href="potential-customers.html">Potential Customers</a>
-                        <a class="nav-link active" href="find-customers.html">Find Customers By Image</a>
+                        <a class="nav-link" href="find-customers.html">Find Customers By Image</a>
                     </div>
                 </div>
 
@@ -125,12 +127,12 @@
                     </div>
                 </div>
                 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEmailSettings" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEmailSettings" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fi-rs-envelope me-2"></i>Email Settings <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEmailSettings">
                     <div class="card card-body">
-                        <a class="nav-link" href="mail-server.html">Mail Server</a>
+                        <a class="nav-link active" href="mail-server.html">Mail Server</a>
                         <a class="nav-link" href="customer-registration.html">Customer Registration</a>
                         <a class="nav-link" href="forgot-password.html">Forgot Password</a>
                         <a class="nav-link" href="orders.html">Orders</a>
@@ -217,53 +219,66 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Find Customers By Image</li>
+                      <li class="breadcrumb-item"><a href="#">Email Settings</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Mail Server</li>
                     </ol>
                 </nav>
                 
-                <h1>Search By Product Image</h1>
+                <h1>Mail Server Management</h1>
 
-                <div class="mb-3 d-flex justify-content-between align-items-center">
-                    <p>Search by Product Image Here</p>
-
-                    <div class="input-group" style="max-width: 30rem;">
-                        <input type="file" class="form-control" id="searchImage" aria-describedby="searchImage" aria-label="Upload">
-                        <button class="btn btn-primary" type="button" id="searchImage">Search</button>
-                    </div>
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>Manage Your Mail Server Here</p>
                 </div>
 
-                
+                <div class=" mb-4 sort-block d-flex align-items-center">
+                    <label for="contactUs" class="me-2">Store:</label>
+                    <select class="form-select" style="width: auto;" id="contactUs">
+                        <option>Safekom</option>
+                        <option>Tradercart</option>
+                        <option>Plus Bee.com LTD</option>
+                        <option>Tehkal</option>
+                        <option selected>eTradehouse.com</option>
+                        <option>Safekom UK</option>
+                    </select>
+                </div>
 
 
-                <div class="card data-tables">
+
+                <div class="card">
+
+                    <div class="card-header">E-Mail Server Settings</div>
+            
                     <div class="card-body">
 
-                        <table id="findCustomersTB" class="table stores-table table-bordered table-hover border">
-                            <thead class="bg-light">
-                                <tr>
-                                  <th scope="col">Image</th>
-                                  <th scope="col">Item ID</th>
-                                  <th scope="col">Title</th>
-                                  <th scope="col">Price (£)</th>
-                                  <th scope="col">Seller</th>
-                                  <th scope="col">Feedback Score</th>
-                                  <th scope="col">Address</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td><img src="images/item.jpg" alt=""></td>
-                                <td>333948060427</td>
-                                <td>Samsung Galaxy S9 SM-G960 64GB Unlocked Smartphone Various Colours & Grades</td>
-                                <td>139.99</td>
-                                <td>gadget-gifts</td>
-                                <td>522-99.2%</td>
-                                <td>SL***, GB</td>
-                            </tr>
-                        
-                        
-                            </tbody>
-                        </table>
+                        <form action="" style="max-width: 500px;">
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="msUsername" placeholder="Username">
+                                <label for="msUsername">Username</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="msPassword" placeholder="Password">
+                                <label for="msPassword">Password</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="msHost" placeholder="Host">
+                                <label for="msHost">Host</label>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="msReqAuth" checked="">
+                                <label class="form-check-label" for="msReqAuth">
+                                  Mail Server Requires Authentication
+                                </label>
+                            </div>
+
+                            <button class="btn btn-primary">Save</button>
+
+
+
+                        </form>
 
                     </div>
                 </div>
@@ -299,16 +314,5 @@
 
     <!-- Custom Javascipt -->
     <script src="dist/js/custom.js"></script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
+    <!-- https://ckeditor.com/ckeditor-5/ -->
+   

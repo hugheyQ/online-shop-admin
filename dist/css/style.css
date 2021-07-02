@@ -419,4 +419,72 @@ p {
 .shipping-blocks a:hover {
   color: #4a6fdc;
 }
+
+.contact-table {
+  text-align: center;
+}
+
+.contact-table td {
+  vertical-align: middle;
+}
+
+.contact-table td a {
+  text-decoration: none;
+  color: unset;
+  transition: all 300ms ease-in-out;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.contact-table td a:hover {
+  color: #4a6fdc;
+}
+
+.contact-table td img {
+  width: 100%;
+  height: auto;
+}
+
+#gatewaysTB {
+  text-align: center;
+}
+
+#gatewaysTB td {
+  vertical-align: middle;
+}
+
+#gatewaysTB td input[type='text'] {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#gatewaysTB td input[type='number'] {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#gatewaysTB td select {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#gatewaysTB td a {
+  text-decoration: none;
+  color: unset;
+  transition: all 300ms ease-in-out;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#gatewaysTB td a:hover {
+  color: #4a6fdc;
+}
+
+#gatewaysTB td img {
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=style.css.map */

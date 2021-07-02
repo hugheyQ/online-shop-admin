@@ -266,3 +266,80 @@ p {
 	}
 }
 
+.contact-table{
+	text-align: center;
+
+	td{
+		vertical-align:middle;
+
+		a{
+			text-decoration: none;
+			color: unset;
+			transition: $ease-in-out-1;
+			display: inline-block;
+			font-size: 16px;
+
+			// &:not(:last-child){
+			//     margin-right: .1em;
+			// }
+
+			&:hover{
+				color: $l-blue;
+			}
+		}
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+#gatewaysTB{
+	text-align: center;
+
+	td{
+		vertical-align:middle;
+	
+		
+		input[type='text']{
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		input[type='number']{
+			width: 30%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		select{
+			width: 20%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		a{
+			text-decoration: none;
+			color: unset;
+			transition: $ease-in-out-1;
+			display: inline-block;
+			font-size: 16px;
+
+			// &:not(:last-child){
+			//     margin-right: .1em;
+			// }
+
+			&:hover{
+				color: $l-blue;
+			}
+		}
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+

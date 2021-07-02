@@ -30,6 +30,8 @@
   
   
     <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
 </head>
 <body>
 
@@ -69,14 +71,14 @@
 
                 <a class="nav-link" href="invoices.html"><i class="fi-rs-receipt me-2"></i>Invoices</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fi-rs-user me-2"></i>Customers <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseCustomers">
                     <div class="card card-body">
                         <a class="nav-link" href="customers.html">Customers</a>
                         <a class="nav-link" href="potential-customers.html">Potential Customers</a>
-                        <a class="nav-link active" href="find-customers.html">Find Customers By Image</a>
+                        <a class="nav-link" href="find-customers.html">Find Customers By Image</a>
                     </div>
                 </div>
 
@@ -103,7 +105,7 @@
                     </div>
                 </div>
 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSiteInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseSiteInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fi-rs-info me-2"></i>Site Info <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseSiteInfo">
@@ -111,7 +113,7 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                         <a class="nav-link" href="site-header.html">Site Header</a>
                         <a class="nav-link" href="gateways.html">Gateways</a>
-                        <a class="nav-link" href="site-top-header.html">Site Top Header</a>
+                        <a class="nav-link active" href="site-top-header.html">Site Top Header</a>
                         <a class="nav-link" href="about-us.html">About Us</a>
                         <a class="nav-link" href="terms-&-conditions.html">Terms & Conditions</a>
                         <a class="nav-link" href="delivery-info.html">Delivery Info</a>
@@ -217,54 +219,183 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Find Customers By Image</li>
+                      <li class="breadcrumb-item"><a href="#">Site Information</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Site Top Header</li>
                     </ol>
                 </nav>
                 
-                <h1>Search By Product Image</h1>
+                <h1>Site Top Header Management</h1>
 
-                <div class="mb-3 d-flex justify-content-between align-items-center">
-                    <p>Search by Product Image Here</p>
-
-                    <div class="input-group" style="max-width: 30rem;">
-                        <input type="file" class="form-control" id="searchImage" aria-describedby="searchImage" aria-label="Upload">
-                        <button class="btn btn-primary" type="button" id="searchImage">Search</button>
-                    </div>
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>Modify Site's Top Header Here</p>
                 </div>
 
-                
 
 
-                <div class="card data-tables">
+                <div class="card">
+
                     <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <button class="btn btn-primary float-end"><i class="bi bi-save"></i> Save All</button>
+                            </div>
+                        </div>
 
-                        <table id="findCustomersTB" class="table stores-table table-bordered table-hover border">
-                            <thead class="bg-light">
-                                <tr>
-                                  <th scope="col">Image</th>
-                                  <th scope="col">Item ID</th>
-                                  <th scope="col">Title</th>
-                                  <th scope="col">Price (£)</th>
-                                  <th scope="col">Seller</th>
-                                  <th scope="col">Feedback Score</th>
-                                  <th scope="col">Address</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td><img src="images/item.jpg" alt=""></td>
-                                <td>333948060427</td>
-                                <td>Samsung Galaxy S9 SM-G960 64GB Unlocked Smartphone Various Colours & Grades</td>
-                                <td>139.99</td>
-                                <td>gadget-gifts</td>
-                                <td>522-99.2%</td>
-                                <td>SL***, GB</td>
-                            </tr>
-                        
-                        
-                            </tbody>
-                        </table>
+                        <div class="row">
+                
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header">Marketing Information</div>
+                                    <div class="card-body">
 
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="facebookInfo" placeholder="Facebook URL" value="https://www.facebook.com/plusbee1">
+                                                    <label for="facebookInfo">Facebook URL</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 d-flex align-items-center">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="showFacebook" checked>
+                                                    <label class="form-check-label" for="showFacebook">
+                                                      Show
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="twitterInfo" paceholder="Twitter URL" value="https://www.facebook.com/plusbee1">
+                                                    <label for="twitterInfo">Twitter URL</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 d-flex align-items-center">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="showTwitter" checked>
+                                                    <label class="form-check-label" for="showTwitter">
+                                                      Show
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="rssInfo" paceholder="RSS Feeds URL" value="https://www.etradehouse.com/Code/Rss/">
+                                                    <label for="rssInfo">RSS Feeds URL</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 d-flex align-items-center">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="showRss" checked>
+                                                    <label class="form-check-label" for="showRss">
+                                                      Show
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="youtubeInfo" paceholder="YouTube URL" value="https://">
+                                                    <label for="youtubeInfo">YouTube URL</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 d-flex align-items-center">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="showYoutube" checked>
+                                                    <label class="form-check-label" for="showYoutube">
+                                                      Show
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="youtubeInfo" paceholder="YouTube URL" value="https://">
+                                                    <label for="youtubeInfo">YouTube URL</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 d-flex align-items-center">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="showYoutube" checked>
+                                                    <label class="form-check-label" for="showYoutube">
+                                                      Show
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="googlePlusInfo" paceholder="Google Plus URL" value="https://">
+                                                    <label for="googlePlusInfo">Google Plus URL</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 d-flex align-items-center">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="showGooglePlus" checked>
+                                                    <label class="form-check-label" for="showGooglePlus">
+                                                      Show
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="linkedInInfo" paceholder="LinkedIn URL" value="https://www.linkedin.com/company/etradehouse">
+                                                    <label for="linkedInInfo">LinkedIn URL</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 d-flex align-items-center">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="showLinkedIn" checked>
+                                                    <label class="form-check-label" for="showLinkedIn">
+                                                      Show
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header">Modify Site Header</div>
+                                    <div class="card-body">
+
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="headerTitle" placeholder="Header Title" value="Buy CCTV Camera HDMI Cables Audio Cables Video Cable">
+                                            <label for="headerTitle">Header Title</label>
+                                        </div>
+
+                                        <label class="mb-1">Header Logo:</label>
+                                        <div class="input-group">
+                                            <input type="file" class="form-control" id="headerLogo">
+                                            <label class="input-group-text" for="headerLogo">Upload</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 
@@ -299,15 +430,8 @@
 
     <!-- Custom Javascipt -->
     <script src="dist/js/custom.js"></script>
-</body>
+
 </html>
-
-
-
-
-
-
-
 
 
 
