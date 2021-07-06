@@ -127,7 +127,7 @@
                     </div>
                 </div>
                 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEmailSettings" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEmailSettings" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fi-rs-envelope me-2"></i>Email Settings <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEmailSettings">
@@ -135,13 +135,13 @@
                         <a class="nav-link" href="mail-server.html">Mail Server</a>
                         <a class="nav-link" href="customer-registration.html">Customer Registration</a>
                         <a class="nav-link" href="forgot-password.html">Forgot Password</a>
-                        <a class="nav-link active" href="orders.html">Orders</a>
+                        <a class="nav-link" href="orders.html">Orders</a>
                         <a class="nav-link" href="tracking-emails.html">Tracking Emails</a>
                         <a class="nav-link" href="customer-invoices.html">Invoices</a>
                     </div>
                 </div>
 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseMarketing" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseMarketing" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <i class="fi-rs-megaphone me-2"></i>Marketing <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseMarketing">
@@ -149,7 +149,7 @@
                         <a class="nav-link" href="send-emails.html">Send Emails</a>
                         <a class="nav-link" href="froogle.html">Froogle</a>
                         <a class="nav-link" href="rss-feeds.html">RSS Feeds</a>
-                        <a class="nav-link" href="validate-newsletter-emails.html">Validate NL Emails</a>
+                        <a class="nav-link active" href="validate-newsletter-emails.html">Validate NL Emails</a>
                         <a class="nav-link" href="lions-home.html">Lions Home</a>
                         <a class="nav-link" href="site-map.html">Site Map</a>
                     </div>
@@ -218,92 +218,47 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                      <li class="breadcrumb-item"><a href="#">Email Settings</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Customer Order Email Settings</li>
+                      <li class="breadcrumb-item"><a href="#">Marketing</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Validate Newsletter Email Addresses</li>
                     </ol>
                 </nav>
                 
-                <h1>Customer Order Email Management</h1>
+                <h1>Validation Section</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>Manage Your Customer Order Email Settings Here</p>
-                </div>
-
-                <div class="mb-4 sort-block d-flex align-items-center">
-                    <label for="contactUs" class="me-2">Store:</label>
-                    <select class="form-select" style="width: auto;" id="contactUs">
-                        <option>Safekom</option>
-                        <option>Tradercart</option>
-                        <option>Plus Bee.com LTD</option>
-                        <option>Tehkal</option>
-                        <option selected>eTradehouse.com</option>
-                        <option>Safekom UK</option>
-                    </select>
+                    <p>Manage Validate Newsletter Email Addresses Here</p>
                 </div>
 
 
 
                 <div class="card">
 
-                    <div class="card-header">Customer Order Email Settings</div>
+                    <div class="card-header">Validate Email Addresses of Newsletter</div>
             
                     <div class="card-body">
-
-                        <div class="card mb-3">
-                            <div class="card-header">Customer Order Email</div>
-                            <div class="card-body">
-
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="coeS" checked="">
-                                    <label class="form-check-label" for="coeS">
-                                      Send
-                                    </label>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="coeF" placeholder="From">
-                                    <label for="coeF">From</label>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="coeS" placeholder="Subject">
-                                    <label for="coeS">Subject</label>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="card mb-3">
-                            <div class="card-header">Administrator Customer Order Email</div>
-                            <div class="card-body">
-
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="acoeS" checked="">
-                                    <label class="form-check-label" for="acoeS">
-                                      Send
-                                    </label>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="acoeF" placeholder="From">
-                                    <label for="acoeF">From</label>
-                                </div>
-                                
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="acoeT" placeholder="From">
-                                    <label for="acoeT">To</label>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="acoeS" placeholder="Subject">
-                                    <label for="acoeS">Subject</label>
-                                </div>
-
                         
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <select class="form-select" id="valCType">
+                                        <option selected>All</option>
+                                        <option>Trade</option>
+                                        <option>End User</option>
+                                    </select>
+                                    <label for="valCType">Customer Type</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="valSub" placeholder="Messages Sent" value="0" min="0">
+                                    <label for="valSub">Messages Sent</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-primary w-100" style="height: 3.6rem;">Validate</button>
                             </div>
                         </div>
 
-                        <button class="btn btn-primary float-end">Save</button>
 
 
                     </div>
@@ -340,8 +295,6 @@
 
     <!-- Custom Javascipt -->
     <script src="dist/js/custom.js"></script>
-    <!-- https://ckeditor.com/ckeditor-5/ -->
-
 </body>
 </html>
 

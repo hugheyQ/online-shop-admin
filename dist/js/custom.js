@@ -55,6 +55,11 @@ $(document).ready(function () {
         "scrollX": true
     });
 
+    $('#productsTB').DataTable({
+        ordering:true,
+        searching:true
+    });
+
     
 
     $('#imageInput').change(function() {
