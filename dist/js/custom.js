@@ -57,7 +57,8 @@ $(document).ready(function () {
 
     $('#productsTB').DataTable({
         ordering:true,
-        searching:true
+        searching:true,
+        "scrollX":true
     });
 
     
