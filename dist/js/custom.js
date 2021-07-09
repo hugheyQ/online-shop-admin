@@ -61,6 +61,12 @@ $(document).ready(function () {
         "scrollX":true
     });
 
+    $('#eBayCustomerTB').DataTable({
+        ordering:true,
+        searching:true,
+        "scrollX":true
+    });
+
     
 
     $('#imageInput').change(function() {

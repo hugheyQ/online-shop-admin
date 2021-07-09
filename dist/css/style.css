@@ -487,4 +487,16 @@ p {
   width: 100%;
   height: auto;
 }
+
+label {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  /* Safari */
+  /* Konqueror HTML */
+  /* Old versions of Firefox */
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
 /*# sourceMappingURL=style.css.map */
