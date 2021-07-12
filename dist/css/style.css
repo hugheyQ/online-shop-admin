@@ -420,6 +420,30 @@ p {
   color: #4a6fdc;
 }
 
+.ebay-orders .print-btn {
+  font-size: .9rem;
+}
+
+.ebay-orders .card-body {
+  font-size: .9rem;
+}
+
+.ebay-orders a {
+  text-decoration: none;
+  color: unset;
+  transition: all 300ms ease-in-out;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.ebay-orders a:not(:last-child) {
+  margin-right: .6em;
+}
+
+.ebay-orders a:hover {
+  color: #4a6fdc;
+}
+
 .contact-table {
   text-align: center;
 }

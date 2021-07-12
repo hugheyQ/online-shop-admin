@@ -266,6 +266,31 @@ p {
 	}
 }
 
+
+.ebay-orders{
+	.print-btn{
+		font-size: .9rem;
+	}
+	.card-body{
+		font-size: .9rem;
+	}
+	a{
+		text-decoration: none;
+		color: unset;
+		transition: $ease-in-out-1;
+		display: inline-block;
+		font-size: 16px;
+
+		&:not(:last-child){
+		    margin-right: .6em;
+		}
+
+		&:hover{
+			color: $l-blue;
+		}
+	}
+}
+
 .contact-table{
 	text-align: center;
 
