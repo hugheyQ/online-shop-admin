@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="../dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="../dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="../dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="../images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="../index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="index.html">eBay Dashboard</a>
+                <a class="nav-link" href="ebay-customers.html">eBay Customers</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapsePendingOrders" role="button" aria-expanded="false" aria-controls="collapseExample">eBay Pending Orders  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapsePendingOrders">
+                    <div class="card card-body">
+                        <a class="nav-link" href="address-unconfirmed-orders.html">Address Unconfirmed Orders</a>
+                        <a class="nav-link" href="prb-down.html">PRB Down</a>
+                        <a class="nav-link" href="prb-up.html">PRB Up</a>
+                        <a class="nav-link" href="kits-down-1.html">Kits Down</a>
+                        <a class="nav-link" href="kits-up-1.html">Kits Up</a>
+                        <a class="nav-link" href="sku-down-1.html">SKU Down</a>
+                        <a class="nav-link" href="sku-up-1.html">SKU Up</a>
+                        <a class="nav-link" href="loss-orders.html">Loss Orders</a>
+                        <a class="nav-link" href="hold-orders.html">Hold Orders</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Orders <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseOrders">
+                    <div class="card card-body">
+                        <a class="nav-link" href="sku-down-2.html">SKU Down</a>
+                        <a class="nav-link" href="sku-up-2.html">SKU Up</a>
+                        <a class="nav-link" href="kits-down-2.html">Kits Down</a>
+                        <a class="nav-link" href="kits-up-2.html">Kits Up</a>
+                        <a class="nav-link" href="ebay-sku-count.html">eBay SKU Count</a>
+                        <a class="nav-link" href="ebay-date-up.html">eBay Date Up</a>
+                        <a class="nav-link" href="bulk-sku-count.html">Bulk SKU Count</a>
+                        <a class="nav-link active" href="collection-orders.html">Collection-Orders</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="ebay-search.html">eBay Search</a>
+                <a class="nav-link" href="ebay-invoices.html">eBay Invoices</a>
+                <a class="nav-link" href="unprinted-replacements.html">Unprinted Replacements</a>
+                <a class="nav-link" href="unconfirmed-replacements.html">Unconfirmed Replacements</a>
+                <a class="nav-link" href="printed-replacements.html">Printed Replacements</a>
+                <a class="nav-link" href="dispatch-orders.html">Dispatch Orders</a>
+                <a class="nav-link" href="ebay-fixing.html">eBay Fixing</a>
+
+        
+            </nav>
+        </div>
+
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="../images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">eBay Orders</li>
+                    </ol>
+                </nav>
+                
+                <h1>eBay Orders Management</h1>
+
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>Manage eBay Orders Here</p>
+                    
+                    
+                </div>
+
+                <div class=" mb-4 sort-block d-flex align-items-center">
+                    <label for="eBayStore" class="me-2">Store:</label>
+                    <select class="form-select" style="width: auto;" id="eBayStore">
+                        <option selected>All</option>
+                        <option>Tradercart</option>
+                        <option>Plus Bee.com LTD</option>
+                        <option>Tehkal</option>
+                        <option>eTradehouse.com</option>
+                        <option>Safekom UK</option>
+                    </select>
+                </div>
+
+
+
+                <div class="card ebay-orders">
+
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span class="fs-5 fw-bold">eBay Orders</span>
+
+                        <button class="btn btn-primary print-btn" data-bs-toggle="modal" data-bs-target="#printAllOrdersModal"><i class="bi bi-printer"></i> Print all</button>
+
+                    </div>
+
+                    <div class="card-body">
+
+
+
+                        <div class="card mb-3">
+                            <div class="card-header d-flex justify-content-end">
+                                <span>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#editOrderModal" title="Order Detail Information"><i class="bi bi-info-circle"></i></a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#changeOrderAddressModal" title="Change Order Address"><i class="bi bi-house-door"></i></a>
+                                    <a href="#" title="Hold Order"><i class="bi bi-stop-circle"></i></a>
+                                    <a href="#" title="Mark as Collection Order"><i class="bi bi-bookmark-star"></i></a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#printOrderModal" title="Print Order"><i class="bi bi-printer"></i></a>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-4">
+                                    <div class="col">
+                                        <div>Twin Security Systems - Mr Khalil Noor</div>
+                                        <div>3 HARTBURN LANE EBAYSDBC23X</div>
+                                        <div>STOCKTON-ON-TEES DURHAM</div>
+                                        <div>TS18 3QJ</div>
+                                        <div>United Kingdom</div>
+                                        <div>Email: security_productsuk@ebay.com</div>
+                                        <div>Tel: 07999222139</div>
+                                    </div>
+                                    <div class="col">
+                                        <div>No: 1 - Order Placed on: 11/07/2021 08:54 AM</div>
+                                        <div>Order Status: Un-Printed</div>
+                                        <div>eBay ID: security_productsuk</div>
+                                        <div>Transaction ID: 7586108602</div>
+                                        <div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div>SKU: 4*BNCF-RCA-LT100</div>
+                                        <div>Item Nos: 114871346440</div>
+                                        <div>Postage: £4.50</div>
+                                        <div>Weight: 2.000kg</div>
+                                        <div>Profit: £12.39</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-header d-flex justify-content-end">
+                                <span>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#editOrderModal" title="Order Detail Information"><i class="bi bi-info-circle"></i></a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#changeOrderAddressModal" title="Change Order Address"><i class="bi bi-house-door"></i></a>
+                                    <a href="#" title="Hold Order"><i class="bi bi-stop-circle"></i></a>
+                                    <a href="#" title="Mark as Collection Order"><i class="bi bi-bookmark-star"></i></a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#printOrderModal" title="Print Order"><i class="bi bi-printer"></i></a>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-4">
+                                    <div class="col">
+                                        <div>Twin Security Systems - Mr Khalil Noor</div>
+                                        <div>3 HARTBURN LANE EBAYSDBC23X</div>
+                                        <div>STOCKTON-ON-TEES DURHAM</div>
+                                        <div>TS18 3QJ</div>
+                                        <div>United Kingdom</div>
+                                        <div>Email: security_productsuk@ebay.com</div>
+                                        <div>Tel: 07999222139</div>
+                                    </div>
+                                    <div class="col">
+                                        <div>No: 1 - Order Placed on: 11/07/2021 08:54 AM</div>
+                                        <div>Order Status: Un-Printed</div>
+                                        <div>eBay ID: security_productsuk</div>
+                                        <div>Transaction ID: 7586108602</div>
+                                        <div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div>SKU: 4*BNCF-RCA-LT100</div>
+                                        <div>Item Nos: 114871346440</div>
+                                        <div>Postage: £4.50</div>
+                                        <div>Weight: 2.000kg</div>
+                                        <div>Profit: £12.39</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                
+
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- JQuery File -->
+    <script src="../dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="../dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="../dist/js/custom.js"></script>
+
+    <!-- Print All Orders Modal -->
+    <div class="modal fade" id="printAllOrdersModal" tabindex="-1" aria-labelledby="printAllOrdersModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+            <h5 class="modal-title" id="printAllOrderModalLabel">Print All Orders</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-header">Select a shipping courier</div>
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier" value="" id="rm1">
+                            <label class="form-check-label" for="rm1">
+                              Royal Mail OBA -1st class
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="rm2">
+                            <label class="form-check-label" for="rm2">
+                              Royal Mail OBA -2nd class
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="rmp1">
+                            <label class="form-check-label" for="rmp1">
+                              Royal Mail Proship - Parcel 24hrs
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="rmp2">
+                            <label class="form-check-label" for="rmp2">
+                                Royal Mail Proship - Parcel 48hrs
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="pf1">
+                            <label class="form-check-label" for="pf1">
+                                Parcelforce - 24hrs
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="pf2">
+                            <label class="form-check-label" for="pf2">
+                                Parcelforce - 48hrs
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="rmpll1">
+                            <label class="form-check-label" for="rmpll1">
+                                Royal Mail Proship - LL 24hrs
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="rmpll2">
+                            <label class="form-check-label" for="rmpll2">
+                                Royal Mail Proship - LL 48hrs
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="by1">
+                            <label class="form-check-label" for="by1">
+                                BizTech Yodel 3KG
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="by2">
+                            <label class="form-check-label" for="by2">
+                                BizTech Yodel 17KG
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Print</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <!-- Print Single Order Modal -->
+    <div class="modal fade" id="printOrderModal" tabindex="-1" aria-labelledby="printOrderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+            <h5 class="modal-title" id="printOrderModalLabel">Print Order</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-header">Select a shipping courier</div>
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier" value="" id="srm1">
+                            <label class="form-check-label" for="srm1">
+                              Royal Mail OBA -1st class
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="srm2">
+                            <label class="form-check-label" for="srm2">
+                              Royal Mail OBA -2nd class
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="srmp1">
+                            <label class="form-check-label" for="srmp1">
+                              Royal Mail Proship - Parcel 24hrs
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="srmp2">
+                            <label class="form-check-label" for="srmp2">
+                                Royal Mail Proship - Parcel 48hrs
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="spf1">
+                            <label class="form-check-label" for="spf1">
+                                Parcelforce - 24hrs
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="spf2">
+                            <label class="form-check-label" for="spf2">
+                                Parcelforce - 48hrs
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="srmpll1">
+                            <label class="form-check-label" for="srmpll1">
+                                Royal Mail Proship - LL 24hrs
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="srmpll2">
+                            <label class="form-check-label" for="srmpll2">
+                                Royal Mail Proship - LL 48hrs
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="sby1">
+                            <label class="form-check-label" for="sby1">
+                                BizTech Yodel 3KG
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input delivery" type="radio" name="shippingCourier"  value="" id="sby2">
+                            <label class="form-check-label" for="sby2">
+                                BizTech Yodel 17KG
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Print</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <!-- Edit Order Items Modal -->
+    <div class="modal fade" id="editOrderModal" tabindex="-1" aria-labelledby="editOrderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+            <h5 class="modal-title" id="editOrderModalLabel">Order Detail Information</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-body">
+
+                        <form action="">
+                            <div class="row mb-3">
+        
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-1">eTradehouse.com LTD</h5>
+                                            <p>2 Walmgate Road, Perivale Greenford UB6 7LH (UK)</p>
+                                            <p>Tel: 0871 789 0947</p>
+                                            <p>VAT No: 981654879</p>
+                                            <p>Registration No: 981654879</p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="card h-100 border-0">
+                                        <div class="card-body">
+                                            <p>Order No: 146365</p>
+                                            <p>Customer Account No: 532536</p>
+                                            <p>Order Date: 10/05/2021 11:33 AM</p>
+                                            <p>Transaction ID: </p>
+                                            <p>eBay ID: </p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+        
+        
+        
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card data-tables border-0">
+                                        <div class="card-body">
+                    
+                                            <table class="table stores-table table-hover border">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                    <th scope="col">eBay Item Number</th>
+                                                    <th scope="col">SKU</th>
+                                                    <th scope="col">Title</th>
+                                                    <th scope="col">Price per Unit</th>
+                                                    <th scope="col">Quantity</th>
+                                                    <th scope="col">Amount</th>
+                                                    <th scope="col">VAT</th>
+                                                    <th scope="col">Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+        
+                                                    <tr>
+                                                        <td>RMA</td>
+                                                        <td>RMA 5%</td>
+                                                        <td>Charges for 5% RMA</td>
+                                                        <td>0.00</td>
+                                                        <td>1</td>
+                                                        <td>0.00</td>
+                                                        <td>0.00</td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>eBay Fees</td>
+                                                        <td>eBay Fees</td>
+                                                        <td>Charges for eBay Fees</td>
+                                                        <td>0.00</td>
+                                                        <td>1</td>
+                                                        <td>0.00</td>
+                                                        <td>0.00</td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>PayPal Fees</td>
+                                                        <td>PayPal Fees</td>
+                                                        <td>Charges for PayPal Fees</td>
+                                                        <td>0.00</td>
+                                                        <td>1</td>
+                                                        <td>0.00</td>
+                                                        <td>0.00</td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Packing Fees</td>
+                                                        <td>Packing Fees</td>
+                                                        <td>Charges for Packing Fees</td>
+                                                        <td>0.10</td>
+                                                        <td>1</td>
+                                                        <td>0.10</td>
+                                                        <td>0.00</td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Ad Rate</td>
+                                                        <td>Ad Rate</td>
+                                                        <td>Ad Rate</td>
+                                                        <td>0.00</td>
+                                                        <td>1</td>
+                                                        <td>0.00</td>
+                                                        <td>0.00</td>
+                                                        <td></td>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm">
+                                                        </td>
+                                                        <td></td>
+                                                        <td>0.00</td>
+                                                        <td>1</td>
+                                                        <td>0.00</td>
+                                                        <td>0.00</td>
+                                                        <td><button class="btn"><i class="bi bi-plus-circle"></i></button></td>
+                                                    </tr>
+        
+        
+    
+                                            
+                                            
+                                                </tbody>
+                                            </table>
+        
+        
+                                            <div class="row g-1 ms-auto" style="max-width:450px; font-size: 14px;">
+        
+                                                <div class="col">
+                                                    <div class="card border-0">
+                                                        <div class="card-body">
+                                                            <p>Total Items: 0 Units</p>
+                                                            <p>Total Volume: 0.000cm<sup>3</sup></p>
+                                                            <p>Total Weight: 0.000KG</p>
+                                                            <p>eBay Fees: 0.00</p>
+                                                            <p>Packing Fees: 0.10</p>
+                                                            <p>Total Fees: 0.10</p>
+                                                            <p>Total Cost: 0.10</p>
+                                                            <p>Profit: -0.10</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="col">
+                                                    <div class="card border-0">
+                                                        <div class="card-body">
+                                                            <p>Item Cost: 0.00</p>
+                                                            <p>RMA: 0.00</p>
+                                                            <p>Items VAT: 0.00</p>
+                                                            <p>PayPal Fees: 0.00</p>
+                                                            <p>Shipping Fees: 0.00</p>
+                                                            <p>Fees VAT: 0.00</p>
+                                                            <p>Total Amount: 0.00</p>
+                                                            <p>Profit %: -100%</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+    
+        
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Edit Customer Modal -->
+    <div class="modal fade" id="changeOrderAddressModal" tabindex="-1" aria-labelledby="changeOrderAddressModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                <h5 class="modal-title" id="changeOrderAddressModalLabel">Change Order Address</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Customer Information</h5>
+
+                                        <div class="form-floating mb-3">
+                                            <select class="form-select" id="title">
+                                                <option selected>Mr.</option>
+                                                <option>Miss</option>
+                                                <option>Mrs.</option>
+                                                <option>Dr.</option>
+                                                <option>Lord</option>
+                                                <option>Prof.</option>
+                                                <option>Sir.</option>
+                                                <option>Rev.</option>
+                                                <option>Ms.</option>
+                                            </select>
+                                            <label for="title">Title</label>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="fName" placeholder="Full Name">
+                                            <label for="fName">Full Name</label>
+                                        </div>
+
+                                    
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Address Information</h5>
+
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="postCode" placeholder="Postcode">
+                                            <label for="postCode">Postcode</label>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="address1" placeholder="Address Line 1">
+                                            <label for="address1">Address Line 1</label>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="address2" placeholder="Address Line 2">
+                                            <label for="address2">Address Line 2</label>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="address3" placeholder="Address Line 3">
+                                            <label for="address3">Address Line 3</label>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="town" placeholder="Town">
+                                            <label for="town">Town</label>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="state" placeholder="State">
+                                            <label for="state">State</label>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <select class="form-select" id="county">
+                                                <option value="Afghanistan">Afghanistan</option>
+                                                <option value="Åland Islands">Åland Islands</option>
+                                                <option value="Albania">Albania</option>
+                                                <option value="Algeria">Algeria</option>
+                                                <option value="American Samoa">American Samoa</option>
+                                                <option value="Andorra">Andorra</option>
+                                                <option value="Angola">Angola</option>
+                                                <option value="Anguilla">Anguilla</option>
+                                                <option value="Antarctica">Antarctica</option>
+                                                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                                <option value="Argentina">Argentina</option>
+                                                <option value="Armenia">Armenia</option>
+                                                <option value="Aruba">Aruba</option>
+                                                <option value="Australia">Australia</option>
+                                                <option value="Austria">Austria</option>
+                                                <option value="Azerbaijan">Azerbaijan</option>
+                                                <option value="Bahamas">Bahamas</option>
+                                                <option value="Bahrain">Bahrain</option>
+                                                <option value="Bangladesh">Bangladesh</option>
+                                                <option value="Barbados">Barbados</option>
+                                                <option value="Belarus">Belarus</option>
+                                                <option value="Belgium">Belgium</option>
+                                                <option value="Belize">Belize</option>
+                                                <option value="Benin">Benin</option>
+                                                <option value="Bermuda">Bermuda</option>
+                                                <option value="Bhutan">Bhutan</option>
+                                                <option value="Bolivia">Bolivia</option>
+                                                <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                                <option value="Botswana">Botswana</option>
+                                                <option value="Bouvet Island">Bouvet Island</option>
+                                                <option value="Brazil">Brazil</option>
+                                                <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                                <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                                <option value="Bulgaria">Bulgaria</option>
+                                                <option value="Burkina Faso">Burkina Faso</option>
+                                                <option value="Burundi">Burundi</option>
+                                                <option value="Cambodia">Cambodia</option>
+                                                <option value="Cameroon">Cameroon</option>
+                                                <option value="Canada">Canada</option>
+                                                <option value="Cape Verde">Cape Verde</option>
+                                                <option value="Cayman Islands">Cayman Islands</option>
+                                                <option value="Central African Republic">Central African Republic</option>
+                                                <option value="Chad">Chad</option>
+                                                <option value="Chile">Chile</option>
+                                                <option value="China">China</option>
+                                                <option value="Christmas Island">Christmas Island</option>
+                                                <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                                                <option value="Colombia">Colombia</option>
+                                                <option value="Comoros">Comoros</option>
+                                                <option value="Congo">Congo</option>
+                                                <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                                                <option value="Cook Islands">Cook Islands</option>
+                                                <option value="Costa Rica">Costa Rica</option>
+                                                <option value="Cote D'ivoire">Cote D'ivoire</option>
+                                                <option value="Croatia">Croatia</option>
+                                                <option value="Cuba">Cuba</option>
+                                                <option value="Cyprus">Cyprus</option>
+                                                <option value="Czech Republic">Czech Republic</option>
+                                                <option value="Denmark">Denmark</option>
+                                                <option value="Djibouti">Djibouti</option>
+                                                <option value="Dominica">Dominica</option>
+                                                <option value="Dominican Republic">Dominican Republic</option>
+                                                <option value="Ecuador">Ecuador</option>
+                                                <option value="Egypt">Egypt</option>
+                                                <option value="El Salvador">El Salvador</option>
+                                                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                                <option value="Eritrea">Eritrea</option>
+                                                <option value="Estonia">Estonia</option>
+                                                <option value="Ethiopia">Ethiopia</option>
+                                                <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                                                <option value="Faroe Islands">Faroe Islands</option>
+                                                <option value="Fiji">Fiji</option>
+                                                <option value="Finland">Finland</option>
+                                                <option value="France">France</option>
+                                                <option value="French Guiana">French Guiana</option>
+                                                <option value="French Polynesia">French Polynesia</option>
+                                                <option value="French Southern Territories">French Southern Territories</option>
+                                                <option value="Gabon">Gabon</option>
+                                                <option value="Gambia">Gambia</option>
+                                                <option value="Georgia">Georgia</option>
+                                                <option value="Germany">Germany</option>
+                                                <option value="Ghana">Ghana</option>
+                                                <option value="Gibraltar">Gibraltar</option>
+                                                <option value="Greece">Greece</option>
+                                                <option value="Greenland">Greenland</option>
+                                                <option value="Grenada">Grenada</option>
+                                                <option value="Guadeloupe">Guadeloupe</option>
+                                                <option value="Guam">Guam</option>
+                                                <option value="Guatemala">Guatemala</option>
+                                                <option value="Guernsey">Guernsey</option>
+                                                <option value="Guinea">Guinea</option>
+                                                <option value="Guinea-bissau">Guinea-bissau</option>
+                                                <option value="Guyana">Guyana</option>
+                                                <option value="Haiti">Haiti</option>
+                                                <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                                                <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                                                <option value="Honduras">Honduras</option>
+                                                <option value="Hong Kong">Hong Kong</option>
+                                                <option value="Hungary">Hungary</option>
+                                                <option value="Iceland">Iceland</option>
+                                                <option value="India">India</option>
+                                                <option value="Indonesia">Indonesia</option>
+                                                <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                                                <option value="Iraq">Iraq</option>
+                                                <option value="Ireland">Ireland</option>
+                                                <option value="Isle of Man">Isle of Man</option>
+                                                <option value="Israel">Israel</option>
+                                                <option value="Italy">Italy</option>
+                                                <option value="Jamaica">Jamaica</option>
+                                                <option value="Japan">Japan</option>
+                                                <option value="Jersey">Jersey</option>
+                                                <option value="Jordan">Jordan</option>
+                                                <option value="Kazakhstan">Kazakhstan</option>
+                                                <option value="Kenya">Kenya</option>
+                                                <option value="Kiribati">Kiribati</option>
+                                                <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                                                <option value="Korea, Republic of">Korea, Republic of</option>
+                                                <option value="Kuwait">Kuwait</option>
+                                                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                                                <option value="Latvia">Latvia</option>
+                                                <option value="Lebanon">Lebanon</option>
+                                                <option value="Lesotho">Lesotho</option>
+                                                <option value="Liberia">Liberia</option>
+                                                <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                                                <option value="Liechtenstein">Liechtenstein</option>
+                                                <option value="Lithuania">Lithuania</option>
+                                                <option value="Luxembourg">Luxembourg</option>
+                                                <option value="Macao">Macao</option>
+                                                <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                                                <option value="Madagascar">Madagascar</option>
+                                                <option value="Malawi">Malawi</option>
+                                                <option value="Malaysia">Malaysia</option>
+                                                <option value="Maldives">Maldives</option>
+                                                <option value="Mali">Mali</option>
+                                                <option value="Malta">Malta</option>
+                                                <option value="Marshall Islands">Marshall Islands</option>
+                                                <option value="Martinique">Martinique</option>
+                                                <option value="Mauritania">Mauritania</option>
+                                                <option value="Mauritius">Mauritius</option>
+                                                <option value="Mayotte">Mayotte</option>
+                                                <option value="Mexico">Mexico</option>
+                                                <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                                                <option value="Moldova, Republic of">Moldova, Republic of</option>
+                                                <option value="Monaco">Monaco</option>
+                                                <option value="Mongolia">Mongolia</option>
+                                                <option value="Montenegro">Montenegro</option>
+                                                <option value="Montserrat">Montserrat</option>
+                                                <option value="Morocco">Morocco</option>
+                                                <option value="Mozambique">Mozambique</option>
+                                                <option value="Myanmar">Myanmar</option>
+                                                <option value="Namibia">Namibia</option>
+                                                <option value="Nauru">Nauru</option>
+                                                <option value="Nepal">Nepal</option>
+                                                <option value="Netherlands">Netherlands</option>
+                                                <option value="Netherlands Antilles">Netherlands Antilles</option>
+                                                <option value="New Caledonia">New Caledonia</option>
+                                                <option value="New Zealand">New Zealand</option>
+                                                <option value="Nicaragua">Nicaragua</option>
+                                                <option value="Niger">Niger</option>
+                                                <option value="Nigeria">Nigeria</option>
+                                                <option value="Niue">Niue</option>
+                                                <option value="Norfolk Island">Norfolk Island</option>
+                                                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                                <option value="Norway">Norway</option>
+                                                <option value="Oman">Oman</option>
+                                                <option value="Pakistan">Pakistan</option>
+                                                <option value="Palau">Palau</option>
+                                                <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                                                <option value="Panama">Panama</option>
+                                                <option value="Papua New Guinea">Papua New Guinea</option>
+                                                <option value="Paraguay">Paraguay</option>
+                                                <option value="Peru">Peru</option>
+                                                <option value="Philippines">Philippines</option>
+                                                <option value="Pitcairn">Pitcairn</option>
+                                                <option value="Poland">Poland</option>
+                                                <option value="Portugal">Portugal</option>
+                                                <option value="Puerto Rico">Puerto Rico</option>
+                                                <option value="Qatar">Qatar</option>
+                                                <option value="Reunion">Reunion</option>
+                                                <option value="Romania">Romania</option>
+                                                <option value="Russian Federation">Russian Federation</option>
+                                                <option value="Rwanda">Rwanda</option>
+                                                <option value="Saint Helena">Saint Helena</option>
+                                                <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                                <option value="Saint Lucia">Saint Lucia</option>
+                                                <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                                                <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                                                <option value="Samoa">Samoa</option>
+                                                <option value="San Marino">San Marino</option>
+                                                <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                                                <option value="Saudi Arabia">Saudi Arabia</option>
+                                                <option value="Senegal">Senegal</option>
+                                                <option value="Serbia">Serbia</option>
+                                                <option value="Seychelles">Seychelles</option>
+                                                <option value="Sierra Leone">Sierra Leone</option>
+                                                <option value="Singapore">Singapore</option>
+                                                <option value="Slovakia">Slovakia</option>
+                                                <option value="Slovenia">Slovenia</option>
+                                                <option value="Solomon Islands">Solomon Islands</option>
+                                                <option value="Somalia">Somalia</option>
+                                                <option value="South Africa">South Africa</option>
+                                                <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                                                <option value="Spain">Spain</option>
+                                                <option value="Sri Lanka">Sri Lanka</option>
+                                                <option value="Sudan">Sudan</option>
+                                                <option value="Suriname">Suriname</option>
+                                                <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                                                <option value="Swaziland">Swaziland</option>
+                                                <option value="Sweden">Sweden</option>
+                                                <option value="Switzerland">Switzerland</option>
+                                                <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                                                <option value="Taiwan, Province of China">Taiwan, Province of China</option>
+                                                <option value="Tajikistan">Tajikistan</option>
+                                                <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                                                <option value="Thailand">Thailand</option>
+                                                <option value="Timor-leste">Timor-leste</option>
+                                                <option value="Togo">Togo</option>
+                                                <option value="Tokelau">Tokelau</option>
+                                                <option value="Tonga">Tonga</option>
+                                                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                                <option value="Tunisia">Tunisia</option>
+                                                <option value="Turkey">Turkey</option>
+                                                <option value="Turkmenistan">Turkmenistan</option>
+                                                <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                                                <option value="Tuvalu">Tuvalu</option>
+                                                <option value="Uganda">Uganda</option>
+                                                <option value="Ukraine">Ukraine</option>
+                                                <option value="United Arab Emirates">United Arab Emirates</option>
+                                                <option value="United Kingdom" selected>United Kingdom</option>
+                                                <option value="United States">United States</option>
+                                                <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                                                <option value="Uruguay">Uruguay</option>
+                                                <option value="Uzbekistan">Uzbekistan</option>
+                                                <option value="Vanuatu">Vanuatu</option>
+                                                <option value="Venezuela">Venezuela</option>
+                                                <option value="Viet Nam">Viet Nam</option>
+                                                <option value="Virgin Islands, British">Virgin Islands, British</option>
+                                                <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                                                <option value="Wallis and Futuna">Wallis and Futuna</option>
+                                                <option value="Western Sahara">Western Sahara</option>
+                                                <option value="Yemen">Yemen</option>
+                                                <option value="Zambia">Zambia</option>
+                                                <option value="Zimbabwe">Zimbabwe</option>
+                                            </select>
+                                            <label for="country">Country</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="card mb-3">
+
+                                    <div class="card-body">
+
+                                        <h5 class="card-title">Contact Information</h5>
+
+                                        <div class="form-floating mb-3">
+                                            <input type="tel" class="form-control" id="tel" placeholder="Telephone Number">
+                                            <label for="tel">Telephone</label>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="extension" placeholder="Extension">
+                                            <label for="extension">Extension</label>
+                                        </div>
+
+                                        <div class="form-floating mb-3">
+                                            <input type="tel" class="form-control" id="mobile" placeholder="Mobile Number">
+                                            <label for="mobile">Mobile</label>
+                                        </div>
+
+                    
+                                    </div>
+
+
+                                    
+                                </div>
+                            
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="../dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="../dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="../dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="../images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="../index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="index.html">eBay Dashboard</a>
+                <a class="nav-link" href="ebay-customers.html">eBay Customers</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapsePendingOrders" role="button" aria-expanded="false" aria-controls="collapseExample">eBay Pending Orders  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapsePendingOrders">
+                    <div class="card card-body">
+                        <a class="nav-link" href="address-unconfirmed-orders.html">Address Unconfirmed Orders</a>
+                        <a class="nav-link" href="prb-down.html">PRB Down</a>
+                        <a class="nav-link" href="prb-up.html">PRB Up</a>
+                        <a class="nav-link" href="kits-down-1.html">Kits Down</a>
+                        <a class="nav-link" href="kits-up-1.html">Kits Up</a>
+                        <a class="nav-link" href="sku-down-1.html">SKU Down</a>
+                        <a class="nav-link" href="sku-up-1.html">SKU Up</a>
+                        <a class="nav-link" href="loss-orders.html">Loss Orders</a>
+                        <a class="nav-link" href="hold-orders.html">Hold Orders</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Orders <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseOrders">
+                    <div class="card card-body">
+                        <a class="nav-link" href="sku-down-2.html">SKU Down</a>
+                        <a class="nav-link" href="sku-up-2.html">SKU Up</a>
+                        <a class="nav-link" href="kits-down-2.html">Kits Down</a>
+                        <a class="nav-link" href="kits-up-2.html">Kits Up</a>
+                        <a class="nav-link" href="ebay-sku-count.html">eBay SKU Count</a>
+                        <a class="nav-link" href="ebay-date-up.html">eBay Date Up</a>
+                        <a class="nav-link" href="bulk-sku-count.html">Bulk SKU Count</a>
+                        <a class="nav-link" href="collection-orders.html">Collection-Orders</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="ebay-search.html">eBay Search</a>
+                <a class="nav-link active" href="ebay-invoices.html">eBay Invoices</a>
+                <a class="nav-link" href="unprinted-replacements.html">Unprinted Replacements</a>
+                <a class="nav-link" href="unconfirmed-replacements.html">Unconfirmed Replacements</a>
+                <a class="nav-link" href="printed-replacements.html">Printed Replacements</a>
+                <a class="nav-link" href="dispatch-orders.html">Dispatch Orders</a>
+                <a class="nav-link" href="ebay-fixing.html">eBay Fixing</a>
+
+        
+            </nav>
+        </div>
+
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">eBay Invoices</li>
+                    </ol>
+                </nav>
+                
+                <h1>eBay Invoices Management</h1>
+
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>Manage eBay Invoices Here</p>
+                    
+                    
+                </div>
+
+                <div class=" mb-4 sort-block d-flex align-items-center">
+                    <label for="eBayStore" class="me-2">Store:</label>
+                    <select class="form-select" style="width: auto;" id="eBayStore">
+                        <option selected>All</option>
+                        <option>Tradercart</option>
+                        <option>Plus Bee.com LTD</option>
+                        <option>Tehkal</option>
+                        <option>eTradehouse.com</option>
+                        <option>Safekom UK</option>
+                    </select>
+                </div>
+
+
+
+                <div class="card data-tables">
+                    <div class="card-header">
+                        eBay Invoices
+                    </div>
+                    <div class="card-body">
+
+                        <table id="eBayInvoicesTB" class="table stores-table table-bordered table-hover border" style="width:190%;">
+                            <thead class="bg-light">
+                                <tr>
+                                  <th scope="col">ID</th>
+                                  <th scope="col">Order ID</th>
+                                  <th scope="col">Customer</th>
+                                  <th scope="col">Date</th>
+                                  <th scope="col">Transaction ID</th>
+                                  <th scope="col">Total Amount</th>
+                                  <th scope="col">Items Cost</th>
+                                  <th scope="col">RMA Fees</th>
+                                  <th scope="col">eBay Fees</th>
+                                  <th scope="col">PayPal Fees</th>
+                                  <th scope="col">Fees VAT</th>
+                                  <th scope="col">Packing Cost</th>
+                                  <th scope="col">Shipping Cost</th>
+                                  <th scope="col">Ad Rate</th>
+                                  <th scope="col">Total Fees</th>
+                                  <th scope="col">VAT Fees</th>
+                                  <th scope="col">Total Cost</th>
+                                  <th scope="col">Profit</th>
+                                  <th scope="col">Profit %</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>440634</td>
+                                <td>444467</td>
+                                <td>Nadarajah Ravindran</td>
+                                <td>09/07/2021 09:38 PM</td>
+                                <td>7568803399</td>
+                                <td>3.49</td>
+                                <td>0.83</td>
+                                <td>0.06</td>
+                                <td>0.37</td>
+                                <td>0.42</td>
+                                <td>0.00</td>
+                                <td>0.18</td>
+                                <td>0.95</td>
+                                <td>0.00</td>
+                                <td>1.92</td>
+                                <td>0.58</td>
+                                <td>3.39</td>
+                                <td>0.10</td>
+                                <td>2.91</td>
+                            </tr>
+                        
+                        
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+                
+
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- JQuery File -->
+    <script src="../dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="../dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="../dist/js/custom.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

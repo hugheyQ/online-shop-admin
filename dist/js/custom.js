@@ -67,6 +67,17 @@ $(document).ready(function () {
         "scrollX":true
     });
 
+    $('#eBayInvoicesTB').DataTable({
+        ordering:true,
+        searching:true,
+        "scrollX":true
+    });
+
+    $('#eBaySKUTB').DataTable({
+        ordering:true,
+        searching:true
+    });
+
     
 
     $('#imageInput').change(function() {
