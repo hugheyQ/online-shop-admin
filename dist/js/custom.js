@@ -78,6 +78,12 @@ $(document).ready(function () {
         searching:true
     });
 
+    $('.eBayDash').DataTable({
+        ordering:true,
+        searching:true,
+        "scrollX":true
+    });
+
     
 
     $('#imageInput').change(function() {
