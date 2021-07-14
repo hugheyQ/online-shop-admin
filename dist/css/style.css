@@ -35,7 +35,6 @@
 
 .side-nav .nav-link:hover, .side-nav .nav-link.active {
   color: white;
-  padding-left: 1em;
 }
 
 .side-nav .nav-link i {

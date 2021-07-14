@@ -69,12 +69,12 @@
                 </a>
                 <div class="collapse sub-menu" id="collapseOrders">
                     <div class="card card-body">
-                        <a class="nav-link" href="ebay-orders.html">eBay Orders</a>
+                        <a class="nav-link active" href="ebay-orders.html">eBay Orders</a>
                         <a class="nav-link" href="sku-down-2.html">SKU Down</a>
                         <a class="nav-link" href="sku-up-2.html">SKU Up</a>
                         <a class="nav-link" href="kits-down-2.html">Kits Down</a>
                         <a class="nav-link" href="kits-up-2.html">Kits Up</a>
-                        <a class="nav-link active" href="ebay-sku-count.html">eBay SKU Count</a>
+                        <a class="nav-link" href="ebay-sku-count.html">eBay SKU Count</a>
                         <a class="nav-link" href="ebay-date-up.html">eBay Date Up</a>
                         <a class="nav-link" href="bulk-sku-count.html">Bulk SKU Count</a>
                         <a class="nav-link" href="collection-orders.html">Collection-Orders</a>
@@ -115,7 +115,7 @@
                     <div class="profile">
                         <div class="dropdown">
                             <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="../images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
                               <li><a class="dropdown-item" href="#">Action</a></li>
@@ -135,14 +135,14 @@
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                         <li class="breadcrumb-item"><a href="index.html">Ebay Management Center</a></li>
                         <li class="breadcrumb-item">Ebay Orders</li>
-                        <li class="breadcrumb-item active" aria-current="page">eBay SKU Count</li>
+                      <li class="breadcrumb-item active" aria-current="page">eBay Orders</li>
                     </ol>
                 </nav>
                 
-                <h1>eBay SKU Count Management</h1>
+                <h1>eBay Orders Management</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>Manage eBay SKU Count Here</p>
+                    <p>Manage eBay Orders Here</p>
                     
                     
                 </div>
@@ -162,30 +162,57 @@
 
 
                 <div class="card data-tables">
-
-                    <div class="card-header">eBay SKU Count</div>
-
+                    <div class="card-header">
+                        eBay Orders
+                    </div>
                     <div class="card-body">
 
-                        <table id="eBaySKUTB" class="table stores-table table-hover border">
+                        <table id="eBayInvoicesTB" class="table stores-table table-bordered table-hover border" style="width:190%;">
                             <thead class="bg-light">
                                 <tr>
-                                    <th scope="col">SKU</th>
-                                    <th scope="col">Quantity</th>
+                                  <th scope="col">Order ID</th>
+                                  <th scope="col">Customer</th>
+                                  <th scope="col">Date</th>
+                                  <th scope="col">Transaction ID</th>
+                                  <th scope="col">Total Amount</th>
+                                  <th scope="col">Items Cost</th>
+                                  <th scope="col">RMA Fees</th>
+                                  <th scope="col">eBay Fees</th>
+                                  <th scope="col">PayPal Fees</th>
+                                  <th scope="col">Packing Cost</th>
+                                  <th scope="col">Shipping Cost</th>
+                                  <th scope="col">Ad Rate</th>
+                                  <th scope="col">Total Fees</th>
+                                  <th scope="col">VAT Fees</th>
+                                  <th scope="col">Total Cost</th>
+                                  <th scope="col">Profit</th>
+                                  <th scope="col">Profit %</th>
                                 </tr>
                             </thead>
                             <tbody>
-
-                                <tr>
-                                    <td colspan="2">No Data is Avilable</td>
-                                </tr>
-
-
+                            <tr>
+                                <td>433994</td>
+                                <td>Robert Allen</td>
+                                <td>29/12/2020 12:46 PM</td>
+                                <td>5720646376</td>
+                                <td>13.95</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.70</td>
+                                <td>0.16</td>
+                                <td>0.95</td>
+                                <td>0.00</td>
+                                <td>1.81</td>
+                                <td>2.32</td>
+                                <td>4.14</td>
+                                <td>9.81</td>
+                                <td>70.33</td>
+                            </tr>
                         
                         
                             </tbody>
                         </table>
-
 
                     </div>
                 </div>
@@ -221,11 +248,9 @@
 
     <!-- Custom Javascipt -->
     <script src="../dist/js/custom.js"></script>
-
-
-
 </body>
 </html>
+
 
 
 
