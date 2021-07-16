@@ -509,4 +509,8 @@ label {
   color: #dddfeb;
   font-weight: 900;
 }
+
+.breadcrumb {
+  --bs-breadcrumb-divider: '/';
+}
 /*# sourceMappingURL=style.css.map */
