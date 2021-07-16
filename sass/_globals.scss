@@ -377,3 +377,91 @@ label {
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
 }
+
+
+
+.overview{
+	.card{
+		border-radius: 5px;
+		.card-title{
+			margin-bottom: .1em;
+		}
+
+		.stat{
+			color: #5a5c69;
+		}
+
+		&.card-1{
+			border-left: 4px solid $violet;
+
+			.card-title{
+				color: $violet;
+			}
+		}
+
+		&.card-2{
+			border-left: 4px solid $green;
+
+			.card-title{
+				color: $green;
+			}
+		}
+
+		&.card-3{
+			border-left: 4px solid $lime;
+
+			.card-title{
+				color: $lime;
+			}
+		}
+
+		&.card-4{
+			border-left: 4px solid $gold;
+
+			.card-title{
+				color: $gold;
+			}
+		}
+
+		&.card-5{
+			border-left: 4px solid $red;
+
+			.card-title{
+				color: $red;
+			}
+		}
+
+		&.card-6{
+			border-left: 4px solid $purple;
+
+			.card-title{
+				color: $purple;
+			}
+		}
+
+		&.card-7{
+			border-left: 4px solid $pink;
+
+			.card-title{
+				color: $pink;
+			}
+		}
+
+		&.card-8{
+			border-left: 4px solid $brown;
+
+			.card-title{
+				color: $brown;
+			}
+		}
+	}
+	.right{
+		display: flex;
+		align-items: center;
+		i{
+			font-size: 37px;
+			color: #dddfeb;
+			font-weight: 900;
+		}
+	}
+}

@@ -84,6 +84,11 @@ $(document).ready(function () {
         "scrollX":true
     });
 
+    $('.eBayDash1').DataTable({
+        ordering:true,
+        searching:true
+    });
+
     
 
     $('#imageInput').change(function() {

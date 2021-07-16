@@ -57,7 +57,7 @@
 }
 
 .side-nav .sub-menu .card .nav-link:hover, .side-nav .sub-menu .card .nav-link.active {
-  background-color: #eaecf4;
+  color: #4a6fdc;
 }
 
 .main-section {
@@ -89,93 +89,6 @@
 .main-section .main-section-container .cta-btn:hover {
   background-color: #3457bb;
   border: 1px solid #3457bb;
-}
-
-.main-section .main-section-container .overview .card {
-  border-radius: 5px;
-}
-
-.main-section .main-section-container .overview .card .card-title {
-  margin-bottom: .1em;
-}
-
-.main-section .main-section-container .overview .card .stat {
-  color: #5a5c69;
-}
-
-.main-section .main-section-container .overview .card.card-1 {
-  border-left: 4px solid #597be1;
-}
-
-.main-section .main-section-container .overview .card.card-1 .card-title {
-  color: #597be1;
-}
-
-.main-section .main-section-container .overview .card.card-2 {
-  border-left: 4px solid #1cc88a;
-}
-
-.main-section .main-section-container .overview .card.card-2 .card-title {
-  color: #1cc88a;
-}
-
-.main-section .main-section-container .overview .card.card-3 {
-  border-left: 4px solid #36b9cc;
-}
-
-.main-section .main-section-container .overview .card.card-3 .card-title {
-  color: #36b9cc;
-}
-
-.main-section .main-section-container .overview .card.card-4 {
-  border-left: 4px solid #f6c23e;
-}
-
-.main-section .main-section-container .overview .card.card-4 .card-title {
-  color: #f6c23e;
-}
-
-.main-section .main-section-container .overview .card.card-5 {
-  border-left: 4px solid #ec1c24;
-}
-
-.main-section .main-section-container .overview .card.card-5 .card-title {
-  color: #ec1c24;
-}
-
-.main-section .main-section-container .overview .card.card-6 {
-  border-left: 4px solid #b83dba;
-}
-
-.main-section .main-section-container .overview .card.card-6 .card-title {
-  color: #b83dba;
-}
-
-.main-section .main-section-container .overview .card.card-7 {
-  border-left: 4px solid #ffaec8;
-}
-
-.main-section .main-section-container .overview .card.card-7 .card-title {
-  color: #ffaec8;
-}
-
-.main-section .main-section-container .overview .card.card-8 {
-  border-left: 4px solid #b97a56;
-}
-
-.main-section .main-section-container .overview .card.card-8 .card-title {
-  color: #b97a56;
-}
-
-.main-section .main-section-container .overview .right {
-  display: flex;
-  align-items: center;
-}
-
-.main-section .main-section-container .overview .right i {
-  font-size: 37px;
-  color: #dddfeb;
-  font-weight: 900;
 }
 
 #viewOrderModal .action-block button {
@@ -508,5 +421,92 @@ label {
   user-select: none;
   /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
+}
+
+.overview .card {
+  border-radius: 5px;
+}
+
+.overview .card .card-title {
+  margin-bottom: .1em;
+}
+
+.overview .card .stat {
+  color: #5a5c69;
+}
+
+.overview .card.card-1 {
+  border-left: 4px solid #597be1;
+}
+
+.overview .card.card-1 .card-title {
+  color: #597be1;
+}
+
+.overview .card.card-2 {
+  border-left: 4px solid #1cc88a;
+}
+
+.overview .card.card-2 .card-title {
+  color: #1cc88a;
+}
+
+.overview .card.card-3 {
+  border-left: 4px solid #36b9cc;
+}
+
+.overview .card.card-3 .card-title {
+  color: #36b9cc;
+}
+
+.overview .card.card-4 {
+  border-left: 4px solid #f6c23e;
+}
+
+.overview .card.card-4 .card-title {
+  color: #f6c23e;
+}
+
+.overview .card.card-5 {
+  border-left: 4px solid #ec1c24;
+}
+
+.overview .card.card-5 .card-title {
+  color: #ec1c24;
+}
+
+.overview .card.card-6 {
+  border-left: 4px solid #b83dba;
+}
+
+.overview .card.card-6 .card-title {
+  color: #b83dba;
+}
+
+.overview .card.card-7 {
+  border-left: 4px solid #ffaec8;
+}
+
+.overview .card.card-7 .card-title {
+  color: #ffaec8;
+}
+
+.overview .card.card-8 {
+  border-left: 4px solid #b97a56;
+}
+
+.overview .card.card-8 .card-title {
+  color: #b97a56;
+}
+
+.overview .right {
+  display: flex;
+  align-items: center;
+}
+
+.overview .right i {
+  font-size: 37px;
+  color: #dddfeb;
+  font-weight: 900;
 }
 /*# sourceMappingURL=style.css.map */
