@@ -51,8 +51,8 @@
 
                 <div class="collapse sub-menu" id="collapseListings">
                     <div class="card card-body">
-                        <a class="nav-link active" href="list-item.html">List Item</a>
-                        <a class="nav-link" href="super-dashboard.html">Super Dashboard</a>
+                        <a class="nav-link" href="list-item.html">List Item</a>
+                        <a class="nav-link active" href="super-dashboard.html">Super Dashboard</a>
                         <a class="nav-link" href="assign-items.html">Assign Items</a>
                         <a class="nav-link" href="wizard.html">Wizard</a>
                         <a class="nav-link" href="reset-listing.html">Reset Listing</a>
@@ -193,7 +193,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                         <li class="breadcrumb-item">Listings</li>
-                        <li class="breadcrumb-item active" aria-current="page">List Item</li>
+                        <li class="breadcrumb-item active" aria-current="page">Super Dashboard</li>
                     </ol>
                 </nav>
                 
@@ -204,35 +204,91 @@
                     
                 </div>
 
-                <div class="row mb-4">
+                <div class="row mb-4 g-2">
                     <div class="col">
-                        <div class="sort-block d-flex align-items-center">
-                            <label for="eBayStore" class="me-2">eBay Store:</label>
-                            <select class="form-select" style="width: auto;" id="eBayStore">
-                                <option>Safekom UK</option>
-                                <option>dooma-it</option>
-                                <option>eTHShop</option>
-                                <option>Comet</option>
-                            </select>
-                        </div>
+                        <label for="eBayStore">eBay Store:</label>
+                        <select class="form-select" id="eBayStore">
+                            <option>Safekom UK</option>
+                            <option>dooma-it</option>
+                            <option>eTHShop</option>
+                            <option>Comet</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="catSelect">Category:</label>
+                        <select class="form-select" id="catSelect">
+                            <option selected="selected">Car Accessories</option>
+                            <option>Exercise Fitness</option>
+                            <option>CCTV Systems</option>
+                            <option>Travel Accessories</option>
+                            <option>Home Accessories</option>
+                            <option>DIY Tools</option>
+                            <option>LCDTV Accessories</option>
+                            <option>Power Bank Backup Battery Charger </option>
+                            <option>Clothing</option>
+                            <option>Pet Accessories</option>
+                            <option>Cable Leads</option>
+                            <option>Network Product</option>
+                            <option>Women Accessories</option>
+                            <option>Computer Accessories</option>
+                            <option>Mobile Accessories</option>
+                            <option>Adaptors Splitters</option>
+                            <option>Health And Beauty Accessories</option>
+                            <option>Children</option>
+                            <option>Bicycle Accessories</option>
+                            <option>Speakers HeadPhones</option>
+                            <option>Garden Patio</option>
+                            <option>Music Instrument Accessories</option>
+                            <option>Outdoor Accessories</option>
+                            <option>Stationery</option>
+                            <option>Camera Accessories</option>
+                            <option>Due Soon</option>
+                            <option>Industrial and commercial accessories</option>
+                            <option>sporting goods</option>
+                            <option>Business, Office &amp; Industrial</option>
+                            <option>Computers,Tablets &amp; Networking</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="subCatSelect">Subcategory:</label>
+                        <select class="form-select" id="subCatSelect">
+                            <option selected="selected">Dashboard Accessories</option>
+                            <option>Mix Car Accessories</option>
+                            <option>FM Transmitters</option>
+                            <option>Universal Holders</option>
+                            <option>Car Roof Rails</option>
+                            <option>Car Tyre care</option>
+                            <option>Car steering Tools</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="childSubCatSelect">Child Subcategory:</label>
+                        <select class="form-select" id="childSubCatSelect">
+                            <option selected="selected">N/A</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="productSelect">Product</label>
+                        <select class="form-select" id="productSelect">
+                            <option selected="selected">5V35A-2U @ 1836</option>
+                            <option>5V24A-1UA @ 21</option>
+                            <option>5V35A-2 @ 1754</option>
+                        </select>
                     </div>
                 </div>
 
 
                 <div class="card data-tables">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        Listed Dashboard Items
-
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createListingModal"><i class="bi bi-plus"></i> Create New Listing</button>
-                    </div>
+                    <div class="card-header">Listed Dashboard Items</div>
                     <div class="card-body">
 
-                        <table id="eBayCustomerTB" class="table stores-table table-bordered table-hover border" style="width:160%;">
+                        <table id="eBayCustomerTB" class="table stores-table table-bordered table-hover border" style="width:180%;">
                             <thead class="bg-light">
                                 <tr>
                                   <th scope="col">Item ID</th>
                                   <th scope="col">Images</th>
                                   <th scope="col">Title</th>
+                                  <th scope="col">Shop Name</th>
                                   <th scope="col">Item Info</th>
                                   <th scope="col">Quantity</th>
                                   <th scope="col">Sales History</th>
@@ -249,6 +305,7 @@
                                     <img src="../images/item.jpg">
                                 </td>
                                 <td>Strong Brown Clear Packaging Parcel Packing Tape Strong 48mm x 66m Fragile 6 12</td>
+                                <td>eTHShop</td>
                                 <td>
                                     <a href ="#" class="btn" data-bs-toggle="modal" data-bs-target="#itemInfoModal" title="Item Info"><i class="bi bi-eye"></i></a>
                                 </td>
@@ -340,192 +397,10 @@
                         <li class="list-group-item"><span class="fw-bold">Postage</span>: £0.95 - £0.95</li>
                         <li class="list-group-item"><span class="fw-bold">Sell Price</span>: £0.99 - £142.99</li>
                         <li class="list-group-item"><span class="fw-bold">Profit</span>: £-0.25</li>
-                        <li class="list-group-item"><span class="fw-bold">Schedule Time</span>: 25/06/2021 02:48 PM</li>
-                        <li class="list-group-item"><span class="fw-bold">Ad Rate</span>: 0%</li>
-                        <li class="list-group-item"><span class="fw-bold">Ad Rate Money</span>: £0.00</li>
                     </ul>
                 </div>
                 
             </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- Create New Listing Modal -->
-<div class="modal fade" id="createListingModal" tabindex="-1" aria-labelledby="createListingModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-            <h5 class="modal-title" id="createListingModalLabel">Create New List Item</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body data-tables">
-                <div class="card">
-                    <div class="card-body">
-
-                        <div class="row mb-4 g-3">
-                            <div class="col">
-                                <div class="form-floating">
-                                    <select class="form-select" id="newListingSelect">
-                                        <option>Safekom UK</option>
-                                        <option>dooma-it</option>
-                                        <option>eTHShop</option>
-                                        <option>Comet</option>
-                                    </select>
-                                    <label for="newListingSelect" class="me-2">Store:</label>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="input-group">
-                                    <div class="form-floating" style="width: 80%;">
-                                        <input type="text" class="form-control" id="cpItemID" placeholder="Copy Listing Item ID">
-                                        <label for="cpItemID">Copy Listing Item ID</label>    
-                                    </div>
-                                    <button class="btn btn-primary" style="width: 20%;"><i class="bi bi-clipboard"></i> Copy</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row mb-3">
-                            <div class="col-12 mb-2">
-                                <form class="searchCatForm">
-                                    <div class="input-group">
-                                        <div class="form-floating" style="width: 75%;">
-                                            <input type="search" class="form-control" id="searchCat1" placeholder="Search Category 1" required>
-                                            <label for="searchCat1">Search Category 1</label>    
-                                        </div>
-                                        <button type="submit" class="btn btn-primary" style="width: 25%;"><i class="bi bi-search"></i> Get Suggested Categories</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-12">
-                                <table class="table table-bordered table-hover border d-none">
-                                    <thead class="bg-light">
-                                        <tr>
-                                        <th scope="col">Select</th>
-                                        <th scope="col">Main Category</th>
-                                        <th scope="col">Category</th>
-                                        <th scope="col">Main Subcategory</th>
-                                        <th scope="col">Subcategory</th>
-                                        <th scope="col">Product</th>
-                                        <th scope="col">Keyword %</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <input type="radio" class="form-check-input" name="selectCat1">
-                                            </td>
-                                            <td>Jewellery & Watches</td>
-                                            <td>Watches, Parts & Accessories</td>
-                                            <td>Watches</td>
-                                            <td>Wristwatches</td>
-                                            <td></td>
-                                            <td>99</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input type="radio" class="form-check-input" name="selectCat1">
-                                            </td>
-                                            <td>Jewellery & Watches</td>
-                                            <td>Watches, Parts & Accessories</td>
-                                            <td>Watches</td>
-                                            <td>Wristwatches</td>
-                                            <td></td>
-                                            <td>99</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="row mb-3">
-                            <div class="col-12 mb-2">
-                                <form class="searchCatForm">
-                                    <div class="input-group">
-                                        <div class="form-floating" style="width: 75%;">
-                                            <input type="search" class="form-control" id="searchCat2" placeholder="Search Category 2" required>
-                                            <label for="searchCat1">Search Category 2</label>    
-                                        </div>
-                                        <button type="submit" class="btn btn-primary" style="width: 25%;"><i class="bi bi-search"></i> Get Suggested Categories</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-12">
-                                <table class="table table-bordered table-hover border d-none">
-                                    <thead class="bg-light">
-                                        <tr>
-                                        <th scope="col">Select</th>
-                                        <th scope="col">Main Category</th>
-                                        <th scope="col">Category</th>
-                                        <th scope="col">Main Subcategory</th>
-                                        <th scope="col">Subcategory</th>
-                                        <th scope="col">Product</th>
-                                        <th scope="col">Keyword %</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <input type="radio" class="form-check-input" name="selectCat2">
-                                            </td>
-                                            <td>Jewellery & Watches</td>
-                                            <td>Watches, Parts & Accessories</td>
-                                            <td>Watches</td>
-                                            <td>Wristwatches</td>
-                                            <td></td>
-                                            <td>99</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input type="radio" class="form-check-input" name="selectCat2">
-                                            </td>
-                                            <td>Jewellery & Watches</td>
-                                            <td>Watches, Parts & Accessories</td>
-                                            <td>Watches</td>
-                                            <td>Wristwatches</td>
-                                            <td></td>
-                                            <td>99</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        
-
-        
-
-
-                    </div>
-                </div>
-                
-            </div>
-            <div class="modal-footer border-0">
-                <a href="ebay-category-data.html" class="btn btn-primary">Next</a>
-            </div>
-
-            <script>
-                const searchForms = document.querySelectorAll('.searchCatForm');
-
-                
-                searchForms.forEach(searchForm => {
-                    searchForm.addEventListener('submit', e =>{
-                        e.preventDefault();
-                        const formParent = searchForm.parentElement.parentElement;
-
-                        let resultTable = formParent.querySelector('table');
-
-                        resultTable.classList.remove('d-none');
-                    });
-                });
-
-
-            </script>
         </div>
     </div>
 </div>

@@ -89,6 +89,24 @@ $(document).ready(function () {
         searching:true
     });
 
+    $('#searchResultsTable').DataTable({
+        ordering:true,
+        searching:true,
+        "scrollX":true
+    });
+
+    $('#listngTable').DataTable({
+        ordering:true,
+        searching:false,
+        "scrollX":true,
+        paging:false
+    });
+
+    $('#checkMarketTable').DataTable({
+        ordering:true,
+        searching:true
+    });
+
     
 
     $('#imageInput').change(function() {

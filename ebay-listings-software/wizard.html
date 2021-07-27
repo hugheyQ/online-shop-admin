@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="../dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="../dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="../dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="../images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="../index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="index.html">eBay Dashboard</a>
+
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseListings" role="button" aria-expanded="false" aria-controls="collapseExample">Listings  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseListings">
+                    <div class="card card-body">
+                        <a class="nav-link" href="list-item.html">List Item</a>
+                        <a class="nav-link" href="super-dashboard.html">Super Dashboard</a>
+                        <a class="nav-link" href="assign-items.html">Assign Items</a>
+                        <a class="nav-link active" href="wizard.html">Wizard</a>
+                        <a class="nav-link" href="reset-listing.html">Reset Listing</a>
+                        <a class="nav-link" href="oos-item.html">OOS Item</a>
+                        <a class="nav-link" href="not-selling-item.html">Not Selling Item</a>
+                        <a class="nav-link" href="nsi-wizard.html">NSI Wizard</a>
+                        <a class="nav-link" href="categories-issues.html">Titles / Categories Issues</a>
+                        <a class="nav-link" href="resubmit-listings.html">Resubmit Listings</a>
+                        <a class="nav-link" href="bulk-revise.html">Bulk Revise</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapsePromotions" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Promotions <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapsePromotions">
+                    <div class="card card-body">
+                        <a class="nav-link" href="ebay-sponsor.html">eBay Sponsor</a>
+                        <a class="nav-link" href="ebay-promotions.html">eBay Promotions</a>
+                        <a class="nav-link" href="order-discount-promotions.html">Order Discount Promotions</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="assigned-product.html">Assigned Product</a>
+                <a class="nav-link" href="best-offers.html">Best Offers</a>
+                <a class="nav-link" href="ebay-selling.html">eBay Selling</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSProfiles" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Shipping Profiles <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSProfiles">
+                    <div class="card card-body">
+                        <a class="nav-link" href="shipping-profiles.html">Shipping Profiles</a>
+                        <a class="nav-link" href="ebay-shipping.html">eBay Shipping</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSortEbayItems" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Sort eBay Items <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSortEbayItems">
+                    <div class="card card-body">
+                        <a class="nav-link" href="problem-items.html">Problem Items</a>
+                        <a class="nav-link" href="kits-items.html">Kits Items</a>
+                        <a class="nav-link" href="buy-get-free.html">Buy X Get N Free</a>
+                        <a class="nav-link" href="cross-listings.html">Cross Listings</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="downloads.html">Downloads</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Search <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEbaySearch">
+                    <div class="card card-body">
+                        <a class="nav-link" href="ebay-search.html">eBay Search</a>
+                        <a class="nav-link" href="ebay-images-search.html">eBay Image Search</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="marketing.html">Marketing</a>
+                <a class="nav-link" href="ebay-store-categories.html">eBay Store Categories</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayReports" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Reports <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEbayReports">
+                    <div class="card card-body">
+                        <a class="nav-link" href="staff-revision-history.html">Staff Revision History</a>
+                        <a class="nav-link" href="whats-trending.html">Whats Trending</a>
+                        <a class="nav-link" href="ebay-sqs.html">eBay SQS</a>
+                        <a class="nav-link" href="ebay-lqs.html">eBay LQS</a>
+                        <a class="nav-link" href="ebay-shop-profit.html">eBay Shop Profit</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="calculate-shipping.html">Calculate Shipping</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Store Sync <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEbayStoreSync">
+                    <div class="card card-body">
+                        <a class="nav-link" href="staff-revision-history.html">eBay Store Sync</a>
+                        <a class="nav-link" href="assign-stores.html">Assign Stores</a>
+                        <a class="nav-link" href="ebay-auth-code.html">eBay Auth Code</a>
+                        <a class="nav-link" href="notification.html">Notification</a>
+                        <a class="nav-link" href="paypal-accounts.html">PayPal Accounts</a>
+                        <a class="nav-link" href="returns-policy.html">Returns Policy</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="calculate-shipping.html">Reduce eBay Fees</a>
+
+        
+            </nav>
+        </div>
+
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="../images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container overview p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item">Listings</li>
+                        <li class="breadcrumb-item active" aria-current="page">eBay Listed Items Wizard</li>
+                    </ol>
+                </nav>
+                
+                <h1>eBay Listed Items Wizard Management</h1>
+
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>eBay Listed Items Wizard Here</p>
+                    
+                </div>
+
+            
+
+                <div class="card list-item">
+                    <div class="card-header">eBay Listed Items Wizard</div>
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row g-1">
+                                    <div class="col-3">
+                                        <h6>eBay Store:</h6>
+                                        <select class="form-select" id="storeSelect">
+                                            <option>Safekom UK</option>
+                                            <option>dooma-it</option>
+                                            <option>eTHShop</option>
+                                            <option>Comet</option>
+                                        </select>
+                                    </div>
+                                    <div class="col d-flex align-items-end">
+                                        <button class="btn btn-primary" id="startWizard">Start Wizard</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+
+                        <div class="row g-3 mt-4 hidden d-none">
+
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body d-flex align-items-center justify-content-between">
+                                        <span>Count: 1 of 156</span>
+
+                                        <div class="input-group float-end" style="max-width: 40%;">
+                                            <input type="search" placeholder="Keyword" class="form-control">
+                                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#checkMarketModal">Check Market</button>
+                                        </div>
+
+                                        <div>
+                                            <button class="btn btn-primary">Save and Next</button>
+                                            <button class="btn btn-primary">Skip</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="row g-3">
+                                            <div class="col-12">
+                                                <h6>Selected eBay Category</h6>
+                                                <p>Clothes, Shoes & Accessories > Women > Women's Accessories > Hats</p>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <h6>Listed Item Image</h6>
+                                                <img src="../images/item.jpg" class="img-fluid" style="max-width: 5rem;">
+                                            </div>
+
+                                            <div class="col-12">
+                                                <h6>Item Information</h6>
+                                                <div class="row g-2">
+                                                    <div class="col-4">
+                                                        <p><span class="fw-bold">Item ID:</span> 334022237861</p>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <p><span class="fw-bold">SKU:</span> EMC-F</p>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <p><span class="fw-bold">Today Qty:</span> 0</p>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <p><span class="fw-bold">Yesterday Qty:</span> 0</p>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <p><span class="fw-bold">DBY Qty:</span> 0</p>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <p><span class="fw-bold">Commission:</span> 12%</p>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <p><span class="fw-bold">eBay Item ID Sold:</span> 0</p>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <p><span class="fw-bold">eBay SKU Sold:</span> 8</p>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <p><span class="fw-bold">eTradeHouse SKU Sold:</span> 0</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-6">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="row g-3">
+
+                                            <div class="col-12">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" value="EAR MUFFS SOFT FLEECE WRAP AROUND WINTER WARM Ski ONE SIZE FITS ALL" placeholder="Title" id="title" required>
+                                                    <label for="title">Title</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" placeholder="Subtitle" id="subtitle">
+                                                    <label for="title">Subtitle (£1.20)</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" placeholder="MPN" value="Heavy Duty Unisex Ear Muffs" id="mpn">
+                                                    <label for="mpn">MPN</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form-floating">
+                                                    <input type="number" class="form-control" min="0" step="0.01" value="2.19" id="sellPrice" placeholder="Sell Price">
+                                                    <label for="sellPrice">Sell Price (£)</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form-floating">
+                                                    <input type="number" class="form-control" min="0" value="4" id="quantity" placeholder="Quantity">
+                                                    <label for="quantity">Quantity</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <p><span class="fw-bold">AVG:</span> £2.19</p>
+                                            </div>
+
+                                            <div class="col">
+                                                <p><span class="fw-bold">Postage:</span> £0.95</p>
+                                            </div>
+
+                                            <div class="col">
+                                                <p><span class="fw-bold">Profit:</span> £-1.25</p>
+                                            </div>
+
+                                            <div class="col">
+                                                <p><span class="fw-bold">Profit:</span> -56.907%</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <div class="card">
+                                    <div class="card-body data-tables">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-hover border" style="width:180%;">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                      <th scope="col">Pack Of</th>
+                                                      <th scope="col">SKU</th>
+                                                      <th scope="col">EAN</th>
+                                                      <th scope="col">Quantity</th>
+                                                      <th scope="col">AVG (£)</th>
+                                                      <th scope="col">Sell Price (£)</th>
+                                                      <th scope="col">P&P Cost (£)</th>
+                                                      <th scope="col">P&P Charge (£)</th>
+                                                      <th scope="col">Profit (£)</th>
+                                                      <th scope="col">Profit (%)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+    
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>SHWCPD-LT5</td>
+                                                        <td><input type="text" class="form-control" value="DOES NOT APPLY"></td>
+                                                        <td><input type="number" class="form-control" value="2" min="0"></td>
+                                                        <td>0.29</td>
+                                                        <td><input type="number" class="form-control" value="1.35" min="0" step="0.01"></td>
+                                                        <td>0.95</td>
+                                                        <td>0.00</td>
+                                                        <td>-0.82</td>
+                                                        <td>-60.978%</td>
+                                                    </tr>
+    
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>SHWCPD-LT5-LT2</td>
+                                                        <td><input type="text" class="form-control" value="DOES NOT APPLY"></td>
+                                                        <td><input type="number" class="form-control" value="4" min="0"></td>
+                                                        <td>0.58</td>
+                                                        <td><input type="number" class="form-control" value="2.99" min="0" step="0.01"></td>
+                                                        <td>0.95</td>
+                                                        <td>0.00</td>
+                                                        <td>-0.02</td>
+                                                        <td>-0.649%</td>
+                                                    </tr>
+                                            
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                
+
+                
+
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- JQuery File -->
+    <script src="../dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="../dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="../dist/js/custom.js"></script>
+
+
+    <script>
+        const startBtn = document.querySelector('#startWizard');
+        const storeSelect = document.querySelector('#storeSelect');
+        const hiddenSection = document.querySelector('.hidden');
+
+
+        startBtn.addEventListener('click', () => {
+            startBtn.classList.add('d-none');
+            hiddenSection.classList.remove('d-none');
+
+            storeSelect.setAttribute('disabled', 'disabled');
+
+        });
+    </script>
+
+
+</body>
+</html>
+
+
+<!-- Check Market Modal -->
+<div class="modal fade" id="checkMarketModal" tabindex="-1" aria-labelledby="checkMarketModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+            <h5 class="modal-title" id="checkMarketModalLabel">Check Market</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body data-tables">
+                
+                
+                <div class="table-responsive">
+                    <table class="table stores-table table-bordered table-hover border text-start" style="width: 150%;">
+                        <thead class="bg-light">
+                            <tr>
+                                <th scope="col">Image</th>
+                                <th scope="col">Item ID</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Sell Price</th>
+                                <th scope="col">Shop Name</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Watch</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <img src="../images/item.jpg">
+                                </td>
+                                <td>313433658978</td>
+                                <td>
+                                    <p>Ladies Wrist Watches Watch Quartz Analogue Women S Steel Leather Casual Gift Hot</p>
+                                    <p><span class="fw-bold">Category:</span> Wristwatches</p>
+                                </td>
+                                <td>
+                                    <div class="row g-0">
+                                        <div class="col-5">Strap Color: Brown</div>
+                                        <div class="col">Quantity: 23</div>
+                                        <div class="col">Price: £4.39</div>
+                                    </div>
+
+                                    <div class="row g-0">
+                                        <div class="col-5">Strap Color: Purple</div>
+                                        <div class="col">Quantity: 6</div>
+                                        <div class="col">Price: £4.39</div>
+                                    </div>
+
+                                    <div class="row g-0">
+                                        <div class="col-5">Strap Color: Black</div>
+                                        <div class="col">Quantity: 83</div>
+                                        <div class="col">Price: £4.39</div>
+                                    </div>
+                                </td>
+                                <td>coragios</td>
+                                <td>26/02/2021</td>
+                                <td>57</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <img src="../images/item.jpg">
+                                </td>
+                                <td>313433658978</td>
+                                <td>
+                                    <p>Ladies Wrist Watches Watch Quartz Analogue Women S Steel Leather Casual Gift Hot</p>
+                                    <p><span class="fw-bold">Category:</span> Wristwatches</p>
+                                </td>
+                                <td>
+                                    <div class="row g-0">
+                                        <div class="col-5">Strap Color: Brown</div>
+                                        <div class="col">Quantity: 23</div>
+                                        <div class="col">Price: £4.39</div>
+                                    </div>
+
+                                    <div class="row g-0">
+                                        <div class="col-5">Strap Color: Purple</div>
+                                        <div class="col">Quantity: 6</div>
+                                        <div class="col">Price: £4.39</div>
+                                    </div>
+
+                                    <div class="row g-0">
+                                        <div class="col-5">Strap Color: Black</div>
+                                        <div class="col">Quantity: 83</div>
+                                        <div class="col">Price: £4.39</div>
+                                    </div>
+                                </td>
+                                <td>coragios</td>
+                                <td>26/02/2021</td>
+                                <td>57</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <img src="../images/item.jpg">
+                                </td>
+                                <td>313433658978</td>
+                                <td>
+                                    <p>Ladies Wrist Watches Watch Quartz Analogue Women S Steel Leather Casual Gift Hot</p>
+                                    <p><span class="fw-bold">Category:</span> Wristwatches</p>
+                                </td>
+                                <td>
+                                    <div class="row g-0">
+                                        <div class="col-5">Strap Color: Brown</div>
+                                        <div class="col">Quantity: 23</div>
+                                        <div class="col">Price: £4.39</div>
+                                    </div>
+
+                                    <div class="row g-0">
+                                        <div class="col-5">Strap Color: Purple</div>
+                                        <div class="col">Quantity: 6</div>
+                                        <div class="col">Price: £4.39</div>
+                                    </div>
+
+                                    <div class="row g-0">
+                                        <div class="col-5">Strap Color: Black</div>
+                                        <div class="col">Quantity: 83</div>
+                                        <div class="col">Price: £4.39</div>
+                                    </div>
+                                </td>
+                                <td>coragios</td>
+                                <td>26/02/2021</td>
+                                <td>57</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <table class="table stores-table table-bordered table-hover border mt-4">
+                    <thead class="bg-light">
+                        <tr>
+                            <th scope="col">Keyword</th>
+                            <th scope="col">Repitition</th>
+                        </tr>
+                    </thead>
+                    <tbody style="text-transform: uppercase;">
+                        <tr>
+                            <td>Watch</td>
+                            <td>85</td>
+                        </tr>
+
+                        <tr>
+                            <td>Wrist</td>
+                            <td>66</td>
+                        </tr>
+
+                        <tr>
+                            <td>Watches</td>
+                            <td>62</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

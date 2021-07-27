@@ -21,6 +21,10 @@
 
     <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
     <link rel="stylesheet" href="dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
   
     <!-- Custom CSS -->
     <link rel="stylesheet" href="dist/css/style.css">
@@ -337,6 +341,50 @@
                     </div>
                 </div>
 
+                <div class="row" style="text-align: unset;">
+                    <div class="col">
+                        <div class="card data-tables">
+                            <div class="card-header">
+                                Overview of Sales
+                            </div>
+                            <div class="card-body">
+        
+                                <table class="table table-bordered table-hover border eBayDash1">
+                                    <thead class="bg-light">
+                                        <tr>
+                                          <th scope="col">Date</th>
+                                          <th scope="col">Order Numbers</th>
+                                          <th scope="col">Quantity Sold</th>
+                                          <th scope="col">Amount (£)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>13/07/2021</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>102.99</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>13/07/2021</td>
+                                        <td>10</td>
+                                        <td>10</td>
+                                        <td>102.99</td>
+                                    </tr>
+                                
+                                
+                                    </tbody>
+                                </table>
+        
+                            </div>
+                            <div class="card-footer" style="font-size: .9rem;">
+                                Total Running Sales: £1836.41
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </section>
         </main>
@@ -348,6 +396,15 @@
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="dist/js/bootstrap.bundle.min.js"></script> 
+
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="dist/js/custom.js"></script>
 
 
     <!-- Chart JS -->
@@ -412,8 +469,9 @@
 
     </script>
 
-    <!-- Custom Javascipt -->
-    <script src="dist/js/custom.js"></script>
+    
+
+    
 
 
 </body>

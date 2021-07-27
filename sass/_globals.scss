@@ -223,8 +223,15 @@ p {
 		text-align: center;
 		td{
 			vertical-align:middle;
-			input{
+			input[type='number']{
 				max-width: 80px;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+
+			input[type='text']{
+				width: 80%;
 				margin-left: auto;
 				margin-right: auto;
 				text-align: center;
@@ -235,11 +242,7 @@ p {
 				transition: $ease-in-out-1;
 				display: inline-block;
 				font-size: 16px;
-	
-				// &:not(:last-child){
-				//     margin-right: .1em;
-				// }
-	
+
 				&:hover{
 					color: $l-blue;
 				}
@@ -469,4 +472,45 @@ label {
 
 .breadcrumb{
 	--bs-breadcrumb-divider: '/';
+}
+
+
+.list-item{
+	h6{
+		margin-bottom: .4rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 1rem;
+	}
+	p{
+		font-size: .9rem;
+
+		&:not(:last-child){
+			margin-bottom: .5rem;
+		}
+	}
+
+	
+}
+
+
+.fs-c{
+	font-size: .8rem;
+}
+
+
+.keywords-table-1{
+	text-align: center;
+	font-size: .9rem;
+	img{
+		width: 100%;
+		max-width: 8rem;
+		height: auto;
+	}
+}
+
+.keywords-table-2{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: .9rem;
 }

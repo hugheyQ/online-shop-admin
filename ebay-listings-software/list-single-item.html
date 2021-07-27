@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="../dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="../dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="../dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="../images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="../index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="index.html">eBay Dashboard</a>
+
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseListings" role="button" aria-expanded="false" aria-controls="collapseExample">Listings  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseListings">
+                    <div class="card card-body">
+                        <a class="nav-link active" href="list-item.html">List Item</a>
+                        <a class="nav-link" href="super-dashboard.html">Super Dashboard</a>
+                        <a class="nav-link" href="assign-items.html">Assign Items</a>
+                        <a class="nav-link" href="wizard.html">Wizard</a>
+                        <a class="nav-link" href="reset-listing.html">Reset Listing</a>
+                        <a class="nav-link" href="oos-item.html">OOS Item</a>
+                        <a class="nav-link" href="not-selling-item.html">Not Selling Item</a>
+                        <a class="nav-link" href="nsi-wizard.html">NSI Wizard</a>
+                        <a class="nav-link" href="categories-issues.html">Titles / Categories Issues</a>
+                        <a class="nav-link" href="resubmit-listings.html">Resubmit Listings</a>
+                        <a class="nav-link" href="bulk-revise.html">Bulk Revise</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapsePromotions" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Promotions <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapsePromotions">
+                    <div class="card card-body">
+                        <a class="nav-link" href="ebay-sponsor.html">eBay Sponsor</a>
+                        <a class="nav-link" href="ebay-promotions.html">eBay Promotions</a>
+                        <a class="nav-link" href="order-discount-promotions.html">Order Discount Promotions</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="assigned-product.html">Assigned Product</a>
+                <a class="nav-link" href="best-offers.html">Best Offers</a>
+                <a class="nav-link" href="ebay-selling.html">eBay Selling</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSProfiles" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Shipping Profiles <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSProfiles">
+                    <div class="card card-body">
+                        <a class="nav-link" href="shipping-profiles.html">Shipping Profiles</a>
+                        <a class="nav-link" href="ebay-shipping.html">eBay Shipping</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSortEbayItems" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Sort eBay Items <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSortEbayItems">
+                    <div class="card card-body">
+                        <a class="nav-link" href="problem-items.html">Problem Items</a>
+                        <a class="nav-link" href="kits-items.html">Kits Items</a>
+                        <a class="nav-link" href="buy-get-free.html">Buy X Get N Free</a>
+                        <a class="nav-link" href="cross-listings.html">Cross Listings</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="downloads.html">Downloads</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Search <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEbaySearch">
+                    <div class="card card-body">
+                        <a class="nav-link" href="ebay-search.html">eBay Search</a>
+                        <a class="nav-link" href="ebay-images-search.html">eBay Image Search</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="marketing.html">Marketing</a>
+                <a class="nav-link" href="ebay-store-categories.html">eBay Store Categories</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayReports" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Reports <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEbayReports">
+                    <div class="card card-body">
+                        <a class="nav-link" href="staff-revision-history.html">Staff Revision History</a>
+                        <a class="nav-link" href="whats-trending.html">Whats Trending</a>
+                        <a class="nav-link" href="ebay-sqs.html">eBay SQS</a>
+                        <a class="nav-link" href="ebay-lqs.html">eBay LQS</a>
+                        <a class="nav-link" href="ebay-shop-profit.html">eBay Shop Profit</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="calculate-shipping.html">Calculate Shipping</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Store Sync <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEbayStoreSync">
+                    <div class="card card-body">
+                        <a class="nav-link" href="staff-revision-history.html">eBay Store Sync</a>
+                        <a class="nav-link" href="assign-stores.html">Assign Stores</a>
+                        <a class="nav-link" href="ebay-auth-code.html">eBay Auth Code</a>
+                        <a class="nav-link" href="notification.html">Notification</a>
+                        <a class="nav-link" href="paypal-accounts.html">PayPal Accounts</a>
+                        <a class="nav-link" href="returns-policy.html">Returns Policy</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="calculate-shipping.html">Reduce eBay Fees</a>
+
+        
+            </nav>
+        </div>
+
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="../images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container overview p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item">Listings</li>
+                        <li class="breadcrumb-item active" aria-current="page">List Item</li>
+                    </ol>
+                </nav>
+                
+                <h1>List a Single Item</h1>
+
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>List a Single Item Here</p>
+                    
+                </div>
+
+
+                <div class="card data-tables mb-3">
+                    <div class="card-header">Please enter the item details below.</div>
+                    <div class="card-body list-item">
+
+                        <div class="row g-3 mb-3">
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="row g-4">
+
+                                            <div class="col-12 mb-3">
+                                                <h6>Shop Name:</h6>
+                                                <p>Safekom</p>
+                                            </div>
+
+
+                                            <div class="col-12 mb-3 mt-0">
+                                                <h6>Title:</h6>
+                                                <div class="position-relative">
+                                                    <input type="text" class="form-control py-2" id="title" required>
+
+
+                                                    <a href="#" class="btn position-absolute top-50 end-0 translate-middle p-0" style="z-index: 100;" title="Search Keywords and Titles" data-bs-target="#keywordTitlesModal" data-bs-toggle="modal"><i class="bi bi-info-circle"></i></a>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="col-12 mt-0">
+                                                <h6>Subtitle (£1.20)</h6>
+                                                <input type="text" class="form-control" id="subtitle" required>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <h6>Condition</h6>
+                                                <select class="form-select py-2">
+                                                    <option>New</option>
+                                                    <option>Like New</option>
+                                                    <option>Very Good</option>
+                                                    <option>Good</option>
+                                                    <option>Acceptable</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <h6 class="mb-2">Shop Categories</h6>
+                                                <div class="row g-2">
+                                                    <div class="col-12">
+                                                        <select class="form-select py-2">
+                                                            <option>Other</option>
+                                                            <option>New Items Arrival</option>
+                                                            <option selected>Hot Offers</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Digital Multimeter/Tester Lead</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Screwdriver</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Shelving &amp; Racks</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Drywall Lifter</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Cement Mixer</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Office Chairs</option>
+                                                            <option>Business, Office &amp; Industrial &gt; White Board</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Packing Tape</option>
+                                                            <option>Business, Office &amp; Industrial &gt; White Paper</option>
+                                                            <option>Cameras &amp; Photography &gt; Photo Studio Kit</option>
+                                                            <option>Cameras &amp; Photography &gt; Camera Stand &amp; Monopod Stick</option>
+                                                            <option>Clothes, Shoes &amp; Accessories &gt; Credit Card Wallet &amp; Purse</option>
+                                                            <option>Clothes, Shoes &amp; Accessories &gt; Uniform Belts</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Overflow Trap</option>
+                                                            <option>Clothes, Shoes &amp; Accessories &gt; Carry Bag</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Wireless Doorbell</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Temperature Thermometer</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Tissue Paper Roll Holder</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Chairs</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Shower Head</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Chest Drawers</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Bedside Tables/Cabinets</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; DVD Glass Shelves</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Kitchen Postal Scale</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Wall Lamp Lights</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Security Pad Locks</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Security CCTV Camera</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Toilet Set</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Cooking Utensils Set</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Basin Mixer Tape</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Bunk Bed</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Sleeping Mask</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Cake Dispaly Stand</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Plaques &amp; Signs</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Curtain Rails</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Tyre Air Pressure Gauge</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Driver Socket Bit Set</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Steering Knob/Cover &amp; Lock</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Security Wheel Lock</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car MP3 Player</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Ashtray</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Spanner &amp; Wrench Set</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Mount Holder</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Folding Engine Crane</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Jacks and Lifting Tools</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Paddock Stands</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Wiper Blades</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Dash Camera</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Roof Bars</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Garage Cart Trolley</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Battery Terminals</option>
+                                                            <option>Sporting Goods &gt; Mini Exercise Stepper</option>
+                                                            <option>Sporting Goods &gt; Handlebar Ring Bell</option>
+                                                            <option>Sporting Goods &gt; Handlebar Grips &amp; Holder</option>
+                                                            <option>Sporting Goods &gt; Bicycle Kickstand</option>
+                                                            <option>Sporting Goods &gt; Bike Pedals</option>
+                                                            <option>Sporting Goods &gt; Bicycle Mudguards</option>
+                                                            <option>Sporting Goods &gt; Bicycle Wall Hook Holder</option>
+                                                            <option>Sporting Goods &gt; Abs Wheel Roller</option>
+                                                            <option>Sporting Goods &gt; Bicycle Chain Cleaner</option>
+                                                            <option>Sporting Goods &gt; Bicycle Sports Padded Seat</option>
+                                                            <option>Sporting Goods &gt; Bicycle Torch Lights</option>
+                                                            <option>Sporting Goods &gt; Bicycle Repair Stand</option>
+                                                            <option>Sound &amp; Vision &gt; Optical Toslink Cable</option>
+                                                            <option>Sound &amp; Vision &gt; Loud Speaker Cable</option>
+                                                            <option>Sound &amp; Vision &gt; TV Wall Mounts</option>
+                                                            <option>Sound &amp; Vision &gt; Car Tape Cassette Adapter</option>
+                                                            <option>Sound &amp; Vision &gt; TV Box Media Player</option>
+                                                            <option>Sound &amp; Vision &gt; Headphone Headset</option>
+                                                            <option>Sound &amp; Vision &gt; Disco Light</option>
+                                                            <option>Sound &amp; Vision &gt; HDMI Cable</option>
+                                                            <option>Mobile &amp; Communication &gt; Car Mobile &amp; Tablets Holder</option>
+                                                            <option>Mobile &amp; Communication &gt; Micro USB Charger &amp; Data Cable</option>
+                                                            <option>Buy it Now</option>
+                                                            <option>Garden &amp; Patio &gt; Outdoor Solar Light</option>
+                                                            <option>Garden &amp; Patio &gt; Wheelbarrow</option>
+                                                            <option>Garden &amp; Patio &gt; Lawn Aerator</option>
+                                                            <option>Toys &amp; Games &gt; Kids Scooter</option>
+                                                            <option>Toys &amp; Games &gt; Remote Control Car</option>
+                                                            <option>Toys &amp; Games &gt; Flying Fairy Doll</option>
+                                                            <option>Toys &amp; Games &gt; Kids Medical Toy</option>
+                                                            <option>Baby &gt; Baby Play Mat</option>
+                                                            <option>Pet Supplies &gt; Giggle Ball</option>
+                                                            <option>Pet Supplies &gt; Puppy Cage &amp; Bed</option>
+                                                            <option>Jewellery &amp; Watches &gt; Bracelets &amp; Bangles</option>
+                                                            <option>Health &amp; Beauty Accessories</option>
+                                                            <option>Home Accessories</option>
+                                                            <option>Biscycle Accessories</option>
+                                                            <option>LCD/TV Accessories</option>
+                                                            <option>Bikes Motorcycles Accessories</option>
+                                                            <option>Keyboards &amp; Keypads</option>
+                                                            <option>Art &amp; Craft Supplies</option>
+                                                            <option>PC/Computers Accessories</option>
+                                                            <option>Laptop/Computer Accessories</option>
+                                                            <option>Bicycle Accessories</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <select class="form-select py-2">
+                                                            <option selected>Other</option>
+                                                            <option>New Items Arrival</option>
+                                                            <option>Hot Offers</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Digital Multimeter/Tester Lead</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Screwdriver</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Shelving &amp; Racks</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Drywall Lifter</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Cement Mixer</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Office Chairs</option>
+                                                            <option>Business, Office &amp; Industrial &gt; White Board</option>
+                                                            <option>Business, Office &amp; Industrial &gt; Packing Tape</option>
+                                                            <option>Business, Office &amp; Industrial &gt; White Paper</option>
+                                                            <option>Cameras &amp; Photography &gt; Photo Studio Kit</option>
+                                                            <option>Cameras &amp; Photography &gt; Camera Stand &amp; Monopod Stick</option>
+                                                            <option>Clothes, Shoes &amp; Accessories &gt; Credit Card Wallet &amp; Purse</option>
+                                                            <option>Clothes, Shoes &amp; Accessories &gt; Uniform Belts</option>
+                                                            <option>Clothes, Shoes &amp; Accessories &gt; Carry Bag</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Overflow Trap</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Wireless Doorbell</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Temperature Thermometer</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Tissue Paper Roll Holder</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Chairs</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Shower Head</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Chest Drawers</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Bedside Tables/Cabinets</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; DVD Glass Shelves</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Kitchen Postal Scale</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Wall Lamp Lights</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Security Pad Locks</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Security CCTV Camera</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Toilet Set</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Cooking Utensils Set</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Basin Mixer Tape</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Bunk Bed</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Sleeping Mask</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Cake Dispaly Stand</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Plaques &amp; Signs</option>
+                                                            <option>Home, Furniture &amp; DIY &gt; Curtain Rails</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Tyre Air Pressure Gauge</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Driver Socket Bit Set</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Steering Knob/Cover &amp; Lock</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Security Wheel Lock</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car MP3 Player</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Ashtray</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Spanner &amp; Wrench Set</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Mount Holder</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Folding Engine Crane</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Jacks and Lifting Tools</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Paddock Stands</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Wiper Blades</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Dash Camera</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Roof Bars</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Garage Cart Trolley</option>
+                                                            <option>Vehicle Parts &amp; Accessories &gt; Car Battery Terminals</option>
+                                                            <option>Sporting Goods &gt; Mini Exercise Stepper</option>
+                                                            <option>Sporting Goods &gt; Handlebar Ring Bell</option>
+                                                            <option>Sporting Goods &gt; Handlebar Grips &amp; Holder</option>
+                                                            <option>Sporting Goods &gt; Bicycle Kickstand</option>
+                                                            <option>Sporting Goods &gt; Bike Pedals</option>
+                                                            <option>Sporting Goods &gt; Bicycle Mudguards</option>
+                                                            <option>Sporting Goods &gt; Bicycle Wall Hook Holder</option>
+                                                            <option>Sporting Goods &gt; Abs Wheel Roller</option>
+                                                            <option>Sporting Goods &gt; Bicycle Chain Cleaner</option>
+                                                            <option>Sporting Goods &gt; Bicycle Sports Padded Seat</option>
+                                                            <option>Sporting Goods &gt; Bicycle Torch Lights</option>
+                                                            <option>Sporting Goods &gt; Bicycle Repair Stand</option>
+                                                            <option>Sound &amp; Vision &gt; Optical Toslink Cable</option>
+                                                            <option>Sound &amp; Vision &gt; Loud Speaker Cable</option>
+                                                            <option>Sound &amp; Vision &gt; TV Wall Mounts</option>
+                                                            <option>Sound &amp; Vision &gt; Car Tape Cassette Adapter</option>
+                                                            <option>Sound &amp; Vision &gt; TV Box Media Player</option>
+                                                            <option>Sound &amp; Vision &gt; Headphone Headset</option>
+                                                            <option>Sound &amp; Vision &gt; Disco Light</option>
+                                                            <option>Sound &amp; Vision &gt; HDMI Cable</option>
+                                                            <option>Mobile &amp; Communication &gt; Car Mobile &amp; Tablets Holder</option>
+                                                            <option>Mobile &amp; Communication &gt; Micro USB Charger &amp; Data Cable</option>
+                                                            <option>Buy it Now</option>
+                                                            <option>Garden &amp; Patio &gt; Outdoor Solar Light</option>
+                                                            <option>Garden &amp; Patio &gt; Wheelbarrow</option>
+                                                            <option>Garden &amp; Patio &gt; Lawn Aerator</option>
+                                                            <option>Toys &amp; Games &gt; Kids Scooter</option>
+                                                            <option>Toys &amp; Games &gt; Remote Control Car</option>
+                                                            <option>Toys &amp; Games &gt; Flying Fairy Doll</option>
+                                                            <option>Toys &amp; Games &gt; Kids Medical Toy</option>
+                                                            <option>Baby &gt; Baby Play Mat</option>
+                                                            <option>Pet Supplies &gt; Giggle Ball</option>
+                                                            <option>Pet Supplies &gt; Puppy Cage &amp; Bed</option>
+                                                            <option>Jewellery &amp; Watches &gt; Bracelets &amp; Bangles</option>
+                                                            <option>Health &amp; Beauty Accessories</option>
+                                                            <option>Home Accessories</option>
+                                                            <option>Biscycle Accessories</option>
+                                                            <option>LCD/TV Accessories</option>
+                                                            <option>Bikes Motorcycles Accessories</option>
+                                                            <option>Keyboards &amp; Keypads</option>
+                                                            <option>Art &amp; Craft Supplies</option>
+                                                            <option>PC/Computers Accessories</option>
+                                                            <option>Laptop/Computer Accessories</option>
+                                                            <option>Bicycle Accessories</option>
+                                                          </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+
+                                            
+                                            <div class="col-12">
+                                                <h6>Selected eBay Category:</h6>
+                                                <p>Jewellery & Watches > Watches, Parts & Accessories > Watches > Wristwatches</p>
+                                                <p>Cars, Motorcycles & Vehicles > Cars > Ford</p>
+                                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#changeListingCategoryModal">Change Category</button>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card list-item h-100">
+                                    <div class="card-body">
+
+                                        <div class="row g-2">
+
+
+                                            <div class="col-12">
+                                                <h6>Add Pictures</h6>
+
+                                                <small class="form-text d-inline-block mt-0 mb-2">
+                                                    Upload up to 12 pictures that show your item in multiple views (such as front, back, side, and close-up). You are required to have a minimum of 1 picture in your listing.
+                                                </small>
+
+                                                <div class="row mb-2">
+                                                    <div class="col-12">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input upMethod" type="radio" name="upMethod" id="option1" checked>
+                                                            <label class="form-check-label" for="option1">Upload Pictures</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input upMethod" type="radio" name="upMethod" id="option2" value="option2">
+                                                            <label class="form-check-label" for="option2">URL</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row g-1" id="uploadImg">
+                                                    <div class="col-6">
+                                                        <input class="form-control" type="file" id="imageInput" accept="image/*" multiple>
+                                                    </div>
+                                                    <div class="col">
+                                                        
+                                                        <div class="input-group">
+                                                            <span class="input-group-text">Position</span>
+                                                            <input type="number" class="form-control" value="0" min="0">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button class="btn btn-primary w-100">Upload</button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row g-1 d-none" id="insertURL">
+                                                    <div class="col-10">
+                                                        <div class="input-group">
+                                                            <span class="input-group-text">URL</span>
+                                                            <input type="url" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-flex align-items-stretch">
+                                                        <button class="btn btn-primary w-100">Insert</button>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row g-2 mt-1">
+
+                                                    <div class="col-12">
+                                                        <button class="btn btn-outline-secondary fs-c">Delete All</button>
+                                                        <button class="btn btn-outline-secondary fs-c">Delete</button>
+                                                        <button class="btn btn-outline-secondary fs-c">Up</button>
+                                                        <button class="btn btn-outline-secondary fs-c">Down</button>
+                                                        <button class="btn btn-outline-secondary fs-c">Reshuffle Images</button>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <select class="form-select text-start" size="5">
+                                                            <option>URL to Image</option>
+                                                            <option>URL to Image</option>
+                                                            <option>URL to Image</option>
+                                                            <option>URL to Image</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-12 images-preview">
+
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6>Item Specifics</h6>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" placeholder="EAN" id="ean" required>
+                                                    <label for="ean">EAN</label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" placeholder="Type" id="type">
+                                                    <label for="type">Type</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label>Features</label>
+
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div>
+
+
+                
+    
+
+
+
+                
+
+                
+
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- JQuery File -->
+    <script src="../dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="../dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="../dist/js/custom.js"></script>
+
+
+    <script>
+        // Toggling between Uploading Image Method and Insert URL Method
+
+        const uploadMethods = document.querySelectorAll('.upMethod');
+        const uploadImageSection = document.querySelector('#uploadImg');
+        const insertURLSection = document.querySelector('#insertURL');
+
+
+        uploadMethods.forEach(uploadMethod =>{
+            
+            uploadMethod.addEventListener('change', () =>{
+                const ID = uploadMethod.getAttribute('id');
+
+                if (ID === 'option2') {
+                    uploadImageSection.classList.toggle('d-none');
+                    insertURLSection.classList.toggle('d-none')
+                } else {
+                    uploadImageSection.classList.toggle('d-none');
+                    insertURLSection.classList.toggle('d-none')
+                }
+
+                
+            });
+        });
+    </script>
+
+
+
+</body>
+</html>
+
+
+<!-- Change Listing Category Modal -->
+<div class="modal fade" id="changeListingCategoryModal" tabindex="-1" aria-labelledby="changeListingCategoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+            <h5 class="modal-title" id="changeListingCategoryModalLabel">Edit List Item</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body data-tables">
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="row mb-4 g-3">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <select class="form-select" id="newListingSelect">
+                                        <option>Safekom UK</option>
+                                        <option>dooma-it</option>
+                                        <option>eTHShop</option>
+                                        <option>Comet</option>
+                                    </select>
+                                    <label for="newListingSelect" class="me-2">Store:</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-group">
+                                    <div class="form-floating" style="width: 80%;">
+                                        <input type="text" class="form-control" id="cpItemID" placeholder="Copy Listing Item ID">
+                                        <label for="cpItemID">Copy Listing Item ID</label>    
+                                    </div>
+                                    <button class="btn btn-primary" style="width: 20%;"><i class="bi bi-clipboard"></i> Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-12 mb-2">
+                                <form class="searchCatForm">
+                                    <div class="input-group">
+                                        <div class="form-floating" style="width: 75%;">
+                                            <input type="search" class="form-control" id="searchCat1" placeholder="Search Category 1" required>
+                                            <label for="searchCat1">Search Category 1</label>    
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" style="width: 25%;"><i class="bi bi-search"></i> Get Suggested Categories</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-12">
+                                <table class="table table-bordered table-hover border d-none">
+                                    <thead class="bg-light">
+                                        <tr>
+                                        <th scope="col">Select</th>
+                                        <th scope="col">Main Category</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Main Subcategory</th>
+                                        <th scope="col">Subcategory</th>
+                                        <th scope="col">Product</th>
+                                        <th scope="col">Keyword %</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="radio" class="form-check-input" name="selectCat1">
+                                            </td>
+                                            <td>Jewellery & Watches</td>
+                                            <td>Watches, Parts & Accessories</td>
+                                            <td>Watches</td>
+                                            <td>Wristwatches</td>
+                                            <td></td>
+                                            <td>99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="radio" class="form-check-input" name="selectCat1">
+                                            </td>
+                                            <td>Jewellery & Watches</td>
+                                            <td>Watches, Parts & Accessories</td>
+                                            <td>Watches</td>
+                                            <td>Wristwatches</td>
+                                            <td></td>
+                                            <td>99</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="row mb-3">
+                            <div class="col-12 mb-2">
+                                <form class="searchCatForm">
+                                    <div class="input-group">
+                                        <div class="form-floating" style="width: 75%;">
+                                            <input type="search" class="form-control" id="searchCat2" placeholder="Search Category 2" required>
+                                            <label for="searchCat1">Search Category 2</label>    
+                                        </div>
+                                        <button type="submit" class="btn btn-primary" style="width: 25%;"><i class="bi bi-search"></i> Get Suggested Categories</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-12">
+                                <table class="table table-bordered table-hover border d-none">
+                                    <thead class="bg-light">
+                                        <tr>
+                                        <th scope="col">Select</th>
+                                        <th scope="col">Main Category</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Main Subcategory</th>
+                                        <th scope="col">Subcategory</th>
+                                        <th scope="col">Product</th>
+                                        <th scope="col">Keyword %</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="radio" class="form-check-input" name="selectCat2">
+                                            </td>
+                                            <td>Jewellery & Watches</td>
+                                            <td>Watches, Parts & Accessories</td>
+                                            <td>Watches</td>
+                                            <td>Wristwatches</td>
+                                            <td></td>
+                                            <td>99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="radio" class="form-check-input" name="selectCat2">
+                                            </td>
+                                            <td>Jewellery & Watches</td>
+                                            <td>Watches, Parts & Accessories</td>
+                                            <td>Watches</td>
+                                            <td>Wristwatches</td>
+                                            <td></td>
+                                            <td>99</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        
+
+        
+
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer border-0">
+                <button class="btn btn-primary" data-bs-dismiss="modal">Next</button>
+            </div>
+
+            <script>
+                const searchForms = document.querySelectorAll('.searchCatForm');
+
+                
+                searchForms.forEach(searchForm => {
+                    searchForm.addEventListener('submit', e =>{
+                        e.preventDefault();
+                        const formParent = searchForm.parentElement.parentElement;
+
+                        let resultTable = formParent.querySelector('table');
+
+                        resultTable.classList.remove('d-none');
+                    });
+                });
+
+
+            </script>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Search Keywords and Titles Modal -->
+<div class="modal fade" id="keywordTitlesModal" tabindex="-1" aria-labelledby="keywordTitlesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+            <h5 class="modal-title" id="keywordTitlesModalLabel">Search Keywords and Titles</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body data-tables">
+                <div class="card">
+                    <div class="card-body">
+
+                        <form id="searchForm">
+                            <div class="row g-2">
+                                <div class="col-10">
+                                    <div class="form-floating">
+                                        <input type="search" placeholder="Search" class="form-control" id="search" required>
+                                        <label for="search">Search</label>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-stretch">
+                                    <button type="submit" class="btn btn-primary w-100">Search</button>
+                                </div>
+                            </div>
+                        </form>
+
+
+
+                        <form id="generateNewTitleForm">
+
+                            <div class="row g-2">
+                                <div class="col-10">
+                                    <div class="form-floating">
+                                        <input type="search" placeholder="New Title" class="form-control" id="newTitle">
+                                        <label for="newTitle">New Title</label>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-stretch">
+                                    <button type="submit" class="btn btn-primary w-100">Generate Title</button>
+                                </div>
+                            </div>
+    
+                            <div class="row g-2 mb-2">
+                                <div class="col-10">
+                                    <div class="form-floating">
+                                        <input type="search" placeholder="MPN" class="form-control" id="mpn1">
+                                        <label for="mpn1">MPN</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                        
+
+
+                        <form id="generateRandomTitleForm">
+                            <div class="row g-2 mb-2">
+                                <div class="col-10">
+                                    <div class="form-floating">
+                                        <input type="search" placeholder="Random Title" class="form-control" id="randomTitle">
+                                        <label for="randomTitle">Random Title</label>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-stretch">
+                                    <button type="submit" class="btn btn-primary w-100">Generate Title</button>
+                                </div>
+                            </div>
+    
+                            <div class="row g-2 mb-2">
+                                <div class="col-10">
+                                    <div class="form-floating">
+                                        <input type="search" placeholder="MPN" class="form-control" id="mpn2">
+                                        <label for="mpn2">MPN</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+
+                        <div class="row g-2 d-none" id="searchResults">
+                            <div class="col-9">
+                                <table class="table table-bordered table-hover border keywords-table-1">
+                                    <thead class="bg-light">
+                                        <tr>
+                                          <th scope="col">Image</th>
+                                          <th scope="col">Item ID</th>
+                                          <th scope="col">Titles</th>
+                                          <th scope="col">Store Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    <tr>
+                                        <td><img src="../images/item.jpg"></td>
+                                        <td>124570970513</td>
+                                        <td>Mens Leather Wrist Watch Watches Analogue Quartz Fashion Gift Brown Black</td>
+                                        <td>sib110</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><img src="../images/item.jpg"></td>
+                                        <td>124570970513</td>
+                                        <td>Mens Leather Wrist Watch Watches Analogue Quartz Fashion Gift Brown Black</td>
+                                        <td>sib110</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><img src="../images/item.jpg"></td>
+                                        <td>124570970513</td>
+                                        <td>Mens Leather Wrist Watch Watches Analogue Quartz Fashion Gift Brown Black</td>
+                                        <td>sib110</td>
+                                    </tr>
+                                
+                                
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-3">
+                                <table class="table table-bordered table-hover border keywords-table-2">
+                                    <thead class="bg-light">
+                                        <tr>
+                                          <th scope="col">Keywords</th>
+                                          <th scope="col">Repetition</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Watch</td>
+                                        <td>85</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wrist</td>
+                                        <td>66</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Watches</td>
+                                        <td>62</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quartz</td>
+                                        <td>60</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Steel</td>
+                                        <td>37</td>
+                                    </tr>
+                                
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        
+
+        
+
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer border-0">
+                <button class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+
+
+            <script>
+                const searchForm = document.querySelector('#searchForm');
+                const searchResults = document.querySelector('#searchResults');
+                const generateNewTitleForm = document.querySelector('#generateNewTitleForm');
+                const generateRandomTitleForm = document.querySelector('#generateRandomTitleForm');
+
+                searchForm.addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    if (searchForm.search.value) {
+                        searchResults.classList.remove('d-none');
+                    }
+                });
+
+
+                generateNewTitleForm.addEventListener('submit', e =>{
+                    e.preventDefault();
+
+                    generateNewTitleForm.newTitle.value = 'WATCH WRIST WATCHES QUARTZ STEEL MENS LADIES ANALOG LEATHER UK STAINLESS ANALOGUE';
+                    generateNewTitleForm.mpn1.value = 'FASHION CASUAL GIFT DIGITAL NEW BLACK MILITARY ARMY STRAP WOMEN DATE WATERPROOF SPORTS';
+
+                });
+
+                generateRandomTitleForm.addEventListener('submit', e =>{
+                    e.preventDefault();
+
+                    generateRandomTitleForm.randomTitle.value = 'SEIKO SAPPHIRE, CONNECTION CALENDAR SELLER* LUXURY TONE F-91W-1YER LADY KORS ROSE';
+                    generateRandomTitleForm.mpn2.value = 'MICHAEL BOYS BELT ANALOG MULTICOLOUR MINIMALIST BACK RESIN STRETCH EMPORIO STOPWATCH';
+
+                });
+            </script>
+           
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
