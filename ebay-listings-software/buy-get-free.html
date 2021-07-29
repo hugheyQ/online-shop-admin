@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="../dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="../dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="../dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="../images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="../index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="index.html">eBay Dashboard</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseListings" role="button" aria-expanded="false" aria-controls="collapseExample">Listings  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseListings">
+                    <div class="card card-body">
+                        <a class="nav-link" href="list-item.html">List Item</a>
+                        <a class="nav-link" href="super-dashboard.html">Super Dashboard</a>
+                        <a class="nav-link" href="assign-items.html">Assign Items</a>
+                        <a class="nav-link" href="wizard.html">Wizard</a>
+                        <a class="nav-link" href="reset-listing.html">Reset Listing</a>
+                        <a class="nav-link" href="oos-item.html">OOS Item</a>
+                        <a class="nav-link" href="not-selling-item.html">Not Selling Item</a>
+                        <a class="nav-link" href="nsi-wizard.html">NSI Wizard</a>
+                        <a class="nav-link" href="categories-issues.html">Titles / Categories Issues</a>
+                        <a class="nav-link" href="resubmit-listings.html">Resubmit Listings</a>
+                        <a class="nav-link" href="bulk-revise.html">Bulk Revise</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapsePromotions" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Promotions <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapsePromotions">
+                    <div class="card card-body">
+                        <a class="nav-link" href="ebay-sponsor.html">eBay Sponsor</a>
+                        <a class="nav-link" href="ebay-promotions.html">eBay Promotions</a>
+                        <a class="nav-link" href="order-discount-promotions.html">Order Discount Promotions</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="assigned-product.html">Assigned Product</a>
+                <a class="nav-link" href="best-offers.html">Best Offers</a>
+                <a class="nav-link" href="ebay-selling.html">eBay Selling</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSProfiles" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Shipping Profiles <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSProfiles">
+                    <div class="card card-body">
+                        <a class="nav-link" href="shipping-profiles.html">Shipping Profiles</a>
+                        <a class="nav-link" href="ebay-shipping.html">eBay Shipping</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseSortEbayItems" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Sort eBay Items <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSortEbayItems">
+                    <div class="card card-body">
+                        <a class="nav-link" href="problem-items.html">Problem Items</a>
+                        <a class="nav-link" href="kits-items.html">Kits Items</a>
+                        <a class="nav-link active" href="buy-get-free.html">Buy X Get N Free</a>
+                        <a class="nav-link" href="cross-listings.html">Cross Listings</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="downloads.html">Downloads</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Search <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEbaySearch">
+                    <div class="card card-body">
+                        <a class="nav-link" href="ebay-search.html">eBay Search</a>
+                        <a class="nav-link" href="ebay-images-search.html">eBay Image Search</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="marketing.html">Marketing</a>
+                <a class="nav-link" href="ebay-store-categories.html">eBay Store Categories</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayReports" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Reports <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEbayReports">
+                    <div class="card card-body">
+                        <a class="nav-link" href="staff-revision-history.html">Staff Revision History</a>
+                        <a class="nav-link" href="whats-trending.html">Whats Trending</a>
+                        <a class="nav-link" href="ebay-sqs.html">eBay SQS</a>
+                        <a class="nav-link" href="ebay-lqs.html">eBay LQS</a>
+                        <a class="nav-link" href="ebay-shop-profit.html">eBay Shop Profit</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="calculate-shipping.html">Calculate Shipping</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Store Sync <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEbayStoreSync">
+                    <div class="card card-body">
+                        <a class="nav-link" href="staff-revision-history.html">eBay Store Sync</a>
+                        <a class="nav-link" href="assign-stores.html">Assign Stores</a>
+                        <a class="nav-link" href="ebay-auth-code.html">eBay Auth Code</a>
+                        <a class="nav-link" href="notification.html">Notification</a>
+                        <a class="nav-link" href="paypal-accounts.html">PayPal Accounts</a>
+                        <a class="nav-link" href="returns-policy.html">Returns Policy</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="calculate-shipping.html">Reduce eBay Fees</a>
+
+        
+            </nav>
+        </div>
+
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="../images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container overview p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item">Sort eBay Items</li>
+                        <li class="breadcrumb-item active" aria-current="page">Buy X Get N Free</li>
+                    </ol>
+                </nav>
+                
+                <h1>Buy X Get N Free</h1>
+
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>Manage Buy X Get N Free Items</p>
+                    
+                </div>
+
+            
+
+                <div class="card list-item">
+                    <div class="card-header">Buy X Get N Free Items</div>
+                    <div class="card-body data-tables">
+
+                        <table class="table stores-table table-bordered table-hover border">
+                            <thead class="bg-light">
+                                <tr>
+                                  <th scope="col">Main SKU</th>
+                                  <th scope="col">SKU</th>
+                                  <th scope="col">Buy X</th>
+                                  <th scope="col">Get N Free</th>
+                                  <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="form-control" value="WXCNDLE-100-LT4">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" value="WXCNDLE-100">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" value="10">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" value="1">
+                                    </td>
+                                    <td>
+                                        <a href="#" title="Save"><i class="bi bi-save"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#deleteItemModal" title="Delete"><i class="bi bi-trash"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <input type="text" class="form-control" value="">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" value="">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" value="">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" value="">
+                                    </td>
+                                    <td>
+                                        <a href="add-new-lots-item.html" title="Add New Item"><i class="bi bi-plus-circle"></i></a>
+                                    </td>
+                                </tr>
+
+                    
+                            </tbody>
+                        </table>
+                        
+
+                        
+
+                    </div>
+                </div>
+
+
+
+                
+
+                
+
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- JQuery File -->
+    <script src="../dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="../dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="../dist/js/custom.js"></script>
+
+</body>
+</html>
+
+
+
+<!-- Delete Item Modal -->
+<div class="modal fade" id="deleteItemModal" tabindex="-1" aria-labelledby="deleteItemModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="deleteItemtModalLabel">Delete Item</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+            <i class="bi bi-exclamation-triangle-fill text-danger fs-1"></i>
+            <p>Are you sure you want to delete this item? This action is irreversable!</p>
+        </div>
+        <div class="modal-footer border-0 d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-danger px-4">Yes</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

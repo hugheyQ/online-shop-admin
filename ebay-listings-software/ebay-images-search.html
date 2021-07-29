@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="../dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="../dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="../dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="../images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="../index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="index.html">eBay Dashboard</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseListings" role="button" aria-expanded="false" aria-controls="collapseExample">Listings  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseListings">
+                    <div class="card card-body">
+                        <a class="nav-link" href="list-item.html">List Item</a>
+                        <a class="nav-link" href="super-dashboard.html">Super Dashboard</a>
+                        <a class="nav-link" href="assign-items.html">Assign Items</a>
+                        <a class="nav-link" href="wizard.html">Wizard</a>
+                        <a class="nav-link" href="reset-listing.html">Reset Listing</a>
+                        <a class="nav-link" href="oos-item.html">OOS Item</a>
+                        <a class="nav-link" href="not-selling-item.html">Not Selling Item</a>
+                        <a class="nav-link" href="nsi-wizard.html">NSI Wizard</a>
+                        <a class="nav-link" href="categories-issues.html">Titles / Categories Issues</a>
+                        <a class="nav-link" href="resubmit-listings.html">Resubmit Listings</a>
+                        <a class="nav-link" href="bulk-revise.html">Bulk Revise</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapsePromotions" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Promotions <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapsePromotions">
+                    <div class="card card-body">
+                        <a class="nav-link" href="ebay-sponsor.html">eBay Sponsor</a>
+                        <a class="nav-link" href="ebay-promotions.html">eBay Promotions</a>
+                        <a class="nav-link" href="order-discount-promotions.html">Order Discount Promotions</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="assigned-product.html">Assigned Product</a>
+                <a class="nav-link" href="best-offers.html">Best Offers</a>
+                <a class="nav-link" href="ebay-selling.html">eBay Selling</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSProfiles" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Shipping Profiles <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSProfiles">
+                    <div class="card card-body">
+                        <a class="nav-link" href="shipping-profiles.html">Shipping Profiles</a>
+                        <a class="nav-link" href="ebay-shipping.html">eBay Shipping</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSortEbayItems" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Sort eBay Items <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSortEbayItems">
+                    <div class="card card-body">
+                        <a class="nav-link" href="problem-items.html">Problem Items</a>
+                        <a class="nav-link" href="kits-items.html">Kits Items</a>
+                        <a class="nav-link" href="buy-get-free.html">Buy X Get N Free</a>
+                        <a class="nav-link" href="cross-listings.html">Cross Listings</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="downloads.html">Downloads</a>
+
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Search <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEbaySearch">
+                    <div class="card card-body">
+                        <a class="nav-link" href="ebay-search.html">eBay Search</a>
+                        <a class="nav-link active" href="ebay-images-search.html">eBay Image Search</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="marketing.html">Marketing</a>
+                <a class="nav-link" href="ebay-store-categories.html">eBay Store Categories</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayReports" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Reports <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEbayReports">
+                    <div class="card card-body">
+                        <a class="nav-link" href="staff-revision-history.html">Staff Revision History</a>
+                        <a class="nav-link" href="whats-trending.html">Whats Trending</a>
+                        <a class="nav-link" href="ebay-sqs.html">eBay SQS</a>
+                        <a class="nav-link" href="ebay-lqs.html">eBay LQS</a>
+                        <a class="nav-link" href="ebay-shop-profit.html">eBay Shop Profit</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="calculate-shipping.html">Calculate Shipping</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    eBay Store Sync <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEbayStoreSync">
+                    <div class="card card-body">
+                        <a class="nav-link" href="staff-revision-history.html">eBay Store Sync</a>
+                        <a class="nav-link" href="assign-stores.html">Assign Stores</a>
+                        <a class="nav-link" href="ebay-auth-code.html">eBay Auth Code</a>
+                        <a class="nav-link" href="notification.html">Notification</a>
+                        <a class="nav-link" href="paypal-accounts.html">PayPal Accounts</a>
+                        <a class="nav-link" href="returns-policy.html">Returns Policy</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="calculate-shipping.html">Reduce eBay Fees</a>
+
+        
+            </nav>
+        </div>
+
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="../images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container overview p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item">eBay Search</li>
+                        <li class="breadcrumb-item active" aria-current="page">Search By Image</li>
+                    </ol>
+                </nav>
+                
+                <h1>Search By Image</h1>
+
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>Search By Image Here</p>
+                    
+                </div>
+
+            
+
+                <div class="card list-item">
+                    <div class="card-header">Search eBay By Image</div>
+                    <div class="card-body">
+
+                        <div class="row g-3">
+
+                            <div class="col-4">
+                                <label for="storeSelect">eBay Store:</label>
+                                <select class="form-select" id="storeSelect">
+                                    <option selected>Safekom</option>
+                                    <option>dooma-it</option>
+                                    <option>eTHShop</option>
+                                    <option>Comet</option>
+                                </select>
+                            </div>
+
+                            <div class="col-4">
+                                <label for="imgField">Image:</label>
+                                <input type="file" class="form-control" id="imgField">
+                            </div>
+
+                            <div class="col-3 d-flex align-items-end">
+                                <button class="btn btn-primary w-100" onclick="reveal()">Search</button>
+                            </div>
+
+
+                            <div class="col-12 data-tables mt-4 d-none" id="result">
+                                <table id="imageSearchTable" class="table stores-table table-bordered table-hover border">
+                                    <thead class="bg-light">
+                                        <tr>
+                                          <th scope="col">Image</th>
+                                          <th scope="col">Item ID</th>
+                                          <th scope="col">Title</th>
+                                          <th scope="col">Price (£)</th>
+                                          <th scope="col">Seller</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>
+                                                <img src="../images/item.jpg">
+                                            </td>
+                                            <td>114830175634</td>
+                                            <td>GOOGLE Chromecast - Third Generation Charcoal</td>
+                                            <td>30.00</td>
+                                            <td>farringtondeals</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>
+                                                <img src="../images/item.jpg">
+                                            </td>
+                                            <td>114830175634</td>
+                                            <td>GOOGLE Chromecast - Third Generation Charcoal</td>
+                                            <td>30.00</td>
+                                            <td>farringtondeals</td>
+                                        </tr>
+                                
+        
+                            
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                
+
+                
+
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- JQuery File -->
+    <script src="../dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="../dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="../dist/js/custom.js"></script>
+
+    <script>
+        const reveal = () =>{
+            const resultSection = document.querySelector('#result');
+
+            resultSection.classList.remove('d-none');
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -89,6 +89,11 @@ $(document).ready(function () {
         searching:true
     });
 
+    $('#shippingProfilesTB').DataTable({
+        ordering:true,
+        searching:true
+    });
+
     $('#searchResultsTable').DataTable({
         ordering:true,
         searching:true,
@@ -103,6 +108,11 @@ $(document).ready(function () {
     });
 
     $('#checkMarketTable').DataTable({
+        ordering:true,
+        searching:true
+    });
+
+    $('#imageSearchTable').DataTable({
         ordering:true,
         searching:true
     });
