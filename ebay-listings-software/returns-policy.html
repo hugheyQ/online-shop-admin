@@ -104,12 +104,12 @@
 
                 <a class="nav-link" href="downloads.html">Downloads</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Search <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbaySearch">
                     <div class="card card-body">
-                        <a class="nav-link active" href="ebay-search.html">eBay Search</a>
+                        <a class="nav-link" href="ebay-search.html">eBay Search</a>
                         <a class="nav-link" href="ebay-images-search.html">eBay Image Search</a>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
 
                 <a class="nav-link" href="calculate-shipping.html">Calculate Shipping</a>
 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Store Sync <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbayStoreSync">
@@ -142,7 +142,7 @@
                         <a class="nav-link" href="ebay-auth-code.html">eBay Auth Code</a>
                         <a class="nav-link" href="notification.html">Notification</a>
                         <a class="nav-link" href="paypal-accounts.html">PayPal Accounts</a>
-                        <a class="nav-link" href="returns-policy.html">Returns Policy</a>
+                        <a class="nav-link active" href="returns-policy.html">Returns Policy</a>
                     </div>
                 </div>
 
@@ -192,47 +192,78 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item">eBay Search</li>
-                        <li class="breadcrumb-item active" aria-current="page">eBay Search</li>
+                        <li class="breadcrumb-item">eBay Store Sync</li>
+                        <li class="breadcrumb-item active" aria-current="page">eBay Store Return Policy</li>
                     </ol>
                 </nav>
                 
-                <h1>eBay Search Management</h1>
+                <h1>eBay Store Return Policy Management</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>Manage eBay Search Items Here</p>
+                    <p>Describe Your Return Policy Here</p>
                     
                 </div>
 
-            
 
-                <div class="card list-item">
-                    <div class="card-header">Search an Item Here</div>
-                    <div class="card-body">
+                <div class="card">
+                    <div class="card-header">eBay Stores Return Policy</div>
+                    <div class="card-body list-item">
+
+                        <p class="form-text mb-3">
+                            Most purchases by consumers are protected by the Consumer Contracts Regulations 2013 which give consumer buyers the right to cancel the purchase within 14 days of receiving the item. You are legally obliged to inform consumers about their right of cancellation before the purchase.
+                        </p>
 
                         <div class="row g-3">
-
-                            <div class="col-4">
-                                <div class="form-floating">
-                                    <input type="search" class="form-control" placeholder="Search" id="eBaySearch">
-                                    <label for="eBaySearch">Search</label>
-                                </div>
+                            <div class="col-12">
+                                <h6>eBay Store:</h6>
+                                <select class="form-select py-2" style="max-width: 20rem;">
+                                    <option selected>Safekom</option>
+                                    <option>Comet</option>
+                                    <option>dooma-it</option>
+                                    <option>eTHShop</option>
+                                </select>
                             </div>
 
-                            <div class="col-4">
-                                <div class="form-floating">
-                                    <select class="form-select" id="select">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                    <label for="page">Page</label>
-                                </div>
+                            <div class="col-12">
+                                <h6>Return Accepted:</h6>
+                                <select class="form-select py-2" style="max-width: 20rem;">
+                                    <option selected>Yes</option>
+                                    <option>No</option>
+                                </select>
                             </div>
 
-                            <div class="col-3 d-flex align-items-stretch">
-                                <button class="btn btn-primary w-100" onclick="redirect()">Search</button>
+                            <div class="col-12">
+                                <h6>After receiving the item, your buyer should start a return within:</h6>
+                                <select class="form-select py-2" style="max-width: 20rem;">
+                                    <option>14</option>
+                                    <option selected>30</option>
+                                    <option>60</option>
+                                </select>
                             </div>
+
+                            <div class="col-12">
+                                <h6>Return postage will be paid by:</h6>
+                                <select class="form-select py-2" style="max-width: 20rem;">
+                                    <option selected>Buyer</option>
+                                    <option>Seller</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <h6>Additional return policy details:</h6>
+                                <textarea class="form-control" rows="3" style="max-width: 40rem;">Return: 
+Goods returned must be in the original packaging and in clean resalable condition. Goods returned otherwise will be refused, or a further additional restocking fee of a minimum of 25% will be charged to cover the additional costs involved.
+If you are sending back the item for replacement, or Refund; we will not be responsible if the goods does not reach us. Note: Keep proof of your posting receipt in case the goods go missing so you can be make a claim against it with the postal services. Any returned items that have any signs of abuse or intentional damage will be refused and returned to sender at sender's cost.
+Warranties:
+In addition to your statutory rights as a consumer, we will pass on to you the benefit of any manufacturer’s warranties or guarantees, subject to any conditions that may apply (which will be specified in the documentation accompanying the goods). They may require return in the original manufacturer’s packaging.
+                                </textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-primary px-5">Save</button>
+                            </div>
+
+                           
                         </div>
 
                     </div>
@@ -274,18 +305,12 @@
     <!-- Custom Javascipt -->
     <script src="../dist/js/custom.js"></script>
 
-    <script>
-        const redirect = () =>{
-            location.href = 'https://www.etradehouse.com/code/adm/ELS/eBaySearch/eBaySearch.aspx?Searchtxt=watch&_pgn=1';
-        }
-    </script>
+
+    
+
 
 </body>
 </html>
-
-
-
-
 
 
 

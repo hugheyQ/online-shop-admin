@@ -104,12 +104,12 @@
 
                 <a class="nav-link" href="downloads.html">Downloads</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Search <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbaySearch">
                     <div class="card card-body">
-                        <a class="nav-link active" href="ebay-search.html">eBay Search</a>
+                        <a class="nav-link" href="ebay-search.html">eBay Search</a>
                         <a class="nav-link" href="ebay-images-search.html">eBay Image Search</a>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                 <a class="nav-link" href="marketing.html">Marketing</a>
                 <a class="nav-link" href="ebay-store-categories.html">eBay Store Categories</a>
 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayReports" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbayReports" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Reports <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbayReports">
@@ -126,7 +126,7 @@
                         <a class="nav-link" href="whats-trending.html">Whats Trending</a>
                         <a class="nav-link" href="ebay-sqs.html">eBay SQS</a>
                         <a class="nav-link" href="ebay-lqs.html">eBay LQS</a>
-                        <a class="nav-link" href="ebay-shop-profit.html">eBay Shop Profit</a>
+                        <a class="nav-link active" href="ebay-shop-profit.html">eBay Shop Profit</a>
                     </div>
                 </div>
 
@@ -192,48 +192,116 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item">eBay Search</li>
-                        <li class="breadcrumb-item active" aria-current="page">eBay Search</li>
+                        <li class="breadcrumb-item">eBay Reports</li>
+                        <li class="breadcrumb-item active" aria-current="page">Shop Listings Profit</li>
                     </ol>
                 </nav>
                 
-                <h1>eBay Search Management</h1>
+                <h1>Shop Listings Profit Management</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>Manage eBay Search Items Here</p>
+                    <p>Manage Shop Listings Profit Here</p>
                     
                 </div>
 
             
 
                 <div class="card list-item">
-                    <div class="card-header">Search an Item Here</div>
-                    <div class="card-body">
+                    <div class="card-header">Calculate Shop Listings Profit Here</div>
+                    <div class="card-body data-tables">
 
-                        <div class="row g-3">
-
-                            <div class="col-4">
-                                <div class="form-floating">
-                                    <input type="search" class="form-control" placeholder="Search" id="eBaySearch">
-                                    <label for="eBaySearch">Search</label>
-                                </div>
-                            </div>
+                        <div class="row g-2" id="s1">
 
                             <div class="col-4">
                                 <div class="form-floating">
-                                    <select class="form-select" id="select">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
+                                    <select class="form-select" id="eBayStore">
+                                        <option selected>Safekom UK</option>
+                                        <option>dooma-it</option>
+                                        <option>eTHShop</option>
+                                        <option>Comet</option>
                                     </select>
-                                    <label for="page">Page</label>
+                                    <label for="eBayStore">eBay Store</label>
                                 </div>
                             </div>
 
                             <div class="col-3 d-flex align-items-stretch">
-                                <button class="btn btn-primary w-100" onclick="redirect()">Search</button>
+                                <button class="btn btn-primary w-100" onclick="generateReport()">Calculate All Listings Profit</button>
+                            </div>
+
+                            <div class="col-3 d-flex align-items-stretch">
+                                <button class="btn btn-primary w-100" onclick="generateReport()">Calculate Instock Profit</button>
                             </div>
                         </div>
+
+                        <div class="row g-4 mt-5 hidden d-none">
+
+                            <div class="col-12">
+                                <p><span class="fw-bold">Total Profit:</span> £49.66 | 0.309%</p>
+                                <p><span class="fw-bold">Total Shop Expected Sales Per Day:</span> £3938.15</p>
+                            </div>
+
+
+                            <div class="col-12 table-responsive">
+                                <table class="table stores-table table-bordered table-hover border" style="width: 500%;">
+                                    <thead class="bg-light">
+                                        <tr>
+                                          <th scope="col">Item ID</th>
+                                          <th scope="col">Title</th>
+                                          <th scope="col">SKU</th>
+                                          <th scope="col">Type</th>
+                                          <th scope="col">Quantity</th>
+                                          <th scope="col">AVG (£)</th>
+                                          <th scope="col">RMA (£)</th>
+                                          <th scope="col">ABG + RMA (£)</th>
+                                          <th scope="col">Packing (£)</th>
+                                          <th scope="col">eBay Fees (%)</th>
+                                          <th scope="col">eBay Fees (£)</th>
+                                          <th scope="col">PayPal</th>
+                                          <th scope="col">VAT</th>
+                                          <th scope="col">Postage</th>
+                                          <th scope="col">Sell Price</th>
+                                          <th scope="col">Ad Rate (£)</th>
+                                          <th scope="col">Ad Rate (%)</th>
+                                          <th scope="col">Total Cost</th>
+                                          <th scope="col">Profit (£)</th>
+                                          <th scope="col">Profit (%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+        
+                                        <tr>
+                                            <td>353230377479</td>
+                                            <td>Plantar Orthotic Insoles For Arch Support Fasciitis Flat Feet Back & Heel Pain</td>
+                                            <td>NSINS-1113</td>
+                                            <td>Single</td>
+                                            <td>5</td>
+                                            <td>1.28</td>
+                                            <td>0.09</td>
+                                            <td>1.37</td>
+                                            <td>0.18</td>
+                                            <td>12.000</td>
+                                            <td>0.51</td>
+                                            <td>0.44</td>
+                                            <td>0.71</td>
+                                            <td>0.95</td>
+                                            <td>4.25</td>
+                                            <td>0.00</td>
+                                            <td>0</td>
+                                            <td>4.16</td>
+                                            <td>0.09</td>
+                                            <td>2.060</td>
+                                        </tr>
+                                        
+                        
+        
+                            
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        
+                       
 
                     </div>
                 </div>
@@ -275,13 +343,23 @@
     <script src="../dist/js/custom.js"></script>
 
     <script>
-        const redirect = () =>{
-            location.href = 'https://www.etradehouse.com/code/adm/ELS/eBaySearch/eBaySearch.aspx?Searchtxt=watch&_pgn=1';
+        const table = document.querySelector('.hidden');
+
+    
+
+        const generateReport = () => {
+            table.classList.remove('d-none');
+
         }
     </script>
 
+
+
 </body>
 </html>
+
+
+
 
 
 

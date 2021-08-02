@@ -104,12 +104,12 @@
 
                 <a class="nav-link" href="downloads.html">Downloads</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Search <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbaySearch">
                     <div class="card card-body">
-                        <a class="nav-link active" href="ebay-search.html">eBay Search</a>
+                        <a class="nav-link" href="ebay-search.html">eBay Search</a>
                         <a class="nav-link" href="ebay-images-search.html">eBay Image Search</a>
                     </div>
                 </div>
@@ -132,12 +132,12 @@
 
                 <a class="nav-link" href="calculate-shipping.html">Calculate Shipping</a>
 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Store Sync <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbayStoreSync">
                     <div class="card card-body">
-                        <a class="nav-link" href="ebay-store-sync.html">eBay Store Sync</a>
+                        <a class="nav-link active" href="ebay-store-sync.html">eBay Store Sync</a>
                         <a class="nav-link" href="assign-stores.html">Assign Stores</a>
                         <a class="nav-link" href="ebay-auth-code.html">eBay Auth Code</a>
                         <a class="nav-link" href="notification.html">Notification</a>
@@ -192,46 +192,99 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item">eBay Search</li>
-                        <li class="breadcrumb-item active" aria-current="page">eBay Search</li>
+                        <li class="breadcrumb-item"><a href="ebay-store-sync.html">eBay Store Sync</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Download eBay Store Items</li>
                     </ol>
                 </nav>
                 
-                <h1>eBay Search Management</h1>
+                <h1>Download eBay Store Items</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>Manage eBay Search Items Here</p>
+                    <p>Manage Download eBay Store Items Here</p>
                     
                 </div>
 
-            
 
-                <div class="card list-item">
-                    <div class="card-header">Search an Item Here</div>
-                    <div class="card-body">
+                <div class="card data-tables">
+                    <div class="card-header">Download eBay Store Items</div>
+                    <div class="card-body list-item">
 
                         <div class="row g-3">
+                            <h6>eBay Store Details</h6>
 
-                            <div class="col-4">
+                            <div class="col-6">
                                 <div class="form-floating">
-                                    <input type="search" class="form-control" placeholder="Search" id="eBaySearch">
-                                    <label for="eBaySearch">Search</label>
+                                    <input type="text" class="form-control" placeholder="Store Name" id="sName" value="Safekom" disabled>
+                                    <label for="sName">Store Name</label>
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-6">
                                 <div class="form-floating">
-                                    <select class="form-select" id="select">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                    <label for="page">Page</label>
+                                    <input type="email" class="form-control" placeholder="Developer Email" id="dEmail" value="safekom1@gmail.com" disabled>
+                                    <label for="dEmail">Developer Email</label>
                                 </div>
                             </div>
 
-                            <div class="col-3 d-flex align-items-stretch">
-                                <button class="btn btn-primary w-100" onclick="redirect()">Search</button>
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" placeholder="Developer Password" id="dPass" value="unknown" disabled>
+                                    <label for="dPass">Developer Password</label>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" placeholder="Developer Key" id="dKey" value="51b27c17-d77b-42c0-8fbb-cb465425e1e1" disabled>
+                                    <label for="dKey">Developer Key</label>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" placeholder="Application Key" id="aKey" value="Plusbee02-f5ed-41f0-bc77-375a880334a" disabled>
+                                    <label for="aKey">Application Key</label>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" placeholder="Certification Key" id="cKey" value="dc08a226-18f0-4685-879e-4e0aec00744e" disabled>
+                                    <label for="cKey">Certification Key</label>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" placeholder="eBay Token" id="eToken" value="AgAAAA**AQAAAA**aAAAAA**y/C9YA**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wClIWgAZiCqQudj6x9nY+seQ**5CICAA**AAMAAA**fFiMLcaFwzP22Qfh5CD+T3gTZJoCQZYY0oI0xjflHszxGYHlYsBRz27lKLs26XKiYuvi6i8IFtlPLw4G+QdDUMMhWOoYLJOa2AEoDkNldBO6MKgIHhy732ly1Rh4TuZ/kVas0k9OF1sp7/uy9/0mOducdnYuZnURbeOBXfDK6pv/11Sm6Ktj3wnn0bdQieZXW3pQrprxg6q05ozVmF+Iobyvbvtb62n9st38kze/SKboi0L+f3z60gDS7XSqzP7wCgIVScAP/qH+Eo4QkgcKdE2CWebMmJxaXAV/CSPcRuPTvFiaSqlwTsxY885+PkeVmP6cogIxO7d5vx5G/OFPM2IffK3zaBSAUy8N3fjR1vNZmEgqW6003iZ8JDpP++gEVzYLEp4dovxPhG8aoIlhCuP454LTqHgvB39IIE5eMz8oO4anrLaa8Vvmb377IPZC41o4xa3zgDcyrUm+XUqF4dCksngmnjbTAPyvV2VOuGrOXOrP0UP0REDL3+/tq6htiugHGUaVFfLX5Ces+lTlhlnlfE42WusD/H/OMsIm382e6KJ3gGIcuGVKIHJZ2NfqHa2y4ShsZUgXyklIqZKQOgizn8nlCppHnqS6J1RWtugxKKWmHLr6AnkhQ+vyMWn+0FkMTh+EhFkLO5Uel4qHv2asEE8w2AhlBm3tF69sXe9gJvEbZfFRh6YBr8hE2a6uPRGyfTuwZl5dPEltU+4lYL+KDYSHmu1tG5aippl0y3IwMHY1rl+bdAtA2IbNeHGt" disabled>
+                                    <label for="eToken">eBay Token</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-primary px-5 py-2" onclick="reveal()">Download eBay Items</button>
+                            </div>
+
+                            <div class="col-12 mt-4 d-none" id="downloadSec">
+                                <div class="card" style="width: 20rem;">
+                                    <div class="card-header fw-bold text-uppercase">
+                                      Downloaded From Safekom
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                      <li class="list-group-item d-flex justify-content-between"><span>402964222685</span> <span>FTI-C</span></li>
+                                      <li class="list-group-item d-flex justify-content-between"><span>402964222685</span> <span>FTI-C</span></li>
+                                      <li class="list-group-item d-flex justify-content-between"><span>402964222685</span> <span>FTI-C</span></li>
+                                      <li class="list-group-item d-flex justify-content-between"><span>402964222685</span> <span>FTI-C</span></li>
+                                      <li class="list-group-item d-flex justify-content-between"><span>402964222685</span> <span>FTI-C</span></li>
+                                      <li class="list-group-item d-flex justify-content-between"><span>402964222685</span> <span>FTI-C</span></li>
+                                      <li class="list-group-item d-flex justify-content-between"><span>402964222685</span> <span>FTI-C</span></li>
+                                      <li class="list-group-item d-flex justify-content-between"><span>402964222685</span> <span>FTI-C</span></li>
+                                      <li class="list-group-item d-flex justify-content-between"><span>402964222685</span> <span>FTI-C</span></li>
+                                    </ul>
+                                    <div class="card-footer d-flex justify-content-between" style="font-size: .8rem;">
+                                        <span class="fw-bold">Total Number of Items</span> <span>9</span>
+                                    </div>
+                                  </div>
                             </div>
                         </div>
 
@@ -274,19 +327,16 @@
     <!-- Custom Javascipt -->
     <script src="../dist/js/custom.js"></script>
 
+
     <script>
-        const redirect = () =>{
-            location.href = 'https://www.etradehouse.com/code/adm/ELS/eBaySearch/eBaySearch.aspx?Searchtxt=watch&_pgn=1';
+        const downloadSec = document.querySelector('#downloadSec');
+
+        const reveal = () =>{
+            downloadSec.classList.remove('d-none');
         }
     </script>
-
 </body>
 </html>
-
-
-
-
-
 
 
 

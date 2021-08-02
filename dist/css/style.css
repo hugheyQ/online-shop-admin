@@ -292,7 +292,7 @@ p {
 }
 
 .data-tables table td input[type='text'] {
-  width: 80%;
+  width: 99%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;

@@ -104,12 +104,12 @@
 
                 <a class="nav-link" href="downloads.html">Downloads</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Search <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbaySearch">
                     <div class="card card-body">
-                        <a class="nav-link active" href="ebay-search.html">eBay Search</a>
+                        <a class="nav-link" href="ebay-search.html">eBay Search</a>
                         <a class="nav-link" href="ebay-images-search.html">eBay Image Search</a>
                     </div>
                 </div>
@@ -132,14 +132,14 @@
 
                 <a class="nav-link" href="calculate-shipping.html">Calculate Shipping</a>
 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Store Sync <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbayStoreSync">
                     <div class="card card-body">
                         <a class="nav-link" href="ebay-store-sync.html">eBay Store Sync</a>
                         <a class="nav-link" href="assign-stores.html">Assign Stores</a>
-                        <a class="nav-link" href="ebay-auth-code.html">eBay Auth Code</a>
+                        <a class="nav-link active" href="ebay-auth-code.html">eBay Auth Code</a>
                         <a class="nav-link" href="notification.html">Notification</a>
                         <a class="nav-link" href="paypal-accounts.html">PayPal Accounts</a>
                         <a class="nav-link" href="returns-policy.html">Returns Policy</a>
@@ -192,46 +192,59 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item">eBay Search</li>
-                        <li class="breadcrumb-item active" aria-current="page">eBay Search</li>
+                        <li class="breadcrumb-item">eBay Store Sync</li>
+                        <li class="breadcrumb-item active" aria-current="page">eBay Stores Authentication Code</li>
                     </ol>
                 </nav>
                 
-                <h1>eBay Search Management</h1>
+                <h1>eBay Stores Authentication Code</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>Manage eBay Search Items Here</p>
+                    <p>Manage eBay Stores Authentication Code Here</p>
                     
                 </div>
 
-            
 
-                <div class="card list-item">
-                    <div class="card-header">Search an Item Here</div>
-                    <div class="card-body">
+                <div class="card data-tables">
+                    <div class="card-header">eBay Stores Authentication Code</div>
+                    <div class="card-body list-item">
 
-                        <div class="row g-3">
-
-                            <div class="col-4">
-                                <div class="form-floating">
-                                    <input type="search" class="form-control" placeholder="Search" id="eBaySearch">
-                                    <label for="eBaySearch">Search</label>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="row g-4">
+                                            <div class="col-12">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="store">
+                                                        <option selected>Safekom</option>
+                                                        <option>Comet</option>
+                                                        <option>dooma-it</option>
+                                                        <option>eTHShop</option>
+                                                    </select>
+                                                    <label for="store">eBay Store</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <h6>Grant Application Access</h6>
+                                                <button class="btn btn-primary" onclick="reveal()">Generate Application Access Link</button>
+                                                <p class="d-none hidden mt-2"><a href="https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fauth.ebay.com%2Foauth2%2Fconsents%3Fclient_id%3DPlusbee02-f5ed-41f0-bc77-375a880334a%26redirect_uri%3DPlusbee-Plusb%2520dooma-it%2520amjad%40shenztech.com%2520%25E2%2580%25A2%25E2%2580%25A2%25E2%2580%25A2%25E2%2580%25A2%25E2%2580%25A2%25E2%2580%25A2%26scope%3Dhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%2Bhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%252Fsell.marketing.readonly%2Bhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%252Fsell.marketing%2Bhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%252Fsell.inventory.readonly%2Bhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%252Fsell.inventory%2Bhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%252Fsell.account.readonly%2Bhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%252Fsell.account%2Bhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%252Fsell.fulfillment.readonly%2Bhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%252Fsell.fulfillment%2Bhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%252Fsell.analytics.readonly%2Bhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%252Fsell.finances%2Bhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%252Fsell.payment.dispute%2Bhttps%253A%252F%252Fapi.ebay.com%252Foauth%252Fapi_scope%252Fcommerce.identity.readonly%26state%26response_type%3Dcode%26hd%26consentGiven%3Dfalse%26prompt%3Dlogin">Generate Token</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="col-4">
-                                <div class="form-floating">
-                                    <select class="form-select" id="select">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                    <label for="page">Page</label>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <p class="form-text">Please accept the user agreement http://scgi.ebay.co.uk/ws/eBayISAPI.dll?UserAgreementV2&agrid=17</p>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" placeholder="Authentication Code" id="authCode">
+                                            <label for="authCode">Authentication Code</label>
+                                        </div>
+                                        <button class="btn btn-primary">Save Refresh Token</button>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="col-3 d-flex align-items-stretch">
-                                <button class="btn btn-primary w-100" onclick="redirect()">Search</button>
                             </div>
                         </div>
 
@@ -274,18 +287,18 @@
     <!-- Custom Javascipt -->
     <script src="../dist/js/custom.js"></script>
 
+
     <script>
-        const redirect = () =>{
-            location.href = 'https://www.etradehouse.com/code/adm/ELS/eBaySearch/eBaySearch.aspx?Searchtxt=watch&_pgn=1';
+        const hidden = document.querySelector('.hidden');
+        const reveal = () =>{
+            hidden.classList.remove('d-none');
         }
     </script>
 
+
+
 </body>
 </html>
-
-
-
-
 
 
 

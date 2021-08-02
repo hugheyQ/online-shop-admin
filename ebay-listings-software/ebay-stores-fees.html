@@ -104,12 +104,12 @@
 
                 <a class="nav-link" href="downloads.html">Downloads</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Search <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbaySearch">
                     <div class="card card-body">
-                        <a class="nav-link active" href="ebay-search.html">eBay Search</a>
+                        <a class="nav-link" href="ebay-search.html">eBay Search</a>
                         <a class="nav-link" href="ebay-images-search.html">eBay Image Search</a>
                     </div>
                 </div>
@@ -132,12 +132,12 @@
 
                 <a class="nav-link" href="calculate-shipping.html">Calculate Shipping</a>
 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Store Sync <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbayStoreSync">
                     <div class="card card-body">
-                        <a class="nav-link" href="ebay-store-sync.html">eBay Store Sync</a>
+                        <a class="nav-link active" href="ebay-store-sync.html">eBay Store Sync</a>
                         <a class="nav-link" href="assign-stores.html">Assign Stores</a>
                         <a class="nav-link" href="ebay-auth-code.html">eBay Auth Code</a>
                         <a class="nav-link" href="notification.html">Notification</a>
@@ -192,47 +192,97 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item">eBay Search</li>
-                        <li class="breadcrumb-item active" aria-current="page">eBay Search</li>
+                        <li class="breadcrumb-item"><a href="ebay-store-sync.html">eBay Store Sync</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">eBay Stores Fees</li>
                     </ol>
                 </nav>
                 
-                <h1>eBay Search Management</h1>
+                <h1>eBay Stores Fees</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>Manage eBay Search Items Here</p>
+                    <p>Manage eBay Stores Fees Here</p>
                     
                 </div>
 
-            
 
-                <div class="card list-item">
-                    <div class="card-header">Search an Item Here</div>
-                    <div class="card-body">
+                <div class="card data-tables">
+                    <div class="card-header">eBay Stores Fees</div>
+                    <div class="card-body list-item">
 
                         <div class="row g-3">
+                            
+                            <div class="col-12">
+                                <h6>eBay Store</h6>
+                                <p>Safekom</p>
+                            </div>
 
-                            <div class="col-4">
-                                <div class="form-floating">
-                                    <input type="search" class="form-control" placeholder="Search" id="eBaySearch">
-                                    <label for="eBaySearch">Search</label>
+                            <div class="col-12">
+                                <h6>Standard PayPal Fees</h6>
+                                <div class="row g-3">
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" min="0" step="0.01" value="3.40">
+                                            <span class="input-group-text">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <span class="input-group-text">£</span>
+                                            <input type="number" class="form-control" min="0" step="0.01" value="0.30">
+                                            <span class="input-group-text">p</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-4">
-                                <div class="form-floating">
-                                    <select class="form-select" id="select">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                    <label for="page">Page</label>
+                            <div class="col-12">
+                                <h6>Micro PayPal Fees</h6>
+                                <div class="row g-3">
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" min="0" step="0.01" value="0.05">
+                                            <span class="input-group-text">%</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <span class="input-group-text">£</span>
+                                            <input type="number" class="form-control" min="0" step="0.01" value="0.05">
+                                            <span class="input-group-text">p</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-3 d-flex align-items-stretch">
-                                <button class="btn btn-primary w-100" onclick="redirect()">Search</button>
+                            <div class="col-12">
+                                <h6>RMA Fees</h6>
+                                <div class="row g-3">
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" min="0" step="0.01" value="7.00">
+                                            <span class="input-group-text">%</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+                            <div class="col-12">
+                                <h6>Packing Fees</h6>
+                                <div class="row g-3">
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <span class="input-group-text">£</span>
+                                            <input type="number" class="form-control" min="0" step="0.01" value="0.18">
+                                            <span class="input-group-text">p</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <a href="ebay-store-sync.html" class="btn btn-primary px-5">Save</a>
+                            </div>
+
                         </div>
 
                     </div>
@@ -274,19 +324,9 @@
     <!-- Custom Javascipt -->
     <script src="../dist/js/custom.js"></script>
 
-    <script>
-        const redirect = () =>{
-            location.href = 'https://www.etradehouse.com/code/adm/ELS/eBaySearch/eBaySearch.aspx?Searchtxt=watch&_pgn=1';
-        }
-    </script>
 
 </body>
 </html>
-
-
-
-
-
 
 
 

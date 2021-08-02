@@ -104,12 +104,12 @@
 
                 <a class="nav-link" href="downloads.html">Downloads</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Search <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbaySearch">
                     <div class="card card-body">
-                        <a class="nav-link active" href="ebay-search.html">eBay Search</a>
+                        <a class="nav-link" href="ebay-search.html">eBay Search</a>
                         <a class="nav-link" href="ebay-images-search.html">eBay Image Search</a>
                     </div>
                 </div>
@@ -117,13 +117,13 @@
                 <a class="nav-link" href="marketing.html">Marketing</a>
                 <a class="nav-link" href="ebay-store-categories.html">eBay Store Categories</a>
 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayReports" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbayReports" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Reports <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbayReports">
                     <div class="card card-body">
                         <a class="nav-link" href="staff-revision-history.html">Staff Revision History</a>
-                        <a class="nav-link" href="whats-trending.html">Whats Trending</a>
+                        <a class="nav-link active" href="whats-trending.html">Whats Trending</a>
                         <a class="nav-link" href="ebay-sqs.html">eBay SQS</a>
                         <a class="nav-link" href="ebay-lqs.html">eBay LQS</a>
                         <a class="nav-link" href="ebay-shop-profit.html">eBay Shop Profit</a>
@@ -192,48 +192,56 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item">eBay Search</li>
-                        <li class="breadcrumb-item active" aria-current="page">eBay Search</li>
+                        <li class="breadcrumb-item">eBay Reports</li>
+                        <li class="breadcrumb-item active" aria-current="page">Whats Trending</li>
                     </ol>
                 </nav>
                 
-                <h1>eBay Search Management</h1>
+                <h1>Whats Trending Management</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>Manage eBay Search Items Here</p>
+                    <p>Manage What's Trending Here</p>
                     
                 </div>
 
             
 
                 <div class="card list-item">
-                    <div class="card-header">Search an Item Here</div>
-                    <div class="card-body">
+                    <div class="card-header">What has been Trending Between 30/06/2021 and 29/07/2021</div>
+                    <div class="card-body data-tables">
 
-                        <div class="row g-3">
+                        <table id="checkMarketTable" class="table stores-table table-bordered table-hover border">
+                            <thead class="bg-light">
+                                <tr>
+                                  <th scope="col">SKU</th>
+                                  <th scope="col">Title</th>
+                                  <th scope="col">Sold</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
-                            <div class="col-4">
-                                <div class="form-floating">
-                                    <input type="search" class="form-control" placeholder="Search" id="eBaySearch">
-                                    <label for="eBaySearch">Search</label>
-                                </div>
-                            </div>
+                                <tr>
+                                    <td>5V24A-1UA</td>
+                                    <td></td>
+                                    <td>145</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>5V24A-1UA</td>
+                                    <td></td>
+                                    <td>145</td>
+                                </tr>
 
-                            <div class="col-4">
-                                <div class="form-floating">
-                                    <select class="form-select" id="select">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                    <label for="page">Page</label>
-                                </div>
-                            </div>
+                                <tr>
+                                    <td>5V24A-1UA</td>
+                                    <td></td>
+                                    <td>145</td>
+                                </tr>
 
-                            <div class="col-3 d-flex align-items-stretch">
-                                <button class="btn btn-primary w-100" onclick="redirect()">Search</button>
-                            </div>
-                        </div>
+                    
+                            </tbody>
+                        </table>
+                       
 
                     </div>
                 </div>
@@ -274,14 +282,11 @@
     <!-- Custom Javascipt -->
     <script src="../dist/js/custom.js"></script>
 
-    <script>
-        const redirect = () =>{
-            location.href = 'https://www.etradehouse.com/code/adm/ELS/eBaySearch/eBaySearch.aspx?Searchtxt=watch&_pgn=1';
-        }
-    </script>
+
 
 </body>
 </html>
+
 
 
 

@@ -104,12 +104,12 @@
 
                 <a class="nav-link" href="downloads.html">Downloads</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Search <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbaySearch">
                     <div class="card card-body">
-                        <a class="nav-link active" href="ebay-search.html">eBay Search</a>
+                        <a class="nav-link" href="ebay-search.html">eBay Search</a>
                         <a class="nav-link" href="ebay-images-search.html">eBay Image Search</a>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                     </div>
                 </div>
 
-                <a class="nav-link" href="calculate-shipping.html">Calculate Shipping</a>
+                <a class="nav-link active" href="calculate-shipping.html">Calculate Shipping</a>
 
                 <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Store Sync <i class="icofont-thin-down float-end"></i>
@@ -192,48 +192,72 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item">eBay Search</li>
-                        <li class="breadcrumb-item active" aria-current="page">eBay Search</li>
+                        <li class="breadcrumb-item active" aria-current="page">Calculate Shipping</li>
                     </ol>
                 </nav>
                 
-                <h1>eBay Search Management</h1>
+                <h1>Calculate Shipping Management</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>Manage eBay Search Items Here</p>
+                    <p>Manage Calculate Shipping Here</p>
                     
                 </div>
 
             
 
                 <div class="card list-item">
-                    <div class="card-header">Search an Item Here</div>
-                    <div class="card-body">
+                    <div class="card-header">Calculate Shipping Here</div>
+                    <div class="card-body data-tables">
 
-                        <div class="row g-3">
+                        <div class="row g-2">
 
-                            <div class="col-4">
+                            <div class="col">
                                 <div class="form-floating">
-                                    <input type="search" class="form-control" placeholder="Search" id="eBaySearch">
-                                    <label for="eBaySearch">Search</label>
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-floating">
-                                    <select class="form-select" id="select">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
+                                    <select class="form-select" id="eBayStore">
+                                        <option selected>Safekom UK</option>
+                                        <option>dooma-it</option>
+                                        <option>eTHShop</option>
+                                        <option>Comet</option>
                                     </select>
-                                    <label for="page">Page</label>
+                                    <label for="eBayStore">eBay Store</label>
                                 </div>
                             </div>
 
-                            <div class="col-3 d-flex align-items-stretch">
-                                <button class="btn btn-primary w-100" onclick="redirect()">Search</button>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" placeholder="SKU" id="sku">
+                                    <label for="sku">SKU</label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" placeholder="Quantity" id="qty">
+                                    <label for="qty">Quantity</label>
+                                </div>
+                            </div>
+
+                            <div class="col-2 d-flex align-items-stretch">
+                                <button class="btn btn-primary w-100" onclick="generateReport()">Calculate</button>
                             </div>
                         </div>
+
+                        <div class="row g-4 mt-4 hidden d-none">
+                            <div class="col-5">
+                                <div class="card">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex justify-content-between"><span class="fw-bold">Weight</span> 0.167</li>
+                                        <li class="list-group-item d-flex justify-content-between"><span class="fw-bold">Total Quantity</span> 10</li>
+                                        <li class="list-group-item d-flex justify-content-between"><span class="fw-bold">SKU</span> 5V24A-1UN</li>
+                                        <li class="list-group-item d-flex justify-content-between"><span class="fw-bold">Postage</span> 3.83999995231628</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+                       
 
                     </div>
                 </div>
@@ -275,13 +299,23 @@
     <script src="../dist/js/custom.js"></script>
 
     <script>
-        const redirect = () =>{
-            location.href = 'https://www.etradehouse.com/code/adm/ELS/eBaySearch/eBaySearch.aspx?Searchtxt=watch&_pgn=1';
+        const table = document.querySelector('.hidden');
+
+    
+
+        const generateReport = () => {
+            table.classList.remove('d-none');
+
         }
     </script>
 
+
+
 </body>
 </html>
+
+
+
 
 
 

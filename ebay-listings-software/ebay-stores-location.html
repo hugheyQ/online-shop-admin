@@ -104,12 +104,12 @@
 
                 <a class="nav-link" href="downloads.html">Downloads</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbaySearch" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Search <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbaySearch">
                     <div class="card card-body">
-                        <a class="nav-link active" href="ebay-search.html">eBay Search</a>
+                        <a class="nav-link" href="ebay-search.html">eBay Search</a>
                         <a class="nav-link" href="ebay-images-search.html">eBay Image Search</a>
                     </div>
                 </div>
@@ -132,12 +132,12 @@
 
                 <a class="nav-link" href="calculate-shipping.html">Calculate Shipping</a>
 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbayStoreSync" role="button" aria-expanded="false" aria-controls="collapseExample">
                     eBay Store Sync <i class="icofont-thin-down float-end"></i>
                 </a>
                 <div class="collapse sub-menu" id="collapseEbayStoreSync">
                     <div class="card card-body">
-                        <a class="nav-link" href="ebay-store-sync.html">eBay Store Sync</a>
+                        <a class="nav-link active" href="ebay-store-sync.html">eBay Store Sync</a>
                         <a class="nav-link" href="assign-stores.html">Assign Stores</a>
                         <a class="nav-link" href="ebay-auth-code.html">eBay Auth Code</a>
                         <a class="nav-link" href="notification.html">Notification</a>
@@ -192,47 +192,143 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item">eBay Search</li>
-                        <li class="breadcrumb-item active" aria-current="page">eBay Search</li>
+                        <li class="breadcrumb-item"><a href="ebay-store-sync.html">eBay Store Sync</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">eBay Stores Location</li>
                     </ol>
                 </nav>
                 
-                <h1>eBay Search Management</h1>
+                <h1>eBay Stores Location</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>Manage eBay Search Items Here</p>
+                    <p>Manage eBay Stores Location Here</p>
                     
                 </div>
 
-            
 
-                <div class="card list-item">
-                    <div class="card-header">Search an Item Here</div>
-                    <div class="card-body">
+                <div class="card data-tables">
+                    <div class="card-header">eBay Stores Location</div>
+                    <div class="card-body list-item">
 
                         <div class="row g-3">
-
-                            <div class="col-4">
+                            
+                            <div class="col">
                                 <div class="form-floating">
-                                    <input type="search" class="form-control" placeholder="Search" id="eBaySearch">
-                                    <label for="eBaySearch">Search</label>
+                                    <input type="text" class="form-control" placeholder="Town" id="town" value="Perivale">
+                                    <label for="town">Town</label>
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col">
                                 <div class="form-floating">
-                                    <select class="form-select" id="select">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
+                                    <input type="text" class="form-control" placeholder="Postcode" id="postCode" value="UB6 7LH">
+                                    <label for="postCode">Postcode</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col">
+                                <div class="form-floating">
+                                    <select id="country" class="form-select">
+                                        <option>Afghanistan</option>
+                                        <option>Albania</option>
+                                        <option>ANDORRA</option>
+                                        <option>ARGENTINA</option>
+                                        <option>Australia</option>
+                                        <option>Austria</option>
+                                        <option>Belarus</option>
+                                        <option>Belgium</option>
+                                        <option>BOSNIA AND HERZEGOVINA</option>
+                                        <option>Bosnia and Herzegowina</option>
+                                        <option>Brazil</option>
+                                        <option>Bulgaria</option>
+                                        <option>Canada</option>
+                                        <option>China</option>
+                                        <option>Cote d'Ivoire</option>
+                                        <option>CROATIA</option>
+                                        <option>Croatia (local name: Hrvatska)</option>
+                                        <option>Cyprus</option>
+                                        <option>Czech Republic</option>
+                                        <option>Denmark</option>
+                                        <option>EN</option>
+                                        <option>Estonia</option>
+                                        <option>Finland</option>
+                                        <option>France</option>
+                                        <option>France, Metropolitan</option>
+                                        <option>Gambia</option>
+                                        <option>Germany</option>
+                                        <option>GIBRALTAR</option>
+                                        <option>GREAT BRITAIN</option>
+                                        <option>Greece</option>
+                                        <option>GUAM</option>
+                                        <option>HONDURAS</option>
+                                        <option>Hungary</option>
+                                        <option>ICELAND</option>
+                                        <option>India</option>
+                                        <option>Ireland</option>
+                                        <option>Israel</option>
+                                        <option>Italy</option>
+                                        <option>Jamaica</option>
+                                        <option>JAPAN</option>
+                                        <option>KENYA</option>
+                                        <option>Lao People's Democratic Republic</option>
+                                        <option>Latvia</option>
+                                        <option>Lithuania</option>
+                                        <option>LUXEMBOURG</option>
+                                        <option>MACEDONIA</option>
+                                        <option>Macedonia, the former Yugoslav Republic of</option>
+                                        <option>MALAYSIA</option>
+                                        <option>Malta</option>
+                                        <option>Martinique</option>
+                                        <option>Mexico</option>
+                                        <option>MOLDOVA</option>
+                                        <option>MONTENEGRO</option>
+                                        <option>Netherlands</option>
+                                        <option>NO</option>
+                                        <option>Norway</option>
+                                        <option>OMAN</option>
+                                        <option>OX</option>
+                                        <option>Pakistan</option>
+                                        <option>Peru</option>
+                                        <option>Philippines</option>
+                                        <option>Poland</option>
+                                        <option>Portugal</option>
+                                        <option>PUERTO RICO</option>
+                                        <option>Romania</option>
+                                        <option>RUSSIA</option>
+                                        <option>Russian Federation</option>
+                                        <option>SAN MARINO</option>
+                                        <option>Saudi Arabia</option>
+                                        <option>Senegal</option>
+                                        <option>SERBIA</option>
+                                        <option>Singapore</option>
+                                        <option>SLOVAKIA</option>
+                                        <option>Slovakia (Slovak Republic)</option>
+                                        <option>Slovenia</option>
+                                        <option>SOUTH KOREA</option>
+                                        <option>Spain</option>
+                                        <option>Sweden</option>
+                                        <option>Switzerland</option>
+                                        <option>Thailand</option>
+                                        <option>Turkey</option>
+                                        <option>UB6 7LH</option>
+                                        <option>Uganda</option>
+                                        <option>Ukraine</option>
+                                        <option>UNDEFINED</option>
+                                        <option>United Arab Emirates</option>
+                                        <option selected="selected">United Kingdom</option>
+                                        <option>United States</option>
+                                        <option>VIRGIN ISLANDS (U.S.)</option>
+                                        <option>WE</option>
+                                        <option>WO</option>
+                                        <option>Yugoslavia</option>
                                     </select>
-                                    <label for="page">Page</label>
+                                    <label for="country">Country</label>
                                 </div>
                             </div>
 
-                            <div class="col-3 d-flex align-items-stretch">
-                                <button class="btn btn-primary w-100" onclick="redirect()">Search</button>
+                            <div class="col d-flex justify-content-stretch">
+                                <button class="btn btn-primary w-100" onclick="redirect()">Update Location</button>
                             </div>
+
                         </div>
 
                     </div>
@@ -275,18 +371,14 @@
     <script src="../dist/js/custom.js"></script>
 
     <script>
-        const redirect = () =>{
-            location.href = 'https://www.etradehouse.com/code/adm/ELS/eBaySearch/eBaySearch.aspx?Searchtxt=watch&_pgn=1';
+        const redirect = () => {
+            location.href = 'ebay-store-sync.html';
         }
     </script>
 
+
 </body>
 </html>
-
-
-
-
-
 
 
 
