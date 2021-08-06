@@ -1,0 +1,60 @@
+﻿<?xml version='1.0'?>
+<?mso-application progid='Excel.Sheet'?>
+<s:Workbook xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:s="urn:schemas-microsoft-com:office:spreadsheet">
+  <o:DocumentProperties>
+    <o:Title>Tracking for GrouponUK</o:Title>
+    <o:Author>Locaso</o:Author>
+    <o:Created>2021-08-05T17:44:34</o:Created>
+  </o:DocumentProperties>
+  <x:ExcelWorkbook>
+    <x:WindowHeight>7000</x:WindowHeight>
+    <x:WindowTopX>100</x:WindowTopX>
+    <x:WindowTopY>200</x:WindowTopY>
+    <x:WindowWidth>8000</x:WindowWidth>
+    <x:ActiveSheet>1</x:ActiveSheet>
+    <x:ProtectStructure>False</x:ProtectStructure>
+    <x:ProtectWindows>False</x:ProtectWindows>
+  </x:ExcelWorkbook>
+  <s:Styles>
+    <s:Style s:ID="text">
+      <s:Alignment s:Horizontal="Center" />
+      <s:Font s:Bold="1" s:FontName="Arial" s:Size="16" s:Color="White" />
+      <s:Interior s:Color="Gray" s:Pattern="DiagCross" />
+    </s:Style>
+  </s:Styles>
+  <s:Worksheet s:Name="excel1">
+    <s:Table>
+      <s:Column s:Width="100" />
+      <s:Column s:Width="100" />
+      <s:Row>
+        <s:Cell>
+          <s:Data s:Type="String">CiLineItemID</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Order_ID</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Ref ID</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Postcode</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Tracking Code</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Service Name</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Service Code</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Order Date</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Printed Date</s:Data>
+        </s:Cell>
+      </s:Row>
+    </s:Table>
+  </s:Worksheet>
+</s:Workbook>

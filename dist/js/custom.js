@@ -100,6 +100,12 @@ $(document).ready(function () {
         "scrollX":true
     });
 
+    $('#pendingMessages').DataTable({
+        ordering:true,
+        searching:true,
+        "scrollX":true
+    });
+
     $('#listngTable').DataTable({
         ordering:true,
         searching:false,
@@ -122,6 +128,11 @@ $(document).ready(function () {
     $('#imageInput').change(function() {
         $('.images-preview').html("");
         imagesPreview(this, 'div.images-preview');
+    });
+
+    $('#eTHTemplatesTable').DataTable({
+        ordering:true,
+        searching:true
     });
 
 

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="../dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="../dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="../dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="../images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="../index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="index.html">IDC Dashboard</a>
+                <a class="nav-link" href="assign-stores.html">Assign Stores</a>
+
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbayTemplates" role="button" aria-expanded="false" aria-controls="collapseExample">eBay Templates  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseEbayTemplates">
+                    <div class="card card-body">
+                        <a class="nav-link active" href="completed-templates.html">Completed Templates</a>
+                        <a class="nav-link" href="pending-templates.html">Pending Templates</a>
+                        <a class="nav-link" href="store-templates.html">Store Templates</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="search-ebay-templates.html">Search eBay Templates</a>
+
+                <a class="nav-link" href="upload-ebay-templates.html">Upload eBay Templates</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseETHTemplates" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    ETH Templates <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseETHTemplates">
+                    <div class="card card-body">
+                        <a class="nav-link" href="eth-completed-templates.html">Completed Templates</a>
+                        <a class="nav-link" href="eth-pending-templates.html">Pending Templates</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseETHImages" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    ETH Images <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseETHImages">
+                    <div class="card card-body">
+                        <a class="nav-link" href="completed-images.html">Completed Images</a>
+                        <a class="nav-link" href="pending-images.html">Pending Images</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseProductSupport" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Product Support <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseProductSupport">
+                    <div class="card card-body">
+                        <a class="nav-link" href="completed-support.html">Completed Support</a>
+                        <a class="nav-link" href="pending-support.html">Pending Support</a>
+                    </div>
+                </div>
+
+                
+
+        
+            </nav>
+        </div>
+
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="../images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item">eBay Templates</li>
+                        <li class="breadcrumb-item active" aria-current="page">eBay Stores Completed Templates</li>
+                    </ol>
+                </nav>
+                
+                <h1>eBay Stores Completed Templates Management</h1>
+
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>Load eBay Stores Template Here</p>
+                    
+                </div>
+
+
+                <div class="card data-tables">
+                    <div class="card-header">eBay Store Completed Templates</div>
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="form-floating">
+                                    <select class="form-select" id="eBayStore">
+                                        <option>Safekom UK</option>
+                                        <option>dooma-it</option>
+                                        <option>eTHShop</option>
+                                        <option>Comet</option>
+                                    </select>
+                                    <label for="eBayStore">eBay Store</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                
+
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- JQuery File -->
+    <script src="../dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="../dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="../dist/js/custom.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

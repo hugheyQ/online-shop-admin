@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="../dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="../dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="../dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="../images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="../index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="index.html">Purchase Dashboard</a>
+                <a class="nav-link active" href="available-leader.html">Available Leader</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseFindItems" role="button" aria-expanded="false" aria-controls="collapseExample">Find Items  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseFindItems">
+                    <div class="card card-body">
+                        <a class="nav-link" href="find-by-keywords.html">Find by Keywords</a>
+                        <a class="nav-link" href="find-by-stores.html">Find by Stores</a>
+                        <a class="nav-link" href="find-by-category.html">Find by Category</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="item-demand.html">Item Demand</a>
+
+                <a class="nav-link" href="new-products.html">New Products</a>
+
+                <a class="nav-link" href="assigned-products.html">Assigned Products</a>
+
+                <a class="nav-link" href="containers.html">Containers</a>
+
+                <a class="nav-link" href="currency-rate.html">Currency Rate</a>
+
+                <a class="nav-link" href="suppliers.html">Suppliers</a>
+
+                <a class="nav-link" href="check-sales.html">Check Sales</a>
+
+                
+
+                
+
+        
+            </nav>
+        </div>
+
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="../images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Assign Leader</li>
+                    </ol>
+                </nav>
+                
+                <h1>Assign Leaders</h1>
+
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>Assign Leaders Here</p>
+                    
+                </div>
+
+
+
+
+                <div class="card data-tables mb-4">
+                    <div class="card-header">
+                        Assign Leaders
+                    </div>
+                    <div class="card-body">
+
+                        <table class="table stores-table table-bordered table-hover border">
+                            <thead class="bg-light">
+                                <tr>
+                                  <th scope="col">Staff ID</th>
+                                  <th scope="col">Full Name</th>
+                                  <th scope="col">Email</th>
+                                  <th scope="col">Position</th>
+                                  <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                
+                                
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <select class="form-select py-1">
+                                            <option value="4">Amjad</option>
+                                            <option value="17">Noor Khan</option>
+                                            <option value="19">Sid Ahmad</option>
+                                            <option value="22">Ahmad Shah</option>
+                                            <option value="24">Mubarak Khalil</option>
+                                            <option value="26">Jehangir Khan</option>
+                                            <option value="27">Muhammad Bilal</option>
+                                            <option selected="selected" value="29">Shakeel Malik</option>
+                                            <option value="33">Inam Afridi</option>
+                                            <option value="36">Musarat Jahan</option>
+                                            <option value="37">Amber Khan</option>
+                                            <option value="39">Locaso</option>
+                                            <option value="40">ChengChung</option>
+                                            <option value="42">Tom Khan</option>
+                                            <option value="45">Wendy</option>
+                                            <option value="51">Ghazanfar Ali</option>
+                                            <option value="57">Alice</option>
+                                            <option value="63">Sam</option>
+                                            <option value="64">Emily</option>
+                                            <option value="65">Gulfam Khan</option>
+                                            <option value="69">Atif Ayub</option>
+                                            <option value="70">Hassan</option>
+                                            <option value="71">Bella</option>
+                                            <option value="72">Saif Ullah</option>
+                                            <option value="76">Akhtar Zaman</option>
+                                            <option value="77">Abdullah Jan</option>
+                                            <option value="78">Warehouse</option>
+                                            <option value="79">Ayaz Ahmad</option>
+                                            <option value="84">Zain Ul Abadin</option>
+                                            <option value="88">Done</option>
+                                            <option value="89">Not Possible</option>
+                                            <option value="90">Yang</option>
+                                            <option value="91">Wali 11Ullah</option>
+                                            <option value="93">Liang</option>
+                                            <option value="95">Rose Amyn</option>
+                                            <option value="96">Laray</option>
+                                            <option value="97">Alex1</option>
+                                            <option value="98">Aamir</option>
+                                            <option value="99">Yaling</option>
+                                            <option value="100">Zeng</option>
+                                            <option value="101">Lian</option>
+                                            <option value="102">Jinai</option>
+                                            <option value="103">Ateeq</option>
+                                            <option value="104">Fayzan</option>
+                                            <option value="105">Saleem</option>
+                                            <option value="107">Max</option>
+                                            <option value="108">Sana Ullah</option>
+                                            <option value="112">Peter</option>
+                                            <option value="114">Bilal Ahmad</option>
+                                            <option value="116">Aimal Ziafffrat</option>
+                                            <option value="117">Muhib Ali Khan</option>
+                                            <option value="118">Muhammad Ali Subhan</option>
+                                            <option value="122">Nooran Khan</option>
+                                            <option value="123">Amj Home PC</option>
+                                            <option value="124">Waqar Khan</option>
+                                            <option value="127">Attaullah</option>
+                                            <option value="128">Anwar</option>
+                                            <option value="129">Hamza Khan</option>
+                                            <option value="131">Mohammed Abdullah</option>
+                                            <option value="136">Amyn2</option>
+                                            <option value="140">Murtaza</option>
+                                            <option value="142">Shahroz</option>
+                                            <option value="144">Qari</option>
+                                            <option value="145">Azmat Khan</option>
+                                            <option value="146">Judy</option>
+                                            <option value="147">Claire</option>
+                                            <option value="148">Mubarak Shah</option>
+                                            <option value="149">Ahmad Shah</option>
+                                            <option value="150">Abdullah Khalil</option>
+                                            <option value="151">Bilal Hussain</option>
+                                            <option value="154">Malik Obaid</option>
+                                        </select>
+                                    </td>
+                                    <td>shakeel@etradehouse.com</td>
+                                    <td>
+                                        <select class="form-select py-1">
+                                            <option selected>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <a href="assign-staffs-to-leader.html" title="Assign Staffs to Leader"><i class="bi bi-person"></i></a>
+                                       
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <select class="form-select py-1">
+                                            <option value="4">Amjad</option>
+                                            <option value="17">Noor Khan</option>
+                                            <option value="19">Sid Ahmad</option>
+                                            <option value="22">Ahmad Shah</option>
+                                            <option value="24">Mubarak Khalil</option>
+                                            <option value="26">Jehangir Khan</option>
+                                            <option value="27">Muhammad Bilal</option>
+                                            <option value="29">Shakeel Malik</option>
+                                            <option value="33">Inam Afridi</option>
+                                            <option value="36">Musarat Jahan</option>
+                                            <option value="37">Amber Khan</option>
+                                            <option value="39">Locaso</option>
+                                            <option value="40">ChengChung</option>
+                                            <option value="42">Tom Khan</option>
+                                            <option value="45">Wendy</option>
+                                            <option value="51">Ghazanfar Ali</option>
+                                            <option value="57">Alice</option>
+                                            <option value="63">Sam</option>
+                                            <option value="64">Emily</option>
+                                            <option value="65">Gulfam Khan</option>
+                                            <option value="69">Atif Ayub</option>
+                                            <option value="70">Hassan</option>
+                                            <option value="71">Bella</option>
+                                            <option value="72">Saif Ullah</option>
+                                            <option value="76">Akhtar Zaman</option>
+                                            <option value="77">Abdullah Jan</option>
+                                            <option value="78">Warehouse</option>
+                                            <option value="79">Ayaz Ahmad</option>
+                                            <option value="84">Zain Ul Abadin</option>
+                                            <option value="88">Done</option>
+                                            <option value="89">Not Possible</option>
+                                            <option value="90">Yang</option>
+                                            <option value="91">Wali 11Ullah</option>
+                                            <option value="93">Liang</option>
+                                            <option value="95">Rose Amyn</option>
+                                            <option value="96">Laray</option>
+                                            <option value="97">Alex1</option>
+                                            <option value="98">Aamir</option>
+                                            <option value="99">Yaling</option>
+                                            <option value="100">Zeng</option>
+                                            <option value="101">Lian</option>
+                                            <option value="102">Jinai</option>
+                                            <option value="103">Ateeq</option>
+                                            <option value="104">Fayzan</option>
+                                            <option value="105">Saleem</option>
+                                            <option value="107">Max</option>
+                                            <option value="108">Sana Ullah</option>
+                                            <option value="112">Peter</option>
+                                            <option value="114">Bilal Ahmad</option>
+                                            <option value="116">Aimal Ziafffrat</option>
+                                            <option value="117">Muhib Ali Khan</option>
+                                            <option value="118">Muhammad Ali Subhan</option>
+                                            <option value="122">Nooran Khan</option>
+                                            <option value="123">Amj Home PC</option>
+                                            <option value="124">Waqar Khan</option>
+                                            <option value="127">Attaullah</option>
+                                            <option value="128">Anwar</option>
+                                            <option value="129">Hamza Khan</option>
+                                            <option value="131">Mohammed Abdullah</option>
+                                            <option value="136">Amyn2</option>
+                                            <option value="140">Murtaza</option>
+                                            <option value="142">Shahroz</option>
+                                            <option value="144">Qari</option>
+                                            <option value="145">Azmat Khan</option>
+                                            <option value="146">Judy</option>
+                                            <option value="147">Claire</option>
+                                            <option value="148">Mubarak Shah</option>
+                                            <option value="149">Ahmad Shah</option>
+                                            <option value="150">Abdullah Khalil</option>
+                                            <option value="151">Bilal Hussain</option>
+                                            <option value="154">Malik Obaid</option>
+                                        </select>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <a href="#" title="Add"><i class="bi bi-plus-circle"></i></a>
+                                    </td>
+                                </tr>
+                        
+                            
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+
+                
+
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- JQuery File -->
+    <script src="../dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="../dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="../dist/js/custom.js"></script>
+</body>
+</html>

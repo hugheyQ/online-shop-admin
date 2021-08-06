@@ -173,7 +173,7 @@ p {
 
 	select{
 		font-size: 16px;
-		padding: 0 .5em;
+		// padding: 0 .5em;
 		text-align: center;
 	}
 	
@@ -224,7 +224,7 @@ p {
 		td{
 			vertical-align:middle;
 			input[type='number']{
-				max-width: 80px;
+				max-width: 85px;
 				margin-left: auto;
 				margin-right: auto;
 				text-align: center;
@@ -482,6 +482,14 @@ label {
 		text-transform: uppercase;
 		font-size: 1rem;
 	}
+
+	h5{
+		margin-bottom: .4rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+	}
+
 	p{
 		font-size: .9rem;
 
@@ -513,4 +521,93 @@ label {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: .9rem;
+}
+
+
+.purchasing-dashboard{
+	.card-header{
+		font-weight: bold;
+	}
+
+	.list-group{
+		font-size: .9rem; 
+		height: 380px; 
+		overflow-y: auto;
+		
+
+		.list-group-item{
+			display: flex;
+			justify-content: space-between;
+			align-items: stretch;
+
+			a{
+				color: unset;
+				text-decoration: none;
+
+				&:hover{
+					color: $l-blue;
+					transition: all 300ms ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+
+.esp-dashboard{
+	.card-header{
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	.card-body{
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+	}
+
+	.list-group{
+		border: none;
+		font-size: .9rem; 
+		height: 250px; 
+		overflow-y: auto;
+
+		
+
+		.list-group-item{
+			padding-top: 0;
+			padding-bottom: 0;
+			border: none;
+
+			&:not(:last-child){
+				margin-bottom: .5rem;
+			}
+
+			a{
+				color: white;
+				text-decoration: none;
+				display: flex;
+				justify-content: space-between;
+				transition: all 300ms ease-in-out;
+				padding: .2rem .7rem;
+				background-color: $l-blue;
+
+				&:hover{
+					background-color: $d-blue;
+				}
+
+				
+
+			}
+		}
+	}
+
+	.card-footer{
+		font-size: .9rem;
+	}
+}
+
+
+
+.ck-editor__editable_inline {
+    min-height: 15rem;
 }

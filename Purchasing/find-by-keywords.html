@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="../dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="../dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="../dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="../images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="../index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="index.html">Purchase Dashboard</a>
+                <a class="nav-link" href="available-leader.html">Available Leader</a>
+
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseFindItems" role="button" aria-expanded="false" aria-controls="collapseExample">Find Items  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseFindItems">
+                    <div class="card card-body">
+                        <a class="nav-link active" href="find-by-keywords.html">Find by Keywords</a>
+                        <a class="nav-link" href="find-by-stores.html">Find by Stores</a>
+                        <a class="nav-link" href="find-by-category.html">Find by Category</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="item-demand.html">Item Demand</a>
+
+                <a class="nav-link" href="new-products.html">New Products</a>
+
+                <a class="nav-link" href="assigned-products.html">Assigned Products</a>
+
+                <a class="nav-link" href="containers.html">Containers</a>
+
+                <a class="nav-link" href="currency-rate.html">Currency Rate</a>
+
+                <a class="nav-link" href="suppliers.html">Suppliers</a>
+
+                <a class="nav-link" href="check-sales.html">Check Sales</a>
+
+                
+
+                
+
+        
+            </nav>
+        </div>
+
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="../images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item">Find Items</li>
+                        <li class="breadcrumb-item active" aria-current="page">Find By Keywords</li>
+                    </ol>
+                </nav>
+                
+                <h1>Find Items Management</h1>
+
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>Find Item by Keyword</p>
+                    
+                </div>
+
+
+
+
+                <div class="card data-tables mb-4">
+                    <div class="card-header">
+                        Find Items by Keyword Here
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row g-2">
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="search" class="form-control" id="search" placeholder="Search">
+                                    <label for="search">Search</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <select class="form-select" id="leader">
+                                        <option value="1">Shakeel Malik</option>
+                                        <option value="2">Sam</option>
+                                        <option value="3">Gulfam Khan</option>
+                                        <option value="4">Noor Khan</option>
+                                        <option value="5">Ayaz Ahmad</option>
+                                        <option value="6">Peter</option>
+                                        <option value="7">Musarat Jahan</option>
+                                        <option value="8">Amber Khan</option>
+                                        <option value="9">Amjad</option>
+                                    </select>
+                                    <label for="leader">Leader</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="number" min="0" step="0.01" class="form-control" id="minPrice" placeholder="Min Price" value="11.79">
+                                    <label for="minPrice">Min Price</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="number" min="0" step="0.01" class="form-control" id="maxPrice" placeholder="Max Price">
+                                    <label for="maxPrice">Max Price</label>
+                                </div>
+                            </div>
+                            <div class="col d-flex align-items-stretch">
+                                <button class="btn btn-primary w-100">Find</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                
+
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- JQuery File -->
+    <script src="../dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="../dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="../dist/js/custom.js"></script>
+</body>
+</html>

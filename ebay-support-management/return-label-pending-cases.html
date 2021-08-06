@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="../dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="../dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="../dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="../images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="../index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="index.html">eSP Dashboard</a>
+
+                <a class="nav-link" href="assign-stores.html">Assign Stores</a>
+
+                <a class="nav-link" href="download.html">Download</a>
+
+                <a class="nav-link" href="ebay-selling.html">eBay Selling</a>
+
+                <a class="nav-link" href="pending-messages.html">Pending Messages</a>
+
+                <a class="nav-link" href="sent-messages.html">Sent Messages</a>
+
+                <a class="nav-link" href="ebay-unread-messages.html">eBay Unread Messages</a>
+
+                <a class="nav-link" href="ebay-read-messages.html">eBay Read Messages</a>
+
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbayReturn" role="button" aria-expanded="false" aria-controls="collapseExample">eBay Return Cases  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseEbayReturn">
+                    <div class="card card-body">
+                        <a class="nav-link" href="open-cases.html">Open Cases</a>
+                        <a class="nav-link active" href="return-label-pending-cases.html">Return Label Pending Cases</a>
+                        <a class="nav-link" href="in-progress-cases.html">In Progress Cases</a>
+                        <a class="nav-link" href="item-dispatched-cases.html">Item Dispatched Cases</a>
+                        <a class="nav-link" href="item-delivered-cases.html">Item Delivered Cases</a>
+                        <a class="nav-link" href="escalated-cases.html">Escalated Cases</a>
+                        <a class="nav-link" href="closed-cases.html">Closed Cases</a>
+                        <a class="nav-link" href="return-label-pending-timeout.html">Return Label Pending Timeout</a>
+                        <a class="nav-link" href="return-request-timeout.html">Return Request Timeout</a>
+                        <a class="nav-link" href="refund-timeout.html">Refund Timeout</a>
+                        <a class="nav-link" href="refund-timeout.html">RMA Pending</a>
+                    </div>
+                </div>
+
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayINR" role="button" aria-expanded="false" aria-controls="collapseExample">eBay INR Cases  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseEbayINR">
+                    <div class="card card-body">
+                        <a class="nav-link" href="inr-open-cases.html">Open Cases</a>
+                        <a class="nav-link" href="waiting-buyer-response.html">Waiting Buyer Response</a>
+                        <a class="nav-link" href="waiting-seller-response.html">Waiting Seller Response</a>
+                        <a class="nav-link" href="closed.html">Closed</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="ebay-feedbacks.html">eBay Feedbacks</a>
+
+                <a class="nav-link" href="ebay-messages-template.html">eBay Messages Template</a>
+
+                <a class="nav-link" href="wizard-messages.html">Wizard Messages</a>
+
+                <a class="nav-link" href="auto-responder-template.html">Auto Responder Template</a>
+
+
+                
+
+                
+
+        
+            </nav>
+        </div>
+
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="../images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container p-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">eBay Return Cases Management</li>
+                    </ol>
+                </nav>
+                
+                <h1>eBay Return Cases Management</h1>
+
+                <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <p>eBay Return Cases Management</p>
+                    
+                </div>
+
+
+
+
+                <div class="card data-tables">
+                    <div class="card-header">
+                        eBay Return Cases Management
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row g-2 mb-4">
+                            <div class="col-4">
+                                <div class="form-floating">
+                                    <select id="ebayStore" class="form-select">
+                                        <option selected>All</option>
+                                        <option>eHomeDeals</option>
+                                        <option>Safekom</option>
+                                        <option>dooma-it</option>
+                                        <option>Thomas-IT</option>
+                                        <option>Plusbee</option>
+                                        <option>Sarah-IT</option>
+                                        <option>eTHShop</option>
+                                        <option>Comet</option>
+                                    </select>
+                                    <label for="ebayStore">eBay Store</label>
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex align-items-stretch">
+                                <button class="btn btn-primary w-100">Go</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <table id="pendingMessages" class="table stores-table table-bordered table-hover border text-start" style="width: 150%;">
+                                    <thead class="bg-light text-center">
+                                        <tr>
+                                            <th scope="col">Image</th>
+                                            <th scope="col">Item Info</th>
+                                            <th scope="col">eBay Store</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Details</th>
+                                            <th scope="col">Refund</th>
+                                            <th scope="col">Buyer</th>
+                                            <th scope="col">Updated By</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                        
+                                       <tr>
+                                           <td><img src="../images/item.jpg" alt=""></td>
+                                           <td>
+                                               <div>EAR MUFFS SOFT FLEECE WRAP AROUND WINTER WARM Ski ONE SIZE UK</div>
+                                               <div>Quantity: 1</div>
+                                           </td>
+                                           <td>Plusbee</td>
+                                           <td>
+                                               <div>WAITING_FOR_RETURN_LABEL</div>
+                                               <div>Respond By: 07/12/2020 11:59 PM</div>
+                                           </td>
+                                           <td>
+                                               <div>Return ID: 5167902814</div>
+                                               <div>Requested: 02/12/2020 08:07 PM</div>
+                                               <div>Requested: DEFECTIVE_ITEM</div>
+                                           </td>
+                                           <td>Approx: 2.29 GBP</td>
+                                           <td>happy-child-toys</td>
+                                           <td>Amjad on 02/12/2020 08:09 PM</td>
+                                           <td class="text-center"><a href="return-label-pending-cases-view.html"><i class="bi bi-pencil"></i></a></td>
+                                       </tr>
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+                
+
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- JQuery File -->
+    <script src="../dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="../dist/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="../dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+
+    <!-- Custom Javascipt -->
+    <script src="../dist/js/custom.js"></script>
+
+
+
+
+</body>
+</html>
+
