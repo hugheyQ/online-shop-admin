@@ -66,14 +66,14 @@
                 <div class="collapse sub-menu" id="collapseEbayReturn">
                     <div class="card card-body">
                         <a class="nav-link" href="open-cases.html">Open Cases</a>
-                        <a class="nav-link active" href="return-label-pending-cases.html">Return Label Pending Cases</a>
+                        <a class="nav-link" href="return-label-pending-cases.html">Return Label Pending Cases</a>
                         <a class="nav-link" href="in-progress-cases.html">In Progress Cases</a>
                         <a class="nav-link" href="item-dispatched-cases.html">Item Dispatched Cases</a>
                         <a class="nav-link" href="item-delivered-cases.html">Item Delivered Cases</a>
                         <a class="nav-link" href="escalated-cases.html">Escalated Cases</a>
                         <a class="nav-link" href="closed-cases.html">Closed Cases</a>
                         <a class="nav-link" href="return-label-pending-timeout.html">Return Label Pending Timeout</a>
-                        <a class="nav-link" href="return-request-timeout.html">Return Request Timeout</a>
+                        <a class="nav-link active" href="return-request-timeout.html">Return Request Timeout</a>
                         <a class="nav-link" href="refund-timeout.html">Refund Timeout</a>
                         <a class="nav-link" href="rma-pending.html">RMA Pending</a>
                     </div>
@@ -164,7 +164,7 @@
 
                 <div class="card list-item">
                     <div class="card-header">
-                        Approve an eBay Return Case Request
+                        eBay Return Case Details
                     </div>
                     <div class="card-body">
 
@@ -174,7 +174,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <p class="fw-bold">There's something wrong with the item your buyer's received, so they'd like to return it.</p>
-                                        <span class="form-text">07/12/2020 11:59 PM</span>
+                                        <p><span  class="fw-bold">Respond By:</span> <span class="form-text">26/03/2019 11:59 PM</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -183,8 +183,22 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h6 class="mb-3">Details from the buyer</h6>
+                                        <p><span class="fw-bold">eBay ID:</span> <span>frags_baby</span></p>
                                         <p><span class="fw-bold">Return ID:</span> <span>5167902814</span></p>
-                                        <p><span class="fw-bold">Comments:</span> <span>I received the item today,but it doesn’t fit at all. I think it’s bent or something wrwith it. I would like to return for a full refund.</span></p>
+                                        <p><span class="fw-bold">Reason:</span> <span>ORDERED_DIFFERENT_ITEM</span></p>
+                                        <p><span class="fw-bold">Comments:</span> <span>I requested a blue/purple one not pink/sliver</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="mb-3">Attributes</h6>
+                                        <p><span class="fw-bold">updatedCarrier:</span> <span>Royal Mail</span></p>
+                                        <p><span class="fw-bold">updatedTrackingNumber:</span> <span>ZR237395647GB</span></p>
+                                        <p><span class="fw-bold">updatedCarrier:</span> <span>Royal Mail</span></p>
+                                        <p><span class="fw-bold">updatedTrackingNumber:</span> <span>ZR237395647GB</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -202,7 +216,7 @@
                                                 <div class="row g-3">
                                                     <div class="col-12">
                                                         <span class="d-block fw-bold">Title:</span>
-                                                        <p>	EAR MUFFS SOFT FLEECE WRAP AROUND WINTER WARM Ski ONE SIZE UK</p>
+                                                        <p>Glitter Sequin Bum Bag Travel Waist Fanny Pack Festival Wallet Pouch Money Belt</p>
                                                     </div>
                                                     <div class="col-6">
                                                         <span class="d-block fw-bold">Return QTY:</span>
@@ -210,7 +224,7 @@
                                                     </div>
                                                     <div class="col-6">
                                                         <span class="d-block fw-bold">Amount:</span>
-                                                        <p>2.29 GBP</p>
+                                                        <p>4.79 GBP</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -219,42 +233,149 @@
                                 </div>
                             </div>
 
-
                             <div class="col-12">
-                                <p class="fw-bold">Send a return postage label Please send a return postage label to your buyer by</p>
-                                <p class="fw-bold">If you don't, we may send one on your behalf.Already purchased a label? Upload the label if you've already sent it to the buyer or add tracking details. This helps protect you in case the package gets lost.</p>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6>Photos from your buyer</h6>
+                                        <img src="../images/item.jpg" class="img-fluid" style="max-width: 10rem;">
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="col-12">
-                                <h6 class="mb-3">What can you do?</h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="mb-3">Here's what happend</h6>
 
-                                <div class="row g-3">
-                                    <div class="col-4">
-                                        <div class="form-floating">
-                                            <select id="labelOption" class="form-select">
-                                                <option>Buy a label on eBay</option>
-                                                <option>Upload your own label</option>
-                                                <option>Confirm you already sent a label</option>
-                                            </select>
-                                            <label for="labelOption">Select an Option</label>
+
+                                        <table class="table stores-table table-bordered table-hover border text-start" style="font-size: .9rem;">
+                                            <thead class="bg-light text-center d-none">
+                                                <tr>
+                                                    <th scope="col" style="width: 20%;"></th>
+                                                    <th scope="col" style="width: 80%;"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                
+                                               <tr>
+                                                   <td>
+                                                       <div>18/03/2019 06:10 PM</div>
+                                                       <div>Reason for return</div>
+                                                       <div>Comments</div>
+                                                       <div>Author</div>
+                                                       <div>Activity</div>
+                                                       <div>Address</div>
+                                                   </td>
+                                                   <td>
+                                                       <div class="fw-bold">The buyer (frags_baby) created a return (5110674989)</div>
+                                                       <div>ORDERED_DIFFERENT_ITEM</div>
+                                                       <div>I requested a blue/purple one not pink/sliver</div>
+                                                       <div>BUYER</div>
+                                                       <div>BUYER_CREATE_RETURN</div>
+                                                       <div>Caihua Huang</div>
+                                                       <div>Unit 5, Tao Ran Court, Phase 1, Zhenye City, Henggang Town, Longgang District,</div>
+                                                       <div>SHENZHEN</div>
+                                                       <div>???</div>
+                                                       <div>51800</div>
+                                                       <div>cn</div>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td>
+                                                       <div>19/03/2019 06:07 PM</div>
+                                                       <div>Messages</div>
+                                                   </td>
+                                                   <td>
+                                                       <div>sorry for the inconvenience. we will compensate you 15% and keep the product. if you agree let us know.</div>
+                                                   </td>
+                                               </tr>
+
+                                               <tr>
+                                                   <td>
+                                                       <div>20/03/2019 12:03 AM Author</div>
+                                                       <div>Activity</div>
+                                                   </td>
+
+                                                   <td>
+                                                       <div>SYSTEM</div>
+                                                       <div>REMINDER_SELLER_TO_RESPOND</div>
+                                                   </td>
+                                               </tr>
+                                            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h6>Select an option</h6>
+                                        <p class="mb-2">You can fully refund the buyer to close this request.</p>
+                                        <div class="row g-3">
+                                            <div class="col-4">
+                                                
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="refundOption">
+                                                        <option selected="selected" value="---Select---">---Select---</option>
+                                                        <option value="SELLER_ISSUE_REFUND">SELLER_ISSUE_REFUND</option>
+                                                        <option value="SELLER_MARK_REFUND_SENT">SELLER_MARK_REFUND_SENT</option>
+                                                        <option value="SUBMIT_FILE">SUBMIT_FILE</option>
+                                                        <option value="OTHER">OTHER</option>
+                                                        <option value="SELLER_ESCALATE">SELLER_ESCALATE</option>
+                                                    </select>
+                                                    <label for="refundOption">Select</label>
+                                                </div>
+                                                
+                                            </div>
+
+                                
                                         </div>
+                                        
                                     </div>
+                                </div>
+                            </div>
 
-                                    <div class="col-12">
-                                        <p><span class="fw-bold">Label Cost: </span></p>
-                                        <p class="fw-bold">Charged to your monthly invoice when the buyer uses the postage label</p>
-                                        <p><span class="fw-bold">Return address: </span></p>
-                                    </div>
-                                    
-                                    <div class="col-4">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" placeholder="Add an RMA number" id="rma">
-                                            <label for="rma">Add an RMA Number</label>
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="mb-3">Invoices</h6>
+                                        <div class="card">
+
+                                            <div class="card-body">
+                                                <div class="row mb-4">
+                                                    <div class="col">
+                                                        <div>Jodie Lockhart</div>
+                                                        <div>33 GLENALLA ROAD</div>
+                                                        <div>MAYBOLE SOUTH AYRSHIRE</div>
+                                                        <div>KA19 8DB</div>
+                                                        <div>United Kingdom</div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div>No: 1</div>
+                                                        <div>Order ID: 249923</div>
+                                                        <div>Order Placed on: 25/11/2018 08:09 PM</div>
+                                                        <div>Order Sent on: 26/11/2018 09:30 AM</div>
+                                                        <div>Invoice Status: Printed</div>
+                                                        <div>eBay ID: alvydas96</div>
+                                                        <div>Transaction ID: 12E793159L821644Y</div>
+                                                        <div>Email: paypal@alv.lt</div>
+                                                        <div>Tel: 07476808295</div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div>1*BUMGLT-PS</div>
+                                                        <div>Item Nos: 223412285982</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <button class="btn btn-primary px-5">Continue</button>
                                     </div>
                                 </div>
                             </div>

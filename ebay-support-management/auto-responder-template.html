@@ -59,7 +59,7 @@
 
                 <a class="nav-link" href="ebay-unread-messages.html">eBay Unread Messages</a>
 
-                <a class="nav-link active" href="ebay-read-messages.html">eBay Read Messages</a>
+                <a class="nav-link" href="ebay-read-messages.html">eBay Read Messages</a>
 
                 <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayReturn" role="button" aria-expanded="false" aria-controls="collapseExample">eBay Return Cases  <i class="icofont-thin-down float-end"></i></a>
 
@@ -97,7 +97,7 @@
 
                 <a class="nav-link" href="wizard-messages.html">Wizard Messages</a>
 
-                <a class="nav-link" href="auto-responder-template.html">Auto Responder Template</a>
+                <a class="nav-link active" href="auto-responder-template.html">Auto Responder Template</a>
 
 
                 
@@ -148,14 +148,14 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">eBay Completed Messages Management</li>
+                        <li class="breadcrumb-item active" aria-current="page">eBay Messages Auto Responder Templates</li>
                     </ol>
                 </nav>
                 
-                <h1>eBay Completed Messages Management</h1>
+                <h1>eBay Messages Auto Responder Template Management</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>eBay Completed Messages Here</p>
+                    <p>eBay Messages Auto Responder Templates here</p>
                     
                 </div>
 
@@ -164,52 +164,111 @@
 
                 <div class="card data-tables">
                     <div class="card-header">
-                        eBay Completed Messages Management
+                        eBay Messages Auto Responder Template
                     </div>
-                    <div class="card-body list-item">
+                    <div class="card-body">
 
-
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <div class="row m-0">
-                                    <div class="col-12 fw-bold">
-                                        <p>Counter-offer submitted to buyer: £5.71 for Car Charger Adapter for Nextbase Micro USB Hard Wire Kit Box Dash Cam Camera DVR (133525602685)</p>
-                                        <p>From: eBay</p>
-                                        <p>To: dooma-it</p>
-                                        <p>Sent: 06/08/2021</p>
-                                    </div>
+                        <div class="row g-2 mb-3">
+                            <div class="col-4">
+                                <div class="form-floating">
+                                    <select id="ebayStore" class="form-select">
+                                        <option>eHomeDeals</option>
+                                        <option>Safekom</option>
+                                        <option>dooma-it</option>
+                                        <option>Thomas-IT</option>
+                                        <option>Plusbee</option>
+                                        <option>Sarah-IT</option>
+                                        <option>eTHShop</option>
+                                        <option>Comet</option>
+                                    </select>
+                                    <label for="ebayStore">eBay Store</label>
                                 </div>
                             </div>
                         </div>
 
-
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <div class="row g-4 m-0 mb-4">
-
-                                    <div class="col-12 d-flex justify-content-between mt-0">
-                                        <div>
-                                            <h6>User ID:</h6>
-                                            <p>eBay</p>
-                                        </div>
-                                        <div class="form-text">Message 1 of 1</div>
-                                    </div>
-
-
-                                    <div class="col-12">
-                                        <h6>Message:</h6>
-                                        <p></p>
-                                    </div>
-
-
-
-                                </div>
-
-                               
-
-
+                        <div class="row">
+                            <div class="col-12 table-responsive">
+                                <table class="table stores-table table-bordered table-hover border" style="width: 150%;">
+                                    <thead class="bg-light text-center">
+                                        <tr>
+                                            <th scope="col">Template Name</th>
+                                            <th scope="col">SKU</th>
+                                            <th scope="col">Subject Contains</th>
+                                            <th scope="col">Message Contains</th>
+                                            <th scope="col">Send Message</th>
+                                            <th scope="col">First Email</th>
+                                            <th scope="col">eBay Store</th>
+                                            <th scope="col">Updated By</th>
+                                            <th scope="col">Position</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                        
+                                        <tr>
+                                            <td>
+                                                <input type="text" class="form-control" value="OK thank you.">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="OK thank you.">
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" rows="5">You are more than welcome and we are always here to help. Have a nice day  Best Regards</textarea>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input">
+                                            </td>
+                                            <td>eHomeDeals</td>
+                                            <td>Amjad On 05/11/2019 01:51:24</td>
+                                            <td>
+                                               <select class="form-select">
+                                                   <option>1</option>
+                                               </select>
+                                            </td>
+                                            <td>
+                                               <a href="#" title="Save"><i class="bi bi-save"></i></a>
+                                            </td>
+                                        </tr>
+        
+        
+                                        <tr>
+                                            <td>
+                                                <input type="text" class="form-control" value="">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="">
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" rows="5"></textarea>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input">
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                               <a href="#" title="Add"><i class="bi bi-plus-circle"></i></a>
+                                            </td>
+                                        </tr>
+                                    
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
+
                         
                     </div>
                 </div>
@@ -247,10 +306,6 @@
 
     <!-- Custom Javascipt -->
     <script src="../dist/js/custom.js"></script>
-
-
-
-
 
 
 

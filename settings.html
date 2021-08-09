@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store | Admin Portal</title>
+  
+    <!-- UI Icons -->
+    <link href="dist/css/uicons/css/uicons-regular-straight.css" rel="stylesheet">
+  
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="dist/css/icofont/icofont.min.css">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="dist/css/bootstrap-icons-1.5.0/bootstrap-icons.css">
+
+    <!-- Bootstrap Multi-level Dropdown Menu Plugin -->
+    <link rel="stylesheet" href="dist/css/bootstrap5-dropdown-ml-hack-hover.css">
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/DataTables-1.10.24/css/dataTables.bootstrap4.css">
+
+  
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/css/style.css">
+  
+  
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+    <div class="main-container container-fluid d-flex p-0 align-items-stretch">
+
+        <div class="p-3 side-nav">
+            <nav class="nav flex-column">
+                <img src="images/logo_a.png" class="img-fluid company-logo mx-auto" />
+                <h2>Admin</h2>
+                <hr>
+
+                <a class="nav-link home" href="index.html"><i class="bi bi-speedometer me-2"></i>Dashboard</a>
+
+                <hr>
+
+                <a class="nav-link" href="stores.html"><i class="fi-rs-shop me-2"></i> Stores</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseInventory" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fi-rs-box me-2"></i>Inventory  <i class="icofont-thin-down float-end"></i></a>
+
+                <div class="collapse sub-menu" id="collapseInventory">
+                    <div class="card card-body">
+                        <a class="nav-link" href="products.html">Products</a>
+                        <a class="nav-link" href="product-category.html">Category</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-shopping-cart-add me-2"></i>Orders <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseOrders">
+                    <div class="card card-body">
+                        <a class="nav-link" href="completed-orders.html">Completed</a>
+                        <a class="nav-link" href="pending-orders.html">Pending</a>
+                        <a class="nav-link" href="temporary-orders.html">Temporary</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="invoices.html"><i class="fi-rs-receipt me-2"></i>Invoices</a>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseCustomers" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-user me-2"></i>Customers <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseCustomers">
+                    <div class="card card-body">
+                        <a class="nav-link" href="customers.html">Customers</a>
+                        <a class="nav-link" href="potential-customers.html">Potential Customers</a>
+                        <a class="nav-link" href="find-customers.html">Find Customers By Image</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseReports" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-document me-2 "></i>Reports <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseReports">
+                    <div class="card card-body">
+                        <a class="nav-link" href="reports.html">Reports</a>
+                        <a class="nav-link" href="trending.html">What's Trending</a>
+                        <a class="nav-link" href="sales-&-profit.html">Sales & Profit</a>
+                        <!-- <a class="nav-link" href="accounts.html">Accounts</a> -->
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseShipping" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-school-bus me-2"></i>Shipping <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseShipping">
+                    <div class="card card-body">
+                        <a class="nav-link" href="shipping-rates.html">Shipping Rates</a>
+                        <a class="nav-link" href="shipping-auth.html">Shipping Auth</a>
+                        <a class="nav-link" href="postage.html">Postage</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseSiteInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-info me-2"></i>Site Info <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseSiteInfo">
+                    <div class="card card-body">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="site-header.html">Site Header</a>
+                        <a class="nav-link" href="gateways.html">Gateways</a>
+                        <a class="nav-link" href="site-top-header.html">Site Top Header</a>
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                        <a class="nav-link" href="terms-&-conditions.html">Terms & Conditions</a>
+                        <a class="nav-link" href="delivery-info.html">Delivery Info</a>
+                        <a class="nav-link" href="faqs.html">FAQs</a>
+                        <a class="nav-link" href="order-collections.html">Order Collections</a>
+                        <a class="nav-link" href="opening-times.html">Opening Times</a>
+                        <a class="nav-link" href="map-directions.html">Map Directions</a>
+                        <a class="nav-link" href="privacy-policy.html">Privacy Policy</a>
+                        <a class="nav-link" href="security-policy.html">Security Policy</a>
+                        <a class="nav-link" href="cookie-policy.html">Cookie Policy</a>
+                    </div>
+                </div>
+                
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEmailSettings" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-envelope me-2"></i>Email Settings <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseEmailSettings">
+                    <div class="card card-body">
+                        <a class="nav-link" href="mail-server.html">Mail Server</a>
+                        <a class="nav-link" href="customer-registration.html">Customer Registration</a>
+                        <a class="nav-link" href="forgot-password.html">Forgot Password</a>
+                        <a class="nav-link" href="orders.html">Orders</a>
+                        <a class="nav-link" href="tracking-emails.html">Tracking Emails</a>
+                        <a class="nav-link" href="customer-invoices.html">Invoices</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseMarketing" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-megaphone me-2"></i>Marketing <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapseMarketing">
+                    <div class="card card-body">
+                        <a class="nav-link" href="send-emails.html">Send Emails</a>
+                        <a class="nav-link" href="froogle.html">Froogle</a>
+                        <a class="nav-link" href="rss-feeds.html">RSS Feeds</a>
+                        <a class="nav-link" href="validate-newsletter-emails.html">Validate NL Emails</a>
+                        <a class="nav-link" href="lions-home.html">Lions Home</a>
+                        <a class="nav-link" href="site-map.html">Site Map</a>
+                    </div>
+                </div>
+
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapsePromotions" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fi-rs-ticket me-2"></i>Promotions <i class="icofont-thin-down float-end"></i>
+                </a>
+                <div class="collapse sub-menu" id="collapsePromotions">
+                    <div class="card card-body">
+                        <a class="nav-link" href="home-page-promotional-text.html">HomePage Text</a>
+                        <a class="nav-link" href="best-selling.html">Best Selling</a>
+                        <a class="nav-link" href="most-viewed.html">Most Viewed</a>
+                        <a class="nav-link" href="featured-products.html">Featured Products</a>
+                        <a class="nav-link" href="deals.html">Deals</a>
+                        <a class="nav-link" href="take-all.html">Take All</a>
+                    </div>
+                </div>
+
+                <a class="nav-link" href="ebay-management-center/index.html"><i class="fi-rs-building me-2"></i>eBay Management Center</a>
+                <a class="nav-link" href="ebay-listings-software/index.html"><i class="fi-rs-list me-2"></i>eBay Listings Software</a>
+                <a class="nav-link" href="images-data-center/index.html"><i class="fi-rs-gallery me-2"></i>Images Data Center</a>
+                <a class="nav-link" href="purchasing/index.html"><i class="fi-rs-money me-2"></i>Purchasing</a>
+                <a class="nav-link" href="osc-management/index.html"><i class="fi-rs-calculator me-2"></i>OSC Management</a>
+                <a class="nav-link" href="ebay-support-management/index.html"><i class="fi-rs-life-ring me-2"></i>eBay Support Management</a>
+                <a class="nav-link" href="user-image.html"><i class="fi-rs-mode-portrait me-2"></i>User Image</a>
+            </nav>
+        </div>
+
+        <main class="main-section w-100">
+            <nav class="navbar navbar-expand-lg shadow p-3">
+                <div class="container-fluid p-0">
+
+                    <form action="" class="search-form">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Search for..." aria-label="Search for..." aria-describedby="searchBtn">
+                            <button class="btn btn-primary" type="button" id="SearchBtn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                    
+
+                    <div class="notification-block d-flex ms-auto">
+                        <a class="nav-link notification" href="#"><i class="bi bi-bell-fill"></i><span class="badge bg-danger">9</span></a>
+
+                        <a class="nav-link notification" href="#"><i class="bi bi-envelope-fill"></i><span class="badge bg-danger">9</span></a>
+                    </div>
+
+                    <div class="profile">
+                        <div class="dropdown">
+                            <a href="#" class="btn drpdwnBtn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="small text-gray-600">Hubert Quarshie</span> <img src="images/profile.svg" class="img-fluid rounded-circle border" width="32" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                              <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+            
+            <section class="main-section-container py-3 px-3">
+
+                <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">eBay Messages Wizard</li>
+                    </ol>
+                </nav>
+
+                <h1>Store</h1>
+
+                <div class="mb-4">
+                    <p>Modify Store Users Information</p>
+                    
+                </div>
+
+
+                <div class="card list-item">
+                    <div class="card-header">Store Users Information</div>
+                    <div class="card-body">
+
+
+                        <div class="row mb-5">
+                            <h6 class="mb-3">Admin User Information</h6>
+                            <div class="col">
+
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="fName" placeholder="Full Name" value="Noor Khan">
+                                            <label for="fName">Full Name</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Email" value="noor@etradehouse.com">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="password" class="form-control" id="password" placeholder="Password" value="unknown">
+                                            <label for="password">Password</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <select id="department" class="form-select">
+                                                <option>eBay</option>
+                                                <option selected>Admin</option>
+                                                <option>Purchasing</option>
+                                                <option>Warehouse</option>
+                                                <option>Template</option>
+                                                <option>Trade</option>
+                                            </select>
+                                            <label for="department">Deparment</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                            </div>
+                            <div class="col">
+                                <div class="row g-4">
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="allowMain" checked>
+                                        <label for="allowMain">Allow Main</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="allowEbay" checked>
+                                        <label for="allowEbay">Allow eBay</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="allowELS" checked>
+                                        <label for="allowELS">Allow ELS</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="allowETMP" checked>
+                                        <label for="allowETMP">Allow eBay TMP</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="allowETHTMP" checked>
+                                        <label for="allowETHTMP">Allow eTH Tmp</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="allowEImg" checked>
+                                        <label for="allowEImg">Allow eBay Img</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="allowETHImg" checked>
+                                        <label for="allowETHImg">Allow ETH Img</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="allowAmazon" checked>
+                                        <label for="allowAmazon">Allow Amazon</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="allowEbaySupport" checked>
+                                        <label for="allowEbaySupport">Allow eBay Support</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="allowETHSupport" checked>
+                                        <label for="allowETHSupport">Allow ETH Support</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="allowPurchasing" checked>
+                                        <label for="allowPurchasing">Allow Purchasing</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="allowOCH" checked>
+                                        <label for="allowOCH">Allow OCH</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="active" checked>
+                                        <label for="active">Active</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="checkbox" class="form-check-input" id="admin" checked>
+                                        <label for="admin">Admin</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row data-tables">
+                            <h6 class="mb-3">Admin User Permissions</h6>
+
+                            <div class="col-12">
+                                <table class="table stores-table table-bordered table-hover border">
+                                    <thead class="bg-light text-center">
+                                        <tr>
+                                            <th scope="col">Module</th>
+                                            <th scope="col">Read Only</th>
+                                            <th scope="col">Insert Only</th>
+                                            <th scope="col">Update Only</th>
+                                            <th scope="col">Delete Only</th>
+                                            <th scope="col">Select All</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                        
+                                        <tr>
+                                            <td>Store</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Product Orders</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Change Address</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Invoice Orders</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Customers</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Shipping</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Accounts</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Purchasing</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Supplier</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Credit Note:</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Refund Note</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Reports</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Promotions</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Replacement</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Messages</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Fixing</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>eBay Items</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Contact</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Email Settings</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Gateways</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>Site Info</td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input" checked>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="form-check-input select-all">
+                                            </td>
+                                        </tr>
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="row g-1">
+                            <div class="col-3"><a href="index.html" class="btn btn-danger w-100">Cancel</a></div>
+                            <div class="col-3"><a href="#" class="btn btn-primary w-100">Update</a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    
+
+    <!-- JQuery File -->
+    <script src="dist/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="dist/js/bootstrap.bundle.min.js"></script> 
+
+
+    <!-- Data Tables Javascript -->
+    <script type="text/javascript" charset="utf8" src="dist/DataTables-1.10.24/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="dist/DataTables-1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom Javascipt -->
+    <script src="dist/js/custom.js"></script>
+
+
+
+
+    <script>
+        $('.select-all').change(e =>{
+            const grandParent = e.target.parentElement.parentElement;
+
+            const checkboxes = grandParent.querySelectorAll('.form-check-input');
+
+            checkboxes.forEach(checkbox => {
+                if(e.target.checked){
+                    checkbox.checked = true
+                } else {
+                    checkbox.checked = false;
+                }
+            });
+        });
+
+        
+
+
+
+    </script>
+
+    
+
+
+</body>
+</html>
+

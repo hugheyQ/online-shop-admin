@@ -61,13 +61,13 @@
 
                 <a class="nav-link" href="ebay-read-messages.html">eBay Read Messages</a>
 
-                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbayReturn" role="button" aria-expanded="false" aria-controls="collapseExample">eBay Return Cases  <i class="icofont-thin-down float-end"></i></a>
+                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayReturn" role="button" aria-expanded="false" aria-controls="collapseExample">eBay Return Cases  <i class="icofont-thin-down float-end"></i></a>
 
                 <div class="collapse sub-menu" id="collapseEbayReturn">
                     <div class="card card-body">
                         <a class="nav-link" href="open-cases.html">Open Cases</a>
                         <a class="nav-link" href="return-label-pending-cases.html">Return Label Pending Cases</a>
-                        <a class="nav-link active" href="in-progress-cases.html">In Progress Cases</a>
+                        <a class="nav-link" href="in-progress-cases.html">In Progress Cases</a>
                         <a class="nav-link" href="item-dispatched-cases.html">Item Dispatched Cases</a>
                         <a class="nav-link" href="item-delivered-cases.html">Item Delivered Cases</a>
                         <a class="nav-link" href="escalated-cases.html">Escalated Cases</a>
@@ -80,11 +80,11 @@
                 </div>
 
 
-                <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayINR" role="button" aria-expanded="false" aria-controls="collapseExample">eBay INR Cases  <i class="icofont-thin-down float-end"></i></a>
+                <a class="nav-link custom-dropdown active" data-bs-toggle="collapse" href="#collapseEbayINR" role="button" aria-expanded="false" aria-controls="collapseExample">eBay INR Cases  <i class="icofont-thin-down float-end"></i></a>
 
                 <div class="collapse sub-menu" id="collapseEbayINR">
                     <div class="card card-body">
-                        <a class="nav-link" href="inr-open-cases.html">Open Cases</a>
+                        <a class="nav-link active" href="inr-open-cases.html">Open Cases</a>
                         <a class="nav-link" href="waiting-buyer-response.html">Waiting Buyer Response</a>
                         <a class="nav-link" href="waiting-seller-response.html">Waiting Seller Response</a>
                         <a class="nav-link" href="closed.html">Closed</a>
@@ -148,14 +148,14 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">eBay Return Cases Management</li>
+                        <li class="breadcrumb-item active" aria-current="page">eBay INR Cases Management</li>
                     </ol>
                 </nav>
                 
-                <h1>eBay Return Cases Management</h1>
+                <h1>eBay INR Cases Management</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>eBay Return Cases Here</p>
+                    <p>eBay INR Cases Here</p>
                     
                 </div>
 
@@ -164,7 +164,7 @@
 
                 <div class="card list-item">
                     <div class="card-header">
-                        eBay Return Case Details
+                        eBay INR Case Details
                     </div>
                     <div class="card-body">
 
@@ -185,7 +185,20 @@
                                         <h6 class="mb-3">Details from the buyer</h6>
                                         <p><span class="fw-bold">eBay ID:</span> <span>frags_baby</span></p>
                                         <p><span class="fw-bold">Return ID:</span> <span>5167902814</span></p>
+                                        <p><span class="fw-bold">Reason:</span> <span>ORDERED_DIFFERENT_ITEM</span></p>
                                         <p><span class="fw-bold">Comments:</span> <span>I requested a blue/purple one not pink/sliver</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="mb-3">Attributes</h6>
+                                        <p><span class="fw-bold">updatedCarrier:</span> <span>Royal Mail</span></p>
+                                        <p><span class="fw-bold">updatedTrackingNumber:</span> <span>ZR237395647GB</span></p>
+                                        <p><span class="fw-bold">updatedCarrier:</span> <span>Royal Mail</span></p>
+                                        <p><span class="fw-bold">updatedTrackingNumber:</span> <span>ZR237395647GB</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -224,6 +237,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h6>Photos from your buyer</h6>
+                                        <img src="../images/item.jpg" class="img-fluid" style="max-width: 10rem;">
                                     </div>
                                 </div>
                             </div>
@@ -299,20 +313,29 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h6>Give a full refund</h6>
+
+                                        <h6>Select an option</h6>
                                         <p class="mb-2">You can fully refund the buyer to close this request.</p>
                                         <div class="row g-3">
-                                            <div class="col-12">
+                                            <div class="col-4">
+                                                
                                                 <div class="form-floating">
-                                                    <textarea id="message" placeholder="Message" class="form-control" style="min-height: 15rem;">Hi, We have issued the refund today.</textarea>
-                                                    <label for="message">Messge</label>
+                                                    <select class="form-select" id="refundOption">
+                                                        <option selected="selected" value="---Select---">---Select---</option>
+                                                        <option value="SELLER_ISSUE_REFUND">SELLER_ISSUE_REFUND</option>
+                                                        <option value="SELLER_MARK_REFUND_SENT">SELLER_MARK_REFUND_SENT</option>
+                                                        <option value="SUBMIT_FILE">SUBMIT_FILE</option>
+                                                        <option value="OTHER">OTHER</option>
+                                                        <option value="SELLER_ESCALATE">SELLER_ESCALATE</option>
+                                                    </select>
+                                                    <label for="refundOption">Select</label>
                                                 </div>
+                                                
                                             </div>
 
-                                            <div class="col-4">
-                                                <button class="btn btn-primary px-5">Refund the buyer</button>
-                                            </div>
+                                
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -320,7 +343,7 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h6>Invoices</h6>
+                                        <h6 class="mb-3">Invoices</h6>
                                         <div class="card">
 
                                             <div class="card-body">

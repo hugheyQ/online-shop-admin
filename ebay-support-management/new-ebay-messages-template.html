@@ -59,7 +59,7 @@
 
                 <a class="nav-link" href="ebay-unread-messages.html">eBay Unread Messages</a>
 
-                <a class="nav-link active" href="ebay-read-messages.html">eBay Read Messages</a>
+                <a class="nav-link" href="ebay-read-messages.html">eBay Read Messages</a>
 
                 <a class="nav-link custom-dropdown" data-bs-toggle="collapse" href="#collapseEbayReturn" role="button" aria-expanded="false" aria-controls="collapseExample">eBay Return Cases  <i class="icofont-thin-down float-end"></i></a>
 
@@ -93,7 +93,7 @@
 
                 <a class="nav-link" href="ebay-feedbacks.html">eBay Feedbacks</a>
 
-                <a class="nav-link" href="ebay-messages-template.html">eBay Messages Template</a>
+                <a class="nav-link active" href="ebay-messages-template.html">eBay Messages Template</a>
 
                 <a class="nav-link" href="wizard-messages.html">Wizard Messages</a>
 
@@ -148,14 +148,14 @@
                 <nav style="--bs-breadcrumb-divider: '>';" class="breadcrumb" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">eBay Completed Messages Management</li>
+                        <li class="breadcrumb-item active" aria-current="page">eBay Messages Template</li>
                     </ol>
                 </nav>
                 
-                <h1>eBay Completed Messages Management</h1>
+                <h1>eBay Messages Template Management</h1>
 
                 <div class="mb-4 d-flex justify-content-between align-items-center">
-                    <p>eBay Completed Messages Here</p>
+                    <p>Input eBay Messages Template here</p>
                     
                 </div>
 
@@ -164,52 +164,34 @@
 
                 <div class="card data-tables">
                     <div class="card-header">
-                        eBay Completed Messages Management
+                        eBay Messages Template Area
                     </div>
-                    <div class="card-body list-item">
+                    <div class="card-body">
 
-
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <div class="row m-0">
-                                    <div class="col-12 fw-bold">
-                                        <p>Counter-offer submitted to buyer: £5.71 for Car Charger Adapter for Nextbase Micro USB Hard Wire Kit Box Dash Cam Camera DVR (133525602685)</p>
-                                        <p>From: eBay</p>
-                                        <p>To: dooma-it</p>
-                                        <p>Sent: 06/08/2021</p>
-                                    </div>
+                        <div class="row mb-3">
+                            <div class="col-5">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="tempName" placeholder="Template Name">
+                                    <label for="tempName">Template Name</label>
                                 </div>
                             </div>
                         </div>
 
-
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <div class="row g-4 m-0 mb-4">
-
-                                    <div class="col-12 d-flex justify-content-between mt-0">
-                                        <div>
-                                            <h6>User ID:</h6>
-                                            <p>eBay</p>
-                                        </div>
-                                        <div class="form-text">Message 1 of 1</div>
-                                    </div>
-
-
-                                    <div class="col-12">
-                                        <h6>Message:</h6>
-                                        <p></p>
-                                    </div>
-
-
-
+                        <div class="row mb-3">
+                            <div class="col-7">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="tempMessage" placeholder="Template Message" style="min-height: 15rem;"></textarea>
+                                    <label for="tempMessage">Template Message</label>
                                 </div>
-
-                               
-
-
                             </div>
                         </div>
+
+                        <div class="row mb-3">
+                            <div class="col-2">
+                                <a href="ebay-messages-template.html" class="btn btn-primary w-100">Save</a>
+                            </div>
+                        </div>
+
                         
                     </div>
                 </div>
@@ -247,10 +229,6 @@
 
     <!-- Custom Javascipt -->
     <script src="../dist/js/custom.js"></script>
-
-
-
-
 
 
 
